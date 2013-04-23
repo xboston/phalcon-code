@@ -1,0 +1,4 @@
+
+    Выполняется beforeSomeTask
+    Выполняется afterSomeTask
+

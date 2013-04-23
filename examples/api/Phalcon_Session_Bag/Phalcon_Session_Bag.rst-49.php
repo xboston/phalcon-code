@@ -1,0 +1,8 @@
+
+    <?php
+
+     $user->destroy();
+
+
+
+
