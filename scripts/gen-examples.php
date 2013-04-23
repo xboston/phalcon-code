@@ -9,9 +9,10 @@
  */
 
 define('ROOT_DIR' , '/home/boston/www/phalcon-docs/ru/');
+define('CODES_DIR' , dirname(__DIR__) . '/codes');
 define('EXAMPLES_DIR' , dirname(__DIR__) . '/examples');
 
-class API_Generator
+class CodeExampleGenerator
 {
 
     protected $_docs = array();
@@ -64,19 +65,24 @@ class API_Generator
             }
         }
 
-        $fileName = basename($file);
-
+        $fileName      = basename($file);
         $componentName = str_replace('.rst' , '' , $fileName);
-        $location      = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
+
+        $locationCodes    = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
+        $locationExamples = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
+
+
+        is_dir($locationCodes) ? : mkdir($locationCodes , 0777 , true);
+        is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
 
         foreach ( $codes as $line => $code ) {
 
-            $file = sprintf("%s/%s-%s.php" , $location , $fileName , $line);
-            is_dir($location) ? : mkdir($location , 0777 , true);
+            $file = sprintf("%s/%s-%s.php" , $locationCodes , $fileName , $line);
+
             file_put_contents($file , $code);
-            echo sprintf("%s-ok\n",$fileName);
+            echo sprintf("%s-ok\n" , $fileName);
         }
     }
 }
 
-$api = new API_Generator(ROOT_DIR);
+$api = new CodeExampleGenerator(ROOT_DIR);
