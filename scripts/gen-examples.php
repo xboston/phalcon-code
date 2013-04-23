@@ -38,14 +38,17 @@ class CodeExampleGenerator
     protected function _getCode($file)
     {
 
-        $startLine = 0;
-        $thisCode  = false;
-        $codes     = [ ];
+        $startLine  = 0;
+        $thisCode   = false;
+        $codes      = [ ];
+        $createFile = false;
 
         foreach ( file($file) as $lineNum => $line ) {
             $lineNum += 1;
 
             if ( trim($line) == '.. code-block:: php' ) {
+
+                $createFile = true;
 
                 $thisCode          = true;
                 $startLine         = $lineNum;
@@ -65,19 +68,29 @@ class CodeExampleGenerator
             }
         }
 
+        if ( $createFile == false ) {
+
+            return;
+        }
+
         $fileName      = basename($file);
         $componentName = str_replace('.rst' , '' , $fileName);
 
-        $locationCodes    = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
+
+        $locationCodes    = CODES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
         $locationExamples = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
 
 
         is_dir($locationCodes) ? : mkdir($locationCodes , 0777 , true);
         is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
 
+        $fileNull = sprintf("%s/%s.php" , $locationExamples , $componentName);
+        touch($fileNull);
+
+
         foreach ( $codes as $line => $code ) {
 
-            $file = sprintf("%s/%s-%s.php" , $locationCodes , $fileName , $line);
+            $file = sprintf("%s/%s-%s.php" , $locationCodes , $componentName , $line);
 
             file_put_contents($file , $code);
             echo sprintf("%s-ok\n" , $fileName);
