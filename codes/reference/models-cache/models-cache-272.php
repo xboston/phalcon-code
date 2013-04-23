@@ -12,7 +12,7 @@ class Robots extends Phalcon\Mvc\Model
     {
 
         //Convert the parameters to an array
-        if (!is_array($parameters))) {
+        if (!is_array($parameters)) {
             $parameters = array($parameters);
         }
 

@@ -5,7 +5,7 @@ echo Phalcon\Tag::select(
     array(
         'productId',
         Products::find("type = 'vegetables'"),
-        'using' => array('id', "name')
+        'using' => array('id', "name"),
         'useEmpty' => true,
         'emptyText' => 'Выберите значение...',
         'emptyValue' => '@'

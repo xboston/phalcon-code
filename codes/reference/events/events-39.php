@@ -3,7 +3,7 @@
 $eventsManager = new \Phalcon\Events\Manager();
 
 // Создание слушателе базы данных
-$dbListener = new MyDbListener()
+$dbListener = new MyDbListener();
 
 // Слушать все события базы данных
 $eventsManager->attach('db', $dbListener);

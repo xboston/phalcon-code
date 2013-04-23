@@ -3,7 +3,7 @@
 // Проверяем существует ли сериализованный файл
 if (!file_exists("app/security/acl.data")) {
 
-    $acl = new \Phalcon\Acl("Memory");
+    $acl = new \Phalcon\Acl\Adapter\Memory();
 
     //... Определяем роли, ресурсы, доступ и т.д.
 

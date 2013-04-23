@@ -14,7 +14,7 @@ $di->set('view', function() {
     $view->setViewsDir("../app/views/");
 
     // Назначение обработчика событий для компонента представления
-    $view->setEventsManager($eventManagers);
+    $view->setEventsManager($eventsManager);
 
     return $view;
 

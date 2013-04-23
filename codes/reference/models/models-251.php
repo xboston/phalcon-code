@@ -24,19 +24,19 @@ echo $robots->count();
 
 // Move the internal cursor to the third robot
 $robots->seek(2);
-$robot = $robots->current()
+$robot = $robots->current();
 
 // Access a robot by its position in the resultset
 $robot = $robots[5];
 
 // Check if there is a record in certain position
-if (isset($robots[3]) {
+if (isset($robots[3])) {
    $robot = $robots[3];
 }
 
 // Get the first record in the resultset
-$robot = robots->getFirst();
+$robot = $robots->getFirst();
 
 // Get the last record
-$robot = robots->getLast();
+$robot = $robots->getLast();
 

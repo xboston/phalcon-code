@@ -11,7 +11,7 @@ class PostsController extends \Phalcon\Mvc\Controller
     public function showAction()
     {
         // Передать все посты в представление
-        $this->view->setVar("posts", Posts:find());
+        $this->view->setVar("posts", Posts::find());
     }
 
 }

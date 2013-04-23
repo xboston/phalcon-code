@@ -12,7 +12,7 @@ class MyComponent implements \Phalcon\Events\EventsAwareInterface
 
     public function getEventsManager()
     {
-        return $this->_eventsManager
+        return $this->_eventsManager;
     }
 
     public function someTask()
