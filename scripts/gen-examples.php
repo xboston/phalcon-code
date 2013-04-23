@@ -1,9 +1,8 @@
 <?php
 
 /**
- * This scripts generates the restructuredText for the class API.
+ * Скрипт формирует файлы из встречающихся в документации участков кода
  *
- * Change the CPHALCON_DIR constant to point to the dev/ directory in the Phalcon source code
  *
  * php scripts/gen-examples.php
  */
@@ -46,7 +45,7 @@ class CodeExampleGenerator
         foreach ( file($file) as $lineNum => $line ) {
             $lineNum += 1;
 
-            if ( trim($line) == '.. code-block:: php' ) {
+            if ( trim($line) == '.. code-block:: php' || trim($line) == '.. code-block:: html+php' ) {
 
                 $createFile = true;
 
@@ -55,14 +54,17 @@ class CodeExampleGenerator
                 $codes[$startLine] = '';
             }
 
-            if ( $thisCode == true && ($line{0} == ' ' || $line{0} == "\t" || $line{0} == " " || trim($line) == '' || trim($line) == '.. code-block:: php') ) {
+            if ( $thisCode == true && ($line{0} == ' ' || $line{0} == "\t" || $line{0} == " " || trim($line) == '' || trim($line) == '.. code-block:: php' || trim(
+                $line
+            ) == '.. code-block:: html+php')
+            ) {
 
-                if ( trim($line) != '.. code-block:: php' ) {
+                if ( trim($line) != '.. code-block:: php' &&  trim($line) != '.. code-block:: html+php' ) {
 
-                    $line = rtrim($line,' ');
-                    $line = str_replace("\t",'    ',$line);
-                    $line = preg_replace("/^ {4}/", '', $line);
-                    
+                    $line = rtrim($line , ' ');
+                    $line = str_replace("\t" , '    ' , $line);
+                    $line = preg_replace("/^ {4}/" , '' , $line);
+
                     $codes[$startLine] .= $line;
                 }
 
@@ -87,12 +89,12 @@ class CodeExampleGenerator
         is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
 
         $fileNull = sprintf("%s/%s.php" , $locationExamples , $componentName);
-        touch($fileNull);
+        is_file($fileNull) ? null : touch($fileNull);
 
         foreach ( $codes as $line => $code ) {
 
 
-            $code = ltrim($code,"\n");
+            $code = ltrim($code , "\n");
             $file = sprintf("%s/%s-%s.php" , $locationCodes , $componentName , $line);
 
             file_put_contents($file , $code);
