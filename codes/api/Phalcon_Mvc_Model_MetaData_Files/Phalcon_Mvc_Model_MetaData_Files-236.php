@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    print_r($metaData->getDataTypesNumeric(new Robots()));
+print_r($metaData->getDataTypesNumeric(new Robots()));
 
 
 

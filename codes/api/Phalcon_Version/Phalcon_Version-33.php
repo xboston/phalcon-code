@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Version::getId();
+ echo Phalcon\Version::getId();
 
 
 

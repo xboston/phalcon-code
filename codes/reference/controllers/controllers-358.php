@@ -1,8 +1,7 @@
+<?php
 
-    <?php
+class UsersController extends ControllerBase
+{
 
-    class UsersController extends ControllerBase
-    {
-
-    }
+}
 

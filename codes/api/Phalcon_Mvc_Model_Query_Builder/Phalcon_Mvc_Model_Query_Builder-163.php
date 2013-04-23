@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $builder->orWhere('name = :name: AND id > :id:');
+$builder->orWhere('name = :name: AND id > :id:');
 
 
 

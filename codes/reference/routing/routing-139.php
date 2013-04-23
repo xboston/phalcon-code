@@ -1,27 +1,26 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
+    }
 
-        }
+    public function showAction()
+    {
 
-        public function showAction()
-        {
+        // Возвращает параметр "year"
+        $year = $this->dispatcher->getParam("year");
 
-            // Возвращает параметр "year"
-            $year = $this->dispatcher->getParam("year");
+        // Возвращает параметр "month"
+        $month = $this->dispatcher->getParam("month");
 
-            // Возвращает параметр "month"
-            $month = $this->dispatcher->getParam("month");
-
-            // Возвращает параметр "day"
-            $day = $this->dispatcher->getParam("day");
-
-        }
+        // Возвращает параметр "day"
+        $day = $this->dispatcher->getParam("day");
 
     }
+
+}
 

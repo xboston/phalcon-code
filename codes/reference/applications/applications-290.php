@@ -1,20 +1,19 @@
+<?php
 
-    <?php
+try {
 
-    try {
+    // Register autoloaders
+    //...
 
-        // Register autoloaders
-        //...
+    // Register services
+    //...
 
-        // Register services
-        //...
+    // Handle the request
+    $application = new \Phalcon\Mvc\Application();
+    $application->setDI($di);
+    echo $application->handle()->getContent();
 
-        // Handle the request
-        $application = new \Phalcon\Mvc\Application();
-        $application->setDI($di);
-        echo $application->handle()->getContent();
-
-    } catch (\Phalcon\Exception $e) {
-        echo "PhalconException: ", $e->getMessage();
-    }
+} catch (\Phalcon\Exception $e) {
+    echo "PhalconException: ", $e->getMessage();
+}
 

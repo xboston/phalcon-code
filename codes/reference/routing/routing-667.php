@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $router->handle('/some/route/to/handle');
+$router->handle('/some/route/to/handle');
 

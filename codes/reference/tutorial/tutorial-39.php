@@ -1,11 +1,10 @@
-
-    tutorial/
-      app/
-        controllers/
-        models/
-        views/
-      public/
-        css/
-        img/
-        js/
+tutorial/
+  app/
+    controllers/
+    models/
+    views/
+  public/
+    css/
+    img/
+    js/
 

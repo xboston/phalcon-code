@@ -1,11 +1,10 @@
+<?php
 
-    <?php
-
-    class Robots extends Phalcon\Mvc\Collection
+class Robots extends Phalcon\Mvc\Collection
+{
+    public function initialize()
     {
-        public function initialize()
-        {
-            $this->useImplicitObjectIds(false);
-        }
+        $this->useImplicitObjectIds(false);
     }
+}
 

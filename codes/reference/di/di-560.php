@@ -1,22 +1,21 @@
+<?php
 
-    <?php
+namespace SomeApp;
 
-    namespace SomeApp;
+use Phalcon\Http\Response;
 
-    use Phalcon\Http\Response;
+class SomeComponent
+{
 
-    class SomeComponent
+    protected $_response;
+
+    protected $_someFlag;
+
+    public function __construct(Response $response, $someFlag)
     {
-
-        protected $_response;
-
-        protected $_someFlag;
-
-        public function __construct(Response $response, $someFlag)
-        {
-            $this->_response = $response;
-            $this->_someFlag = $someFlag;
-        }
-
+        $this->_response = $response;
+        $this->_someFlag = $someFlag;
     }
+
+}
 

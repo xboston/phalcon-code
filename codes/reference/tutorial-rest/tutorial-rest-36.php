@@ -1,7 +1,6 @@
-
-    my-rest-api/
-        models/
-            Robots.php
-        index.php
-        .htaccess
+my-rest-api/
+    models/
+        Robots.php
+    index.php
+    .htaccess
 

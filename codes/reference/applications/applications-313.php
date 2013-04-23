@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    echo $application->handle()->getContent();
+echo $application->handle()->getContent();
 

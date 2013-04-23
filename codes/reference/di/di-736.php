@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $request = $di->getRequest();
+$request = $di->getRequest();
 

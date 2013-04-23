@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $user->name = Kimbra;
+ $user->name = Kimbra;
 
 
 

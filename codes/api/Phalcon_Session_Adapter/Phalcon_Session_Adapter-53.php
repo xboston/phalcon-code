@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $session->set('auth', 'yes');
+$session->set('auth', 'yes');
 
 
 

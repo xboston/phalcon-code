@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     	print_r($connection->listTables("blog");
+     print_r($connection->listTables("blog");
 
 
 

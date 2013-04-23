@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $builder->andWhere('name = :name: AND id > :id:');
+$builder->andWhere('name = :name: AND id > :id:');
 
 
 

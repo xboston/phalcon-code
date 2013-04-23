@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($session->isStarted());
+var_dump($session->isStarted());
 
 
 

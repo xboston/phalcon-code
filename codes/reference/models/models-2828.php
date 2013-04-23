@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $robot = Robots::findFirst('id = 101');
+$robot = Robots::findFirst('id = 101');
 
 
 

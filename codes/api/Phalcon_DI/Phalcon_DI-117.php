@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $di['request'] = new Phalcon\Http\Request();
+$di['request'] = new Phalcon\Http\Request();
 
 
 

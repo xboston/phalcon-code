@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
+    public function getSequenceName()
     {
-
-        public function getSequenceName()
-        {
-            return "robots_sequence_name";
-        }
-
+        return "robots_sequence_name";
     }
+
+}
 

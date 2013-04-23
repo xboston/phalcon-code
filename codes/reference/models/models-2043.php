@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+trait MyTimestampable
+{
 
-    trait MyTimestampable
+    public function beforeCreate()
     {
-
-        public function beforeCreate()
-        {
-            $this->created_at = date('r');
-        }
-
-        public function beforeUpdate()
-        {
-            $this->updated_at = date('r');
-        }
-
+        $this->created_at = date('r');
     }
+
+    public function beforeUpdate()
+    {
+        $this->updated_at = date('r');
+    }
+
+}
 

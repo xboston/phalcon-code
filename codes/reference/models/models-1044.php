@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    $robot = new Robots();
-    $robot->save($_POST);
+$robot = new Robots();
+$robot->save($_POST);
 

@@ -1,19 +1,18 @@
+<?php
 
-    <?php
+use Phalcon\Mvc\View;
 
-    use Phalcon\Mvc\View;
+$di->set('view', function(){
 
-    $di->set('view', function(){
+    $view = new View();
 
-        $view = new View();
+    // Отключить несколько уровней
+    $view->disableLevel(array(
+        View::LEVEL_LAYOUT => true,
+        View::LEVEL_MAIN_LAYOUT => true
+    ));
 
-        // Отключить несколько уровней
-        $view->disableLevel(array(
-            View::LEVEL_LAYOUT => true,
-            View::LEVEL_MAIN_LAYOUT => true
-        ));
+    return $view;
 
-        return $view;
-
-    }, true);
+}, true);
 

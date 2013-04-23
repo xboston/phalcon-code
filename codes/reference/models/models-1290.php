@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
+    public function beforeValidationOnCreate()
     {
-
-        public function beforeValidationOnCreate()
-        {
-            echo "This is executed before creating a Robot!";
-        }
-
+        echo "This is executed before creating a Robot!";
     }
+
+}
 

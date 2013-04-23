@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     unset($config['database']);
+ unset($config['database']);
 
 
 

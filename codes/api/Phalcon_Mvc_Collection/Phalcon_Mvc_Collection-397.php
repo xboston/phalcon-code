@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo 'There are ', Robots::aggregate(), ' robots';
+ echo 'There are ', Robots::aggregate(), ' robots';
 
 
 

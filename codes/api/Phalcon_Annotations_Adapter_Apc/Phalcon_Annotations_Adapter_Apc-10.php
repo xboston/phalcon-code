@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $annotations = new \Phalcon\Annotations\Adapter\Apc();
+ $annotations = new \Phalcon\Annotations\Adapter\Apc();
 
 
 

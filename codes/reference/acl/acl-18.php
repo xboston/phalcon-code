@@ -1,3 +1,2 @@
-
-    <?php $acl = new \Phalcon\Acl\Adapter\Memory();
+<?php $acl = new \Phalcon\Acl\Adapter\Memory();
 

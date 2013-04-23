@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Tag::passwordField(array("name", "size" => 30))
+ echo Phalcon\Tag::passwordField(array("name", "size" => 30))
 
 
 

@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $query = Criteria::fromInput($this->di, "Products", $_POST);
+$query = Criteria::fromInput($this->di, "Products", $_POST);
 

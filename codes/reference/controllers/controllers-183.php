@@ -1,9 +1,8 @@
+<?php
 
-    <?php
+$di = new Phalcon\DI();
 
-    $di = new Phalcon\DI();
-
-    $di->set('storage', function() {
-        return new Storage('/some/directory');
-    }, true);
+$di->set('storage', function() {
+    return new Storage('/some/directory');
+}, true);
 

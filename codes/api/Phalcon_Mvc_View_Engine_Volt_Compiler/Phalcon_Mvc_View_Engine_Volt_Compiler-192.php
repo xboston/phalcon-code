@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo $compiler->compileString('{{ "hello world" }}');
+ echo $compiler->compileString('{{ "hello world" }}');
 
 
 

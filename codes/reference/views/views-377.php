@@ -1,20 +1,19 @@
+<?php
 
-    <?php
+use Phalcon\Mvc\View;
 
-    use Phalcon\Mvc\View;
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
-
-        }
-
-        public function findAction()
-        {
-            $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
-        }
-
     }
+
+    public function findAction()
+    {
+        $this->view->disableLevel(View::LEVEL_MAIN_LAYOUT);
+    }
+
+}
 

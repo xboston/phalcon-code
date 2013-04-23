@@ -1,7 +1,6 @@
+<?php
 
-    <?php
+$url = new Phalcon\Mvc\Url();
 
-    $url = new Phalcon\Mvc\Url();
-
-    $url->setBaseUri('/invo/');
+$url->setBaseUri('/invo/');
 

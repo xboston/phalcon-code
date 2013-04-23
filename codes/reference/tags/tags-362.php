@@ -1,14 +1,13 @@
+<?php
 
-    <?php
-
-    echo \Phalcon\Tag::selectStatic(
+echo \Phalcon\Tag::selectStatic(
+    array(
+        "color",
         array(
-            "color",
-            array(
-                "Yellow" => "Yellow",
-                "Blue"   => "Blue",
-                "Red"    => "Red"
-            )
+            "Yellow" => "Yellow",
+            "Blue"   => "Blue",
+            "Red"    => "Red"
         )
-    );
+    )
+);
 

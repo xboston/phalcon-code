@@ -1,14 +1,13 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
+    public function initialize()
     {
-
-        public function initialize()
-        {
-            $this->setReadConnectionService('dbSlave');
-            $this->setWriteConnectionService('dbMaster');
-        }
-
+        $this->setReadConnectionService('dbSlave');
+        $this->setWriteConnectionService('dbMaster');
     }
+
+}
 

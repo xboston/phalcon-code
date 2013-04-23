@@ -1,11 +1,10 @@
+<?php
 
-    <?php
+try {
 
-    try {
+    //... какой-то код
 
-        //... какой-то код
+} catch(\Phalcon\Exception $e) {
 
-    } catch(\Phalcon\Exception $e) {
-
-    }
+}
 

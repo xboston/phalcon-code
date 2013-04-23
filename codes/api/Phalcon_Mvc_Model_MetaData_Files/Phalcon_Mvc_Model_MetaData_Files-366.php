@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($metaData->isEmpty());
+var_dump($metaData->isEmpty());
 
 
 

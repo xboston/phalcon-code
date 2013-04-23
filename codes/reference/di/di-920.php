@@ -1,9 +1,8 @@
+<?php
 
-    <?php
+$router = new MyRouter();
 
-    $router = new MyRouter();
+$router->post('/login');
 
-    $router->post('/login');
-
-    return $router;
+return $router;
 

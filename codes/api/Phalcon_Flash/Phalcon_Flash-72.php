@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $flash->success('The process was finished successfully');
+ $flash->success('The process was finished successfully');
 
 
 

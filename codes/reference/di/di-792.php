@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $request = $di->getShared("request");
+$request = $di->getShared("request");
 

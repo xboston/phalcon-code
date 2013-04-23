@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+use \Phalcon\Events\Event;
+use \Phalcon\Mvc\Dispatcher;
 
-    use \Phalcon\Events\Event;
-    use \Phalcon\Mvc\Dispatcher;
+class Security extends Phalcon\Mvc\User\Plugin
+{
 
-    class Security extends Phalcon\Mvc\User\Plugin
+    // ...
+
+    public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher)
     {
-
         // ...
-
-        public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher)
-        {
-            // ...
-        }
-
     }
+
+}
 

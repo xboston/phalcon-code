@@ -1,27 +1,26 @@
+<?php
 
-    <?php
+//Create a events manager
+$eventManager = \Phalcon\Events\Manager();
 
-    //Create a events manager
-    $eventManager = \Phalcon\Events\Manager();
+//Listen all the application events
+$eventManager->attach('micro', function($event, $app) {
 
-    //Listen all the application events
-    $eventManager->attach('micro', function($event, $app) {
+    if ($event->getType() == 'beforeExecuteRoute') {
+        if ($app->session->get('auth') == false) {
 
-        if ($event->getType() == 'beforeExecuteRoute') {
-            if ($app->session->get('auth') == false) {
+            $app->flashSession->error("The user isn't authenticated");
+            $app->response->redirect("/");
 
-                $app->flashSession->error("The user isn't authenticated");
-                $app->response->redirect("/");
-
-                //Return (false) stop the operation
-                return false;
-            }
+            //Return (false) stop the operation
+            return false;
         }
+    }
 
-    });
+});
 
-    $app = new Phalcon\Mvc\Micro();
+$app = new Phalcon\Mvc\Micro();
 
-    //Bind the events manager to the app
-    $app->setEventsManager($eventsManager);
+//Bind the events manager to the app
+$app->setEventsManager($eventsManager);
 

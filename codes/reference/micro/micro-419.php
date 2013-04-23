@@ -1,17 +1,16 @@
+<?php
 
-    <?php
+$app = new Phalcon\Mvc\Micro();
 
-    $app = new Phalcon\Mvc\Micro();
+//Return a response
+$app->get('/welcome/index', function() {
 
-    //Return a response
-    $app->get('/welcome/index', function() {
+    $response = new Phalcon\Http\Response();
 
-        $response = new Phalcon\Http\Response();
+    $response->setStatusCode(401, "Unauthorized");
 
-        $response->setStatusCode(401, "Unauthorized");
+    $response->setContent("Access is not authorized");
 
-        $response->setContent("Access is not authorized");
-
-        return $response;
-    });
+    return $response;
+});
 

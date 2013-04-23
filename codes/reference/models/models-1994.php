@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class Profiles extends \Phalcon\Mvc\Model
+{
 
-    class Profiles extends \Phalcon\Mvc\Model
+    public function initialize()
     {
-
-        public function initialize()
-        {
-            $this->addBehavior(new Blamable());
-        }
-
+        $this->addBehavior(new Blamable());
     }
+
+}
 

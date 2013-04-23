@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    print_r($dialect->listTables("blog")) ?>
+print_r($dialect->listTables("blog")) ?>
 
 
 

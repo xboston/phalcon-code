@@ -1,16 +1,15 @@
+<?php
 
-    <?php
-
-    class PostsController extends \Phalcon\Mvc\Controller
+class PostsController extends \Phalcon\Mvc\Controller
+{
+    public function initialize()
     {
-        public function initialize()
-        {
-            $this->view->setTemplateAfter('common');
-        }
-
-        public function lastAction()
-        {
-            $this->flash->notice("These are the latest posts");
-        }
+        $this->view->setTemplateAfter('common');
     }
+
+    public function lastAction()
+    {
+        $this->flash->notice("These are the latest posts");
+    }
+}
 

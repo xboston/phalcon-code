@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    echo $session->getId();
+echo $session->getId();
 
 
 

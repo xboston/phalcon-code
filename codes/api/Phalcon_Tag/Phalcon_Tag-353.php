@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-     	echo Phalcon\Tag::getTitle();
+     echo Phalcon\Tag::getTitle();
 

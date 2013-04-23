@@ -1,24 +1,23 @@
+<?php
 
-    <?php
+class UsersController extends Phalcon\Mvc\Controller
+{
 
-	class UsersController extends Phalcon\Mvc\Controller
-	{
+    public function registerAction()
+    {
 
-	    public function registerAction()
-	    {
+        $user = new Users();
 
-	        $user = new Users();
+        $login = $this->request->getPost('login');
+        $password = $this->request->getPost('password');
 
-	        $login = $this->request->getPost('login');
-	        $password = $this->request->getPost('password');
+        $user->login = $login;
 
-	        $user->login = $login;
+        //Сохраняем пароль хешированным
+        $user->password = $this->security->hash($password);
 
-	        //Сохраняем пароль хешированным
-	        $user->password = $this->security->hash($password);
+        $user->save();
+    }
 
-	        $user->save();
-	    }
-
-	}
+}
 

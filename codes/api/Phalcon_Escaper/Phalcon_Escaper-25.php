@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $escaper->setEncoding('utf-8');
+ $escaper->setEncoding('utf-8');
 
 
 

@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
+    }
 
-        }
-
-        public function showAction($year, $postTitle)
-        {
-
-        }
+    public function showAction($year, $postTitle)
+    {
 
     }
+
+}
 

@@ -1,11 +1,10 @@
+<?php
 
-    <?php
-
-    class Robots extends Phalcon\Mvc\Model
+class Robots extends Phalcon\Mvc\Model
+{
+    public function initalize()
     {
-        public function initalize()
-        {
-            $this->useDynamicUpdate(true);
-        }
+        $this->useDynamicUpdate(true);
     }
+}
 

@@ -1,23 +1,22 @@
+<?php
 
-    <?php
+class MyDbListener
+{
 
-    class MyDbListener
+    public function afterConnect()
     {
 
-        public function afterConnect()
-        {
+    }
 
-        }
-
-        public function beforeQuery()
-        {
-
-        }
-
-        public function afterQuery()
-        {
-
-        }
+    public function beforeQuery()
+    {
 
     }
+
+    public function afterQuery()
+    {
+
+    }
+
+}
 

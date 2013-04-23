@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
+    public function initialize()
     {
-
-        public function initialize()
-        {
-            $this->setConnectionService('dbPostgres');
-        }
-
+        $this->setConnectionService('dbPostgres');
     }
+
+}
 

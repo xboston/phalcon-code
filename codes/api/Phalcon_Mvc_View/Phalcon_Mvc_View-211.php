@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $this->view->setParamToView('products', $products);
+$this->view->setParamToView('products', $products);
 
 
 

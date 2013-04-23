@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $user->remove('name'));
+ $user->remove('name'));
 
 
 

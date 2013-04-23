@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function beforeExecuteRoute($dispatcher)
     {
-
-        public function beforeExecuteRoute($dispatcher)
-        {
-            // Выполняется перед каждым найденным действием
-        }
-
-        public function afterExecuteRoute($dispatcher)
-        {
-            // Выполняется после каждого выполненного действия
-        }
-
+        // Выполняется перед каждым найденным действием
     }
+
+    public function afterExecuteRoute($dispatcher)
+    {
+        // Выполняется после каждого выполненного действия
+    }
+
+}
 

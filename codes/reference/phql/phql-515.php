@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+$messages = null;
 
-    $messages = null;
-
-    $process = function() use (&$messages) {
-        foreach (Cars::find("id > 101") as $car) {
-            $car->price = 15000;
-            if ($car->save() == false) {
-                $messages = $car->getMessages();
-                return false;
-            }
+$process = function() use (&$messages) {
+    foreach (Cars::find("id > 101") as $car) {
+        $car->price = 15000;
+        if ($car->save() == false) {
+            $messages = $car->getMessages();
+            return false;
         }
-        return true;
     }
+    return true;
+}
 
-    $success = $process();
+$success = $process();
 

@@ -1,22 +1,21 @@
+<?php
 
-    <?php
+$config = new \Phalcon\Config(array(
+    'database' => array(
+        'host' => 'localhost',
+        'name' => 'test_db'
+    ),
+    'debug' => 1
+));
 
-    $config = new \Phalcon\Config(array(
-        'database' => array(
-            'host' => 'localhost',
-            'name' => 'test_db'
-        ),
-        'debug' => 1
-    ));
+$config2 = new \Phalcon\Config(array(
+    'database' => array(
+        'username' => 'scott',
+        'password' => 'secret',
+    )
+));
 
-    $config2 = new \Phalcon\Config(array(
-        'database' => array(
-            'username' => 'scott',
-            'password' => 'secret',
-        )
-    ));
+$config->merge($config2);
 
-    $config->merge($config2);
-
-    print_r($config);
+print_r($config);
 

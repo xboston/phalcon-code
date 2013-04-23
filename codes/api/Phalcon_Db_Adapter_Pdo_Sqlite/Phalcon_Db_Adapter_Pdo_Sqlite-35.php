@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     print_r($connection->describeColumns("posts")); ?>
+ print_r($connection->describeColumns("posts")); ?>
 
 
 

@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $request = $di['request'];
+$request = $di['request'];
 

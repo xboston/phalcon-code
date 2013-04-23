@@ -1,13 +1,12 @@
+<?php
 
-	<?php
+class MonitoringTask extends \Phalcon\CLI\Task
+{
 
-	class MonitoringTask extends \Phalcon\CLI\Task
-	{
+    public function mainAction()
+    {
 
-	    public function mainAction()
-	    {
+    }
 
-	    }
-
-	}
+}
 

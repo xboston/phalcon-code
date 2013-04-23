@@ -1,13 +1,12 @@
+<?php
 
-	<?php
+// Используйте CLI factory в качестве контейнера ресурсов
+$di = new Phalcon\DI\FactoryDefault\CLI();
 
-	// Используйте CLI factory в качестве контейнера ресурсов
-	$di = new Phalcon\DI\FactoryDefault\CLI();
+// Создание консольного приложения
+$console = new \Phalcon\CLI\Console();
+$console->setDI($di);
 
-	// Создание консольного приложения
-	$console = new \Phalcon\CLI\Console();
-	$console->setDI($di);
-
-	// Выполнение действия
-	$console->handle(array('shell_script_name', 'echo'));
+// Выполнение действия
+$console->handle(array('shell_script_name', 'echo'));
 

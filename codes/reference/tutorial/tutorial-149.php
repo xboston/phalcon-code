@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    //Создание DI
-    $di = new Phalcon\DI\FactoryDefault();
+//Создание DI
+$di = new Phalcon\DI\FactoryDefault();
 

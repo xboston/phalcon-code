@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $builder->having('SUM(Robots.price) > 0');
+$builder->having('SUM(Robots.price) > 0');
 
 
 

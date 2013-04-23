@@ -1,23 +1,22 @@
+<?php
 
-    <?php
+// Используем данные из resultset
+echo Phalcon\Tag::select(
+    array(
+        "productId",
+        Products::find("type = 'vegetables'"),
+        "using" => array("id", "name")
+    )
+);
 
-    // Используем данные из resultset
-    echo Phalcon\Tag::select(
+// Используем данные из массива
+echo Phalcon\Tag::selectStatic(
+    array(
+        "status",
         array(
-            "productId",
-            Products::find("type = 'vegetables'"),
-            "using" => array("id", "name")
+            "A" => "Active",
+            "I" => "Inactive",
         )
-    );
-
-    // Используем данные из массива
-    echo Phalcon\Tag::selectStatic(
-        array(
-            "status",
-            array(
-                "A" => "Active",
-                "I" => "Inactive",
-            )
-        )
-    );
+    )
+);
 

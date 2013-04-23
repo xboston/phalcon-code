@@ -1,17 +1,16 @@
+<?php
 
-    <?php
+// Required
+$config = array(
+    "host" => "localhost",
+    "username" => "postgres",
+    "password" => "secret1",
+    "dbname" => "template"
+);
 
-    // Required
-    $config = array(
-        "host" => "localhost",
-        "username" => "postgres",
-        "password" => "secret1",
-        "dbname" => "template"
-    );
+// Optional
+$config["schema"] = "public";
 
-    // Optional
-    $config["schema"] = "public";
-
-    // Create a connection
-    $connection = new \Phalcon\Db\Adapter\Pdo\Postgresql($config);
+// Create a connection
+$connection = new \Phalcon\Db\Adapter\Pdo\Postgresql($config);
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $this->response->setExpires(new DateTime());
+$this->response->setExpires(new DateTime());
 
 
 

@@ -1,11 +1,10 @@
+<?php
 
-    <?php
+ //Read the info from the rewrite engine
+ $router->handle();
 
-     //Read the info from the rewrite engine
-     $router->handle();
-    
-     //Manually passing an URL
-     $router->handle('/posts/edit/1');
+ //Manually passing an URL
+ $router->handle('/posts/edit/1');
 
 
 

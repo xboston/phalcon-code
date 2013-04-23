@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $robot = Robots::findFirst(3);
-    $robot->name = "RoboCop";
-    $robot->save();
+$robot = Robots::findFirst(3);
+$robot->name = "RoboCop";
+$robot->save();
 

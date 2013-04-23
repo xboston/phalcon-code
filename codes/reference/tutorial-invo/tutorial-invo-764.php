@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $this->persistent->searchParams = $query->getParams();
+$this->persistent->searchParams = $query->getParams();
 

@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $robots = Robots::findByRawSql('id > ?', array(10));
+$robots = Robots::findByRawSql('id > ?', array(10));
 

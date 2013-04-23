@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $response->setContent("<h1>Hello!</h1>");
+$response->setContent("<h1>Hello!</h1>");
 
 
 

@@ -1,15 +1,14 @@
+<?php
 
-    <?php
+$cacheKey = 'my.cache';
 
-    $cacheKey = 'my.cache';
+// Получаем кэш и задаем время жизни
+$robots = $cache->get($cacheKey, 3600);
+if ($robots === null) {
 
-    // Получаем кэш и задаем время жизни
-    $robots = $cache->get($cacheKey, 3600);
-    if ($robots === null) {
+    $robots = "some robots";
 
-        $robots = "some robots";
-
-        // Сохраняем в кэше
-        $cache->save($cacheKey, $robots);
-    }
+    // Сохраняем в кэше
+    $cache->save($cacheKey, $robots);
+}
 

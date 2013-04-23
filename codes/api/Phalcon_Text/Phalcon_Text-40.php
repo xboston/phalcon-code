@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    echo Phalcon\Text::camelize('CocoBongo'); //coco_bongo
+echo Phalcon\Text::camelize('CocoBongo'); //coco_bongo
 
 
 

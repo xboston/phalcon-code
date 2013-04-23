@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    print_r($config->toArray());
+print_r($config->toArray());
 
 
 

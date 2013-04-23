@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-    *
-     $view->setPartialsDir('../common/partials/');
+*
+ $view->setPartialsDir('../common/partials/');
 
 
 

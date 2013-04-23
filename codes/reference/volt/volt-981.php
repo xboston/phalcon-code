@@ -1,23 +1,22 @@
+<?php
 
-    <?php
+// Регистрация Volt в качестве шаблонизатора с анонимной функцией
+$di->set('view', function() {
 
-    // Регистрация Volt в качестве шаблонизатора с анонимной функцией
-    $di->set('view', function() {
+    $view = new \Phalcon\Mvc\View();
 
-        $view = new \Phalcon\Mvc\View();
+    $view->setViewsDir('../app/views/');
 
-        $view->setViewsDir('../app/views/');
+    $view->registerEngines(array(
+        ".volt" => function($view, $di) {
+            $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
 
-        $view->registerEngines(array(
-            ".volt" => function($view, $di) {
-                $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
+            // тут установка каких-то настроек
 
-                // тут установка каких-то настроек
+            return $volt;
+        }
+    ));
 
-                return $volt;
-            }
-        ));
-
-        return $view;
-    });
+    return $view;
+});
 

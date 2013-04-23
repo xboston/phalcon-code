@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($session->destroy());
+var_dump($session->destroy());
 
 
 

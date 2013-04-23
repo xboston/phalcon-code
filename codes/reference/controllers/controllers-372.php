@@ -1,30 +1,29 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function beforeExecuteRoute($dispatcher)
     {
+        // Выполняется до запуска любого найденного действия
 
-        public function beforeExecuteRoute($dispatcher)
-        {
-            // Выполняется до запуска любого найденного действия
+        if ($dispatcher->getActionName() == 'save') {
 
-            if ($dispatcher->getActionName() == 'save') {
+            $this->flash->error("You don't have permission to save posts");
 
-                $this->flash->error("You don't have permission to save posts");
+            $this->dispatcher->forward(array(
+                'controller' => 'home',
+                'action' => 'index'
+            ));
 
-                $this->dispatcher->forward(array(
-                    'controller' => 'home',
-                    'action' => 'index'
-                ));
-
-                return false;
-            }
+            return false;
         }
-
-        public function afterExecuteRoute($dispatcher)
-        {
-            // Выполняется после каждого выполненного действия
-        }
-
     }
+
+    public function afterExecuteRoute($dispatcher)
+    {
+        // Выполняется после каждого выполненного действия
+    }
+
+}
 

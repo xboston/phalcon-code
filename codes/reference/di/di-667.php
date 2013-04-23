@@ -1,16 +1,15 @@
+<?php
 
-    <?php
+namespace SomeApp;
 
-    namespace SomeApp;
+use Phalcon\Http\Response;
 
-    use Phalcon\Http\Response;
+class SomeComponent
+{
 
-    class SomeComponent
-    {
+    public $response;
 
-        public $response;
+    public $someFlag;
 
-        public $someFlag;
-
-    }
+}
 

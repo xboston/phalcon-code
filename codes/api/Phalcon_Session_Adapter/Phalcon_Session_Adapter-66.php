@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($session->has('auth'));
+var_dump($session->has('auth'));
 
 
 

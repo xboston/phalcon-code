@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $escapedStr = $connection->escapeString('some dangerous value');
+$escapedStr = $connection->escapeString('some dangerous value');
 
 
 

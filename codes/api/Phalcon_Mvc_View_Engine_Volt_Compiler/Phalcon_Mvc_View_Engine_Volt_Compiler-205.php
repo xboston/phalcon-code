@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $compiler->compile('views/layouts/main.volt', 'views/layouts/main.volt.php');
+$compiler->compile('views/layouts/main.volt', 'views/layouts/main.volt.php');
 
 
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Tag::imageInput(array("src" => "/img/button.png"));
+ echo Phalcon\Tag::imageInput(array("src" => "/img/button.png"));
 
 
 

@@ -1,10 +1,9 @@
+<?php
 
-    <?php
-
-    // Слушаем все события базы данных
-    $eventManager->attach('db', function($event, $connection) {
-        if ($event->getType() == 'afterQuery') {
-            echo $connection->getSQLStatement();
-        }
-    });
+// Слушаем все события базы данных
+$eventManager->attach('db', function($event, $connection) {
+    if ($event->getType() == 'afterQuery') {
+        echo $connection->getSQLStatement();
+    }
+});
 

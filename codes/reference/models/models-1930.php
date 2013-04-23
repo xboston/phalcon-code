@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    Users::findFirst(2)->delete();
+Users::findFirst(2)->delete();
 

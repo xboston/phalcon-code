@@ -1,17 +1,16 @@
+<?php
 
-    <?php
+$di['modelsMetadata'] = function() {
 
-    $di['modelsMetadata'] = function() {
+    // Instantiate a meta-data adapter
+    $metaData = new \Phalcon\Mvc\Model\MetaData\Apc(array(
+        "lifetime" => 86400,
+        "prefix"   => "my-prefix"
+    ));
 
-        // Instantiate a meta-data adapter
-        $metaData = new \Phalcon\Mvc\Model\MetaData\Apc(array(
-            "lifetime" => 86400,
-            "prefix"   => "my-prefix"
-        ));
+    //Set a custom meta-data database introspection
+    $metaData->setStrategy(new \Phalcon\Mvc\Model\MetaData\Strategy\Annotations());
 
-        //Set a custom meta-data database introspection
-        $metaData->setStrategy(new \Phalcon\Mvc\Model\MetaData\Strategy\Annotations());
-
-        return $metaData;
-    };
+    return $metaData;
+};
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($di['request']);
+var_dump($di['request']);
 
 
 

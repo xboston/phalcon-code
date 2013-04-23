@@ -1,12 +1,11 @@
+<?php
 
-    <?php
-
-    class Robots extends \Phalcon\Mvc\Collection
+class Robots extends \Phalcon\Mvc\Collection
+{
+    public function initialize()
     {
-        public function initialize()
-        {
-            $this->setConnectionService('mongo1');
-        }
-
+        $this->setConnectionService('mongo1');
     }
+
+}
 

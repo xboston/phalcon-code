@@ -1,17 +1,16 @@
+<?php
 
-    <?php
+class ProductsController extends ControllerBase
+{
 
-    class ProductsController extends ControllerBase
+    public function initialize()
     {
-
-        public function initialize()
-        {
-            //Set the document title
-            Tag::setTitle('Manage your product types');
-            parent::initialize();
-        }
-
-        //...
-
+        //Set the document title
+        Tag::setTitle('Manage your product types');
+        parent::initialize();
     }
+
+    //...
+
+}
 

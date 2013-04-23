@@ -1,17 +1,16 @@
+<?php
 
-    <?php
+class Robots extends Phalcon\Mvc\Model
+{
 
-    class Robots extends Phalcon\Mvc\Model
+    public function beforeDelete()
     {
-
-        public function beforeDelete()
-        {
-            if ($this->status == 'A') {
-                echo "The robot is active, it can be deleted";
-                return false;
-            }
-            return true;
+        if ($this->status == 'A') {
+            echo "The robot is active, it can be deleted";
+            return false;
         }
-
+        return true;
     }
+
+}
 

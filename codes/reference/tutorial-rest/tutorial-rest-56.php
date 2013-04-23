@@ -1,9 +1,8 @@
+<?php
 
-    <?php
+$app = new \Phalcon\Mvc\Micro();
 
-    $app = new \Phalcon\Mvc\Micro();
+// тут определяются роуты
 
-    // тут определяются роуты
-
-    $app->handle();
+$app->handle();
 

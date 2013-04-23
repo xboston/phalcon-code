@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    // return new Phalcon\Http\Request();
-    $di->set('request', 'Phalcon\Http\Request');
+// return new Phalcon\Http\Request();
+$di->set('request', 'Phalcon\Http\Request');
 

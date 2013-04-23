@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $builder->columns(array('id', 'name'));
+$builder->columns(array('id', 'name'));
 
 
 

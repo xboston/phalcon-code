@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-     $connection->begin();
-     var_dump($connection->isUnderTransaction()); //true
+ $connection->begin();
+ var_dump($connection->isUnderTransaction()); //true
 
 
 

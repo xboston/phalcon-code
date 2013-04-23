@@ -1,16 +1,15 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
+    public $id;
 
-    class Robots extends \Phalcon\Mvc\Model
+    public $name;
+
+    public function initialize()
     {
-        public $id;
-
-        public $name;
-
-        public function initialize()
-        {
-            $this->hasMany("id", "RobotsParts", "robots_id");
-        }
-
+        $this->hasMany("id", "RobotsParts", "robots_id");
     }
+
+}
 

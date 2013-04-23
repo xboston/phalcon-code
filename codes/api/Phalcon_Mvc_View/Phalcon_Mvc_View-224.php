@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $this->view->setVars(array('products' => $products));
+$this->view->setVars(array('products' => $products));
 
 
 

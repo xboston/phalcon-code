@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo $dialect->getColumnList(array('column1', 'column'));
+ echo $dialect->getColumnList(array('column1', 'column'));
 
 
 

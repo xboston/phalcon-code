@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    require "../app/controllers/ControllerBase.php";
+require "../app/controllers/ControllerBase.php";
 

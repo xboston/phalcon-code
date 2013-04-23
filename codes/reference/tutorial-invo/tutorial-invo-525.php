@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class Elements extends Phalcon\Mvc\User\Component
+{
 
-    class Elements extends Phalcon\Mvc\User\Component
+    public function getMenu()
     {
-
-        public function getMenu()
-        {
-            //...
-        }
-
-        public function getTabs()
-        {
-            //...
-        }
-
+        //...
     }
+
+    public function getTabs()
+    {
+        //...
+    }
+
+}
 

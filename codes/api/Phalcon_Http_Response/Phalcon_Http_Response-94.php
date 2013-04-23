@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $response->setRawHeader("HTTP/1.1 404 Not Found");
+$response->setRawHeader("HTTP/1.1 404 Not Found");
 
 
 

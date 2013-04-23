@@ -59,6 +59,10 @@ class CodeExampleGenerator
 
                 if ( trim($line) != '.. code-block:: php' ) {
 
+                    $line = rtrim($line,' ');
+                    $line = str_replace("\t",'    ',$line);
+                    $line = preg_replace("/^ {4}/", '', $line);
+                    
                     $codes[$startLine] .= $line;
                 }
 
@@ -76,10 +80,8 @@ class CodeExampleGenerator
         $fileName      = basename($file);
         $componentName = str_replace('.rst' , '' , $fileName);
 
-
         $locationCodes    = CODES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
         $locationExamples = EXAMPLES_DIR . '/' . str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
-
 
         is_dir($locationCodes) ? : mkdir($locationCodes , 0777 , true);
         is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
@@ -87,9 +89,10 @@ class CodeExampleGenerator
         $fileNull = sprintf("%s/%s.php" , $locationExamples , $componentName);
         touch($fileNull);
 
-
         foreach ( $codes as $line => $code ) {
 
+
+            $code = ltrim($code,"\n");
             $file = sprintf("%s/%s-%s.php" , $locationCodes , $componentName , $line);
 
             file_put_contents($file , $code);

@@ -1,49 +1,48 @@
+<?php
 
-    <?php
+class Registry
+{
 
-    class Registry
+    /**
+     * Returns the connection
+     */
+    public static function getConnection()
     {
-
-        /**
-         * Returns the connection
-         */
-        public static function getConnection()
-        {
-           return new Connection(array(
-                "host" => "localhost",
-                "username" => "root",
-                "password" => "secret",
-                "dbname" => "invo"
-            ));
-        }
-
+       return new Connection(array(
+            "host" => "localhost",
+            "username" => "root",
+            "password" => "secret",
+            "dbname" => "invo"
+        ));
     }
 
-    class SomeComponent
-    {
+}
 
-        protected $_connection;
+class SomeComponent
+{
 
-        /**
-         * Sets the connection externally
-         */
-        public function setConnection($connection){
-            $this->_connection = $connection;
-        }
+    protected $_connection;
 
-        public function someDbTask()
-        {
-            $connection = $this->_connection;
-
-            // ...
-        }
-
+    /**
+     * Sets the connection externally
+     */
+    public function setConnection($connection){
+        $this->_connection = $connection;
     }
 
-    $some = new SomeComponent();
+    public function someDbTask()
+    {
+        $connection = $this->_connection;
 
-    //Pass the connection defined in the registry
-    $some->setConnection(Registry::getConnection());
+        // ...
+    }
 
-    $some->someDbTask();
+}
+
+$some = new SomeComponent();
+
+//Pass the connection defined in the registry
+$some->setConnection(Registry::getConnection());
+
+$some->someDbTask();
 

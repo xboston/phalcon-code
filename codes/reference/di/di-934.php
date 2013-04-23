@@ -1,14 +1,13 @@
+<?php
 
-    <?php
+class SomeComponent
+{
 
-    class SomeComponent
+    public static function someMethod()
     {
-
-        public static function someMethod()
-        {
-            //Get the session service
-            $session = Phalcon\DI::getDefault()->getSession();
-        }
-
+        //Get the session service
+        $session = Phalcon\DI::getDefault()->getSession();
     }
+
+}
 

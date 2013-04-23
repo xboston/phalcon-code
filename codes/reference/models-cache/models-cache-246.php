@@ -1,8 +1,7 @@
+<?php
 
-	<?php
+class Robots extends CacheableModel
+{
 
-	class Robots extends CacheableModel
-	{
-
-	}
+}
 

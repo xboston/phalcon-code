@@ -1,3 +1,2 @@
-
-    <?php $di = new Phalcon\DI\FactoryDefault();
+<?php $di = new Phalcon\DI\FactoryDefault();
 

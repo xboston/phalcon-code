@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $app = new Phalcon\Mvc\Micro();
+$app = new Phalcon\Mvc\Micro();
 

@@ -1,20 +1,19 @@
+<?php
 
-    <?php
+class MyClass implements \Phalcon\DI\InjectionAwareInterface
+{
 
-    class MyClass implements \Phalcon\DI\InjectionAwareInterface
+    protected $_di;
+
+    public function setDi($di)
     {
-
-        protected $_di;
-
-        public function setDi($di)
-        {
-            $this->_di = $di;
-        }
-
-        public function getDi()
-        {
-            return $this->_di;
-        }
-
+        $this->_di = $di;
     }
+
+    public function getDi()
+    {
+        return $this->_di;
+    }
+
+}
 

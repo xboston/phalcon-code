@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $app['request'] = new Phalcon\Http\Request();
+$app['request'] = new Phalcon\Http\Request();
 
 
 

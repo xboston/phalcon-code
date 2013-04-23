@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     var_dump(isset($message['database']));
+ var_dump(isset($message['database']));
 
 
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    echo $this->view->products;
+echo $this->view->products;
 
 
 

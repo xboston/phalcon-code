@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $messages->appendMessage(new Phalcon\Validation\Message('This is a message'));
+ $messages->appendMessage(new Phalcon\Validation\Message('This is a message'));
 
 
 

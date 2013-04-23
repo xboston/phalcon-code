@@ -1,13 +1,12 @@
+<?php
 
-    <?php
-
-    class Robots extends \Phalcon\Mvc\Model
+class Robots extends \Phalcon\Mvc\Model
+{
+    public function beforeCreate()
     {
-        public function beforeCreate()
-        {
-            if ($this->price > 10000) {
-                $robot->type = new \Phalcon\Db\RawValue('default');
-            }
+        if ($this->price > 10000) {
+            $robot->type = new \Phalcon\Db\RawValue('default');
         }
     }
+}
 

@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    $router = new Phalcon\Mvc\Router();
-    print_r($router);
+$router = new Phalcon\Mvc\Router();
+print_r($router);
 

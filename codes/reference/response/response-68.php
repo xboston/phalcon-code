@@ -1,9 +1,8 @@
+<?php
 
-    <?php
+// Получение всех заголовков
+$headers = $response->getHeaders();
 
-    // Получение всех заголовков
-    $headers = $response->getHeaders();
-
-    // Получение заголовка по имени
-    $contentType = $response->getHeaders()->get("Content-Type");
+// Получение заголовка по имени
+$contentType = $response->getHeaders()->get("Content-Type");
 

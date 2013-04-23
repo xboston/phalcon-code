@@ -1,20 +1,19 @@
+<?php
 
-    <?php
+namespace Store\Admin\Controllers;
 
-    namespace Store\Admin\Controllers;
+class UsersController extends \Phalcon\Mvc\Controller
+{
 
-    class UsersController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
+    }
 
-        }
-
-        public function profileAction()
-        {
-
-        }
+    public function profileAction()
+    {
 
     }
+
+}
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    print_r($metaData->readMetaData(new Robots());
+print_r($metaData->readMetaData(new Robots());
 
 
 

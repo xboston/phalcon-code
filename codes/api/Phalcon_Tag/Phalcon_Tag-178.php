@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Tag::hiddenField(array("name", "value" => "mike"))
+ echo Phalcon\Tag::hiddenField(array("name", "value" => "mike"))
 
 
 

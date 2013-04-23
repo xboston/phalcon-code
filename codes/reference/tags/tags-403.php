@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function initialize()
     {
-
-        public function initialize()
-        {
-            Phalcon\Tag::setTitle(" Суперсайт");
-        }
-
-        public function indexAction()
-        {
-            Phalcon\Tag::prependTitle("Главная страница - ");
-        }
-
+        Phalcon\Tag::setTitle(" Суперсайт");
     }
+
+    public function indexAction()
+    {
+        Phalcon\Tag::prependTitle("Главная страница - ");
+    }
+
+}
 

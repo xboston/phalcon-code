@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $builder->offset(30);
+$builder->offset(30);
 
 
 

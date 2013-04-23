@@ -1,12 +1,11 @@
+<?php
 
-	<?php
+//Get some invoice
+$invoice = Invoices::findFirst();
 
-	//Get some invoice
-	$invoice = Invoices::findFirst();
+//Get the customer related to the invoice
+$customer = $invoice->customer;
 
-	//Get the customer related to the invoice
-	$customer = $invoice->customer;
-
-	//Print his/her name
-	echo $customer->name, "\n";
+//Print his/her name
+echo $customer->name, "\n";
 

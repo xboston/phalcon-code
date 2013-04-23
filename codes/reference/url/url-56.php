@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-    $route->add('/blog/{$year}/{month}/{title}', array(
-        'controller' => 'posts',
-        'action' => 'show'
-    ))->setName('show-post');
+$route->add('/blog/{$year}/{month}/{title}', array(
+    'controller' => 'posts',
+    'action' => 'show'
+))->setName('show-post');
 

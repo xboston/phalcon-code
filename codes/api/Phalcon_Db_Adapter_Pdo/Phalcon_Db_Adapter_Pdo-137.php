@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $escapedTable = $connection->escapeIdentifier('robots');
+$escapedTable = $connection->escapeIdentifier('robots');
 
 
 

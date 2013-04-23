@@ -1,11 +1,10 @@
+<?php
 
-    <?php
+$route = $router->add("/posts/{year}/{title}", "Posts::show");
 
-    $route = $router->add("/posts/{year}/{title}", "Posts::show");
+$route->setName("show-posts");
 
-    $route->setName("show-posts");
+//or just
 
-    //or just
-
-    $router->add("/posts/{year}/{title}", "Posts::show")->setName("show-posts");
+$router->add("/posts/{year}/{title}", "Posts::show")->setName("show-posts");
 

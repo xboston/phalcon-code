@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     	$this->view->setLayout('main');
+     $this->view->setLayout('main');
 
 
 

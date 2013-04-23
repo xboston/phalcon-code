@@ -1,10 +1,9 @@
+<?php
 
-    <?php
-
-     $router->setDefaults(array(
-    	'module' => 'common',
-    	'action' => 'index'
-     ));
+ $router->setDefaults(array(
+    'module' => 'common',
+    'action' => 'index'
+ ));
 
 
 

@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    print_r($dialect->describeColumns("posts")) ?>
+print_r($dialect->describeColumns("posts")) ?>
 
 
 

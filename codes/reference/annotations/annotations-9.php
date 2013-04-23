@@ -1,30 +1,29 @@
+<?php
 
-	<?php
+/**
+ * Это описание класса
+ *
+ * @AmazingClass(true)
+ */
+class Example
+{
 
-	/**
-	 * Это описание класса
-	 *
-	 * @AmazingClass(true)
-	 */
-	class Example
-	{
+    /**
+     * Это свойство с особенностью
+     *
+     * @SpecialFeature
+     */
+    protected $someProperty;
 
-		/**
-		 * Это свойство с особенностью
-		 *
-		 * @SpecialFeature
-		 */
-		protected $someProperty;
+    /**
+     * Это метод
+     *
+     * @SpecialFeature
+     */
+    public function someMethod()
+    {
+        // ...
+    }
 
-		/**
-		 * Это метод
-		 *
-		 * @SpecialFeature
-		 */
-		public function someMethod()
-		{
-			// ...
-		}
-
-	}
+}
 

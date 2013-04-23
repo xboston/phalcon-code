@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Tag::fileField("file")
+ echo Phalcon\Tag::fileField("file")
 
 
 

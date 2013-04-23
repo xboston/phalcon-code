@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     Phalcon\Tag::setTitle('Welcome to my Page');
+ Phalcon\Tag::setTitle('Welcome to my Page');
 
 
 

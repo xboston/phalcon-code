@@ -1,3 +1,2 @@
-
-    <?php $request = $di->get("request");
+<?php $request = $di->get("request");
 

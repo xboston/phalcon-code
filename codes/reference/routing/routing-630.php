@@ -1,8 +1,7 @@
+<?php
 
-    <?php
+$router = new \Phalcon\Mvc\Router();
 
-    $router = new \Phalcon\Mvc\Router();
-
-    //Remove trailing slashes automatically
-    $router->removeExtraSlashes(true);
+//Remove trailing slashes automatically
+$router->removeExtraSlashes(true);
 

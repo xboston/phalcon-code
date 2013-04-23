@@ -1,5 +1,4 @@
+<?php
 
-    <?php
-
-    $title = $post->getSlug();
+$title = $post->getSlug();
 

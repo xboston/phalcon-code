@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $escaper->setHtmlQuoteType(ENT_XHTML);
+ $escaper->setHtmlQuoteType(ENT_XHTML);
 
 
 

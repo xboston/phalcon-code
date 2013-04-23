@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $eventsManager->fire('db', $connection);
+$eventsManager->fire('db', $connection);
 
 
 

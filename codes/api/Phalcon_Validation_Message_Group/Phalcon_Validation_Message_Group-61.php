@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     unset($message['database']);
+ unset($message['database']);
 
 
 

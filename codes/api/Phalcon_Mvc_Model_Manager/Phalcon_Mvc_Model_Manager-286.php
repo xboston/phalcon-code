@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $relations = $modelsManager->getBelongsTo(new Robots());
+$relations = $modelsManager->getBelongsTo(new Robots());
 
 
 

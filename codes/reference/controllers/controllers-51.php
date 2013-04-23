@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class PostsController extends \Phalcon\Mvc\Controller
+{
 
-    class PostsController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
+    }
 
-        }
-
-        public function showAction($year=2012, $postTitle='другой заголовок по умолчанию')
-        {
-
-        }
+    public function showAction($year=2012, $postTitle='другой заголовок по умолчанию')
+    {
 
     }
+
+}
 

@@ -1,14 +1,13 @@
+<?php
 
-    <?php
+$lifetime = 3600;
+$cacheKey = 'my.cache';
 
-    $lifetime = 3600;
-    $cacheKey = 'my.cache';
+$robots = $cache->get($cacheKey, $lifetime);
+if ($robots === null) {
 
-    $robots = $cache->get($cacheKey, $lifetime);
-    if ($robots === null) {
+    $robots = "some robots";
 
-        $robots = "some robots";
-
-        $cache->save($cacheKey, $robots, $lifetime);
-    }
+    $cache->save($cacheKey, $robots, $lifetime);
+}
 

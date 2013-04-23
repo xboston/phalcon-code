@@ -1,40 +1,39 @@
+<?php
 
-    <?php
+class SomeComponent
+{
 
-    class SomeComponent
+    protected $_connection;
+
+    /**
+     * Sets the connection externally
+     */
+    public function setConnection($connection)
     {
-
-        protected $_connection;
-
-        /**
-         * Sets the connection externally
-         */
-        public function setConnection($connection)
-        {
-            $this->_connection = $connection;
-        }
-
-        public function someDbTask()
-        {
-            $connection = $this->_connection;
-
-            // ...
-        }
-
+        $this->_connection = $connection;
     }
 
-    $some = new SomeComponent();
+    public function someDbTask()
+    {
+        $connection = $this->_connection;
 
-    //Create the connection
-    $connection = new Connection(array(
-        "host" => "localhost",
-        "username" => "root",
-        "password" => "secret",
-        "dbname" => "invo"
-    ));
+        // ...
+    }
 
-    //Inject the connection in the component
-    $some->setConnection($connection);
+}
 
-    $some->someDbTask();
+$some = new SomeComponent();
+
+//Create the connection
+$connection = new Connection(array(
+    "host" => "localhost",
+    "username" => "root",
+    "password" => "secret",
+    "dbname" => "invo"
+));
+
+//Inject the connection in the component
+$some->setConnection($connection);
+
+$some->someDbTask();
 

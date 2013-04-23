@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    echo Phalcon\Tag::linkTo('signup/register', 'Register Here!');
+echo Phalcon\Tag::linkTo('signup/register', 'Register Here!');
 
 
 

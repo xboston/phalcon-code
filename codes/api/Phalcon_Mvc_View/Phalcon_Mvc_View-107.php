@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     	$view->setBasePath(__DIR__.'/');
+     $view->setBasePath(__DIR__.'/');
 
 
 

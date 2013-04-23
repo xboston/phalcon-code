@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class SignupController extends \Phalcon\Mvc\Controller
+{
 
-    class SignupController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
+    }
 
-        }
-
-        public function registerAction()
-        {
-
-        }
+    public function registerAction()
+    {
 
     }
+
+}
 

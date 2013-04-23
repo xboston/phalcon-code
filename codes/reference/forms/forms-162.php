@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-    foreach ($form->getMessagesFor('name') as $message) {
-        echo $message, '<br>';
-    }
+foreach ($form->getMessagesFor('name') as $message) {
+    echo $message, '<br>';
+}
 
 

@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class SomeListener
+{
 
-    class SomeListener
+    public function beforeSomeTask($event, $myComponent)
     {
-
-        public function beforeSomeTask($event, $myComponent)
-        {
-            echo "Выполняется beforeSomeTask\n";
-        }
-
-        public function afterSomeTask($event, $myComponent)
-        {
-            echo "Выполняется afterSomeTask\n";
-        }
-
+        echo "Выполняется beforeSomeTask\n";
     }
+
+    public function afterSomeTask($event, $myComponent)
+    {
+        echo "Выполняется afterSomeTask\n";
+    }
+
+}
 

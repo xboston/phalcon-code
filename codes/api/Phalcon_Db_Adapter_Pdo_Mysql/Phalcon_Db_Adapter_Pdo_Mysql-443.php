@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     	echo $connection->limit("SELECT * FROM robots", 5);
+     echo $connection->limit("SELECT * FROM robots", 5);
 
 
 

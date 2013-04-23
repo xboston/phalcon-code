@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-    $compiler->compile('views/layouts/main.volt');
-    require $compiler->getCompiledTemplatePath();
+$compiler->compile('views/layouts/main.volt');
+require $compiler->getCompiledTemplatePath();
 
 
 

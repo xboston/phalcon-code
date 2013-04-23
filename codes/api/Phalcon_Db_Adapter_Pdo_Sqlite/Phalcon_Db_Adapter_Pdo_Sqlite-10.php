@@ -1,11 +1,10 @@
+<?php
 
-    <?php
+ $config = array(
+  "dbname" => "/tmp/test.sqlite"
+ );
 
-     $config = array(
-      "dbname" => "/tmp/test.sqlite"
-     );
-    
-     $connection = new Phalcon\Db\Adapter\Pdo\Sqlite($config);
+ $connection = new Phalcon\Db\Adapter\Pdo\Sqlite($config);
 
 
 

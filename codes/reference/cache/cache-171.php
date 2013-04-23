@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    // Получаем продукты по ключу "myProducts"
-    $products = $cache->get("myProducts");
+// Получаем продукты по ключу "myProducts"
+$products = $cache->get("myProducts");
 

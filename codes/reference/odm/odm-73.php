@@ -1,15 +1,14 @@
+<?php
 
-    <?php
+namespace Store\Toys;
 
-    namespace Store\Toys;
+class Robots extends \Phalcon\Mvc\Collection
+{
 
-    class Robots extends \Phalcon\Mvc\Collection
+    public function getSource()
     {
-
-        public function getSource()
-        {
-            return "robots";
-        }
-
+        return "robots";
     }
+
+}
 

@@ -1,22 +1,21 @@
+<?php
 
-    <?php
+use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
 
-    use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
-    
-    class Subscriptors extends Phalcon\Mvc\Model
+class Subscriptors extends Phalcon\Mvc\Model
+{
+
+    public function validation()
     {
-    
-    	public function validation()
-    	{
-    		$this->validate(new EmailValidator(array(
-    			'field' => 'electronic_mail'
-          	)));
-          	if ($this->validationHasFailed() == true) {
-    			return false;
-          	}
-      	}
-    
-    }
+        $this->validate(new EmailValidator(array(
+            'field' => 'electronic_mail'
+          )));
+          if ($this->validationHasFailed() == true) {
+            return false;
+          }
+      }
+
+}
 
 
 

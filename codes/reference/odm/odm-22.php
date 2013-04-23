@@ -1,8 +1,7 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Collection
+{
 
-    class Robots extends \Phalcon\Mvc\Collection
-    {
-
-    }
+}
 

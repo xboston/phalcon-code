@@ -1,21 +1,20 @@
+<?php
 
-    <?php
+// Цикл диспетчера
+while (!$finished) {
 
-    // Цикл диспетчера
-    while (!$finished) {
+    $finished = true;
 
-        $finished = true;
+    $controllerClass = $controllerName."Controller";
 
-        $controllerClass = $controllerName."Controller";
+    // Создание экземпляра класса контроллера, работает автопогрузчика
+    $controller = new $controllerClass();
 
-        // Создание экземпляра класса контроллера, работает автопогрузчика
-        $controller = new $controllerClass();
+    // Выполнение действия
+    call_user_func_array(array($controller, $actionName . "Action"), $params);
 
-        // Выполнение действия
-        call_user_func_array(array($controller, $actionName . "Action"), $params);
+    // Значение переменной должно быть изменено при необходимости запуска другого контроллера
+    // $finished = false;
 
-        // Значение переменной должно быть изменено при необходимости запуска другого контроллера
-        // $finished = false;
-
-    }
+}
 

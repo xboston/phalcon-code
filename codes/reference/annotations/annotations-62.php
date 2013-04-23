@@ -1,10 +1,9 @@
+<?php
 
-	<?php
+/**
+ * Это свойство с особенностью @SpecialFeature({
+someParameter="the value", false
 
-	/**
-	 * Это свойство с особенностью @SpecialFeature({
-	someParameter="the value", false
-
-	 })  Еще комментарии @AnotherSpecialFeature(true) @MoreAnnotations
-	 **/
+ })  Еще комментарии @AnotherSpecialFeature(true) @MoreAnnotations
+ **/
 

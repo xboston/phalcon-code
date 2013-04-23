@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     $user->set('name', 'Kimbra');
+ $user->set('name', 'Kimbra');
 
 
 

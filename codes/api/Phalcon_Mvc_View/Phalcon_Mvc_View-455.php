@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $this->view->products = $products;
+$this->view->products = $products;
 
 
 

@@ -1,6 +1,5 @@
+<?php
 
-    <?php
-
-    require "config/config.php";
-    $config = new \Phalcon\Config($settings);
+require "config/config.php";
+$config = new \Phalcon\Config($settings);
 

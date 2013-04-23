@@ -1,22 +1,21 @@
+<?php
 
-    <?php
+class Customers extends \Phalcon\Mvc\Model
+{
 
-    class Customers extends \Phalcon\Mvc\Model
+    public function validation()
     {
-
-        public function validation()
-        {
-            $this->validate(new MaxMinValidator(
-                array(
-                    "field"  => "price",
-                    "min" => 10,
-                    "max" => 100
-                )
-            ));
-            if ($this->validationHasFailed() == true) {
-                return false;
-            }
+        $this->validate(new MaxMinValidator(
+            array(
+                "field"  => "price",
+                "min" => 10,
+                "max" => 100
+            )
+        ));
+        if ($this->validationHasFailed() == true) {
+            return false;
         }
-
     }
+
+}
 

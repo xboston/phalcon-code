@@ -1,14 +1,13 @@
+<?php
 
-    <?php
+try {
 
-    try {
+    //... код приложения ...
 
-        //... код приложения ...
-
-    } catch(\Phalcon\Exception $e) {
-        echo get_class($e), ": ", $e->getMessage(), "\n";
-        echo " File=", $e->getFile(), "\n";
-        echo " Line=", $e->getLine(), "\n";
-        echo $e->getTraceAsString();
-    }
+} catch(\Phalcon\Exception $e) {
+    echo get_class($e), ": ", $e->getMessage(), "\n";
+    echo " File=", $e->getFile(), "\n";
+    echo " Line=", $e->getLine(), "\n";
+    echo $e->getTraceAsString();
+}
 

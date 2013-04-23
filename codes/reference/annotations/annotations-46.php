@@ -1,13 +1,12 @@
+<?php
 
-	<?php
-
-	/**
-	 * Это свойство с особенностью
-	 *
-	 * @SpecialFeature
-	 *
-	 * Еще комментарии
-	 *
-	 * @AnotherSpecialFeature(true)
-	 */
+/**
+ * Это свойство с особенностью
+ *
+ * @SpecialFeature
+ *
+ * Еще комментарии
+ *
+ * @AnotherSpecialFeature(true)
+ */
 

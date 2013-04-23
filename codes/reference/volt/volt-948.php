@@ -1,30 +1,29 @@
+<?php
 
-    <?php
+// Регистрация Volt в качестве сервиса
+$di->set('voltService', function($view, $di) {
 
-    // Регистрация Volt в качестве сервиса
-    $di->set('voltService', function($view, $di) {
+    $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
 
-        $volt = new \Phalcon\Mvc\View\Engine\Volt($view, $di);
+    $volt->setOptions(array(
+        "compiledPath" => "../app/compiled-templates/",
+        "compiledExtension" => ".compiled"
+    ));
 
-        $volt->setOptions(array(
-            "compiledPath" => "../app/compiled-templates/",
-            "compiledExtension" => ".compiled"
-        ));
+    return $volt;
+});
 
-        return $volt;
-    });
+// Регистрация Volt в качестве шаблонизатора
+$di->set('view', function() {
 
-    // Регистрация Volt в качестве шаблонизатора
-    $di->set('view', function() {
+    $view = new \Phalcon\Mvc\View();
 
-        $view = new \Phalcon\Mvc\View();
+    $view->setViewsDir('../app/views/');
 
-        $view->setViewsDir('../app/views/');
+    $view->registerEngines(array(
+        ".volt" => 'voltService'
+    ));
 
-        $view->registerEngines(array(
-            ".volt" => 'voltService'
-        ));
-
-        return $view;
-    });
+    return $view;
+});
 

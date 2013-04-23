@@ -1,15 +1,14 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
-    {
-    
-       public function initialize()
-       {
-    	$this->keepSnapshots(true);
-       }
-    
-    }
+   public function initialize()
+   {
+    $this->keepSnapshots(true);
+   }
+
+}
 
 
 

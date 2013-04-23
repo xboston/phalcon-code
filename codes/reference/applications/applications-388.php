@@ -1,14 +1,13 @@
+<?php
 
-    <?php
+$eventsManager = new Phalcon\Events\Manager();
 
-    $eventsManager = new Phalcon\Events\Manager();
+$application->setEventsManager($eventsManager);
 
-    $application->setEventsManager($eventsManager);
-
-    $eventsManager->attach(
-        "application",
-        function($event, $application) {
-            // ...
-        }
-    );
+$eventsManager->attach(
+    "application",
+    function($event, $application) {
+        // ...
+    }
+);
 

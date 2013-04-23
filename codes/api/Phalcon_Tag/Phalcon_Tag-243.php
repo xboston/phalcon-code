@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     echo Phalcon\Tag::submitButton("Save")
+ echo Phalcon\Tag::submitButton("Save")
 
 
 

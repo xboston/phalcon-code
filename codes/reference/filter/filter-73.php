@@ -1,18 +1,17 @@
+<?php
 
-    <?php
+class ProductsController extends \Phalcon\Mvc\Controller
+{
 
-    class ProductsController extends \Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
-
-        }
-
-        public function showAction($productId)
-        {
-            $productId = $this->filter->sanitize($productId, "int");
-        }
-
     }
+
+    public function showAction($productId)
+    {
+        $productId = $this->filter->sanitize($productId, "int");
+    }
+
+}
 

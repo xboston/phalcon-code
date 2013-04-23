@@ -1,38 +1,37 @@
+    <?php
 
-    	<?php
+use Phalcon\Validation\Validator,
+    Phalcon\Validation\ValidatorInterface,
+    Phalcon\Validation\Message;
 
-	use Phalcon\Validation\Validator,
-		Phalcon\Validation\ValidatorInterface,
-		Phalcon\Validation\Message;
+class IpValidator extends Validator implements ValidatorInterface
+{
 
-	class IpValidator extends Validator implements ValidatorInterface
-	{
+    /**
+     * Выполненение валидации
+     *
+     * @param Phalcon\Validation $validator
+     * @param string $attribute
+     * @return boolean
+     */
+    public function validate($validator, $attribute)
+    {
+        $value = $validator->getValue($attribute);
 
-		/**
-		 * Выполненение валидации
-		 *
-		 * @param Phalcon\Validation $validator
-		 * @param string $attribute
-		 * @return boolean
-		 */
-		public function validate($validator, $attribute)
-		{
-			$value = $validator->getValue($attribute);
+        if (filter_var($value, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED))) {
 
-			if (filter_var($value, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED))) {
+            $message = $this->getOption('message');
+            if (!$message) {
+                $message = 'IP адресс не правилен';
+            }
 
-				$message = $this->getOption('message');
-				if (!$message) {
-					$message = 'IP адресс не правилен';
-				}
+            $validator->appendMessage(new Message($message, $attribute, 'Ip'));
 
-				$validator->appendMessage(new Message($message, $attribute, 'Ip'));
+            return false;
+        }
 
-				return false;
-			}
+        return true;
+    }
 
-			return true;
-		}
-
-	}
+}
 

@@ -1,20 +1,19 @@
+<?php
 
-	<?php
+//Set the models cache service
+$di->set('modelsCache', function() {
 
-	//Set the models cache service
-	$di->set('modelsCache', function() {
+    //Cache data for one day by default
+    $frontCache = new \Phalcon\Cache\Frontend\Data(array(
+        "lifetime" => 86400
+    ));
 
-		//Cache data for one day by default
-		$frontCache = new \Phalcon\Cache\Frontend\Data(array(
-			"lifetime" => 86400
-		));
+    //Memcached connection settings
+    $cache = new \Phalcon\Cache\Backend\Memcache($frontCache, array(
+        "host" => "localhost",
+        "port" => "11211"
+    ));
 
-		//Memcached connection settings
-		$cache = new \Phalcon\Cache\Backend\Memcache($frontCache, array(
-			"host" => "localhost",
-			"port" => "11211"
-		));
-
-		return $cache;
-	});
+    return $cache;
+});
 

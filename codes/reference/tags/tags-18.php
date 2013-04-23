@@ -1,3 +1,2 @@
-
-    <?php use \Phalcon\Tag as Tag; ?>
+<?php use \Phalcon\Tag as Tag; ?>
 

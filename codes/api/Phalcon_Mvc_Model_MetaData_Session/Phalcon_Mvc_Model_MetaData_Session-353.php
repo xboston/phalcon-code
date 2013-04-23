@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    var_dump($metaData->hasAttribute(new Robots(), 'name'));
+var_dump($metaData->hasAttribute(new Robots(), 'name'));
 
 
 

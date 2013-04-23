@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-     	$acl->addRole(new Phalcon\Acl\Role('administrator'), 'consultant');
-     	$acl->addRole('administrator', 'consultant');
+     $acl->addRole(new Phalcon\Acl\Role('administrator'), 'consultant');
+     $acl->addRole('administrator', 'consultant');
 
 
 

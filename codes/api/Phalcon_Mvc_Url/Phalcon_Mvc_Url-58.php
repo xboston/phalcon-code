@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-    $url->setBasePath('/var/www/');
+$url->setBasePath('/var/www/');
 
 
 

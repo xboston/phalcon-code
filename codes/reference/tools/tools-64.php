@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class TestController extends Phalcon\Mvc\Controller
+{
 
-    class TestController extends Phalcon\Mvc\Controller
+    public function indexAction()
     {
 
-        public function indexAction()
-        {
-
-        }
-
     }
+
+}
 

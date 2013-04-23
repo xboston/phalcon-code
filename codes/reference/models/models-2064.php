@@ -1,8 +1,7 @@
+<?php
 
-    <?php
-
-    class Products extends \Phalcon\Mvc\Model
-    {
-        use MyTimestampable;
-    }
+class Products extends \Phalcon\Mvc\Model
+{
+    use MyTimestampable;
+}
 

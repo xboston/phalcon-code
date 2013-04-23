@@ -1,11 +1,10 @@
+<?php
 
-    <?php
-
-    $robot->assign(array(
-      'type' => 'mechanical',
-      'name' => 'Astro Boy',
-      'year' => 1952
-    ));
+$robot->assign(array(
+  'type' => 'mechanical',
+  'name' => 'Astro Boy',
+  'year' => 1952
+));
 
 
 

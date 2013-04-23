@@ -1,30 +1,29 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
-    {
+    /**
+     * @Primary
+     * @Identity
+     * @Column(type="integer", nullable=false)
+     */
+    public $id;
 
-        /**
-         * @Primary
-         * @Identity
-         * @Column(type="integer", nullable=false)
-         */
-        public $id;
+    /**
+     * @Column(type="string", length=70, nullable=false)
+     */
+    public $name;
 
-        /**
-         * @Column(type="string", length=70, nullable=false)
-         */
-        public $name;
+    /**
+     * @Column(type="string", length=32, nullable=false)
+     */
+    public $type;
 
-        /**
-         * @Column(type="string", length=32, nullable=false)
-         */
-        public $type;
+    /**
+     * @Column(type="integer", nullable=false)
+     */
+    public $year;
 
-        /**
-         * @Column(type="integer", nullable=false)
-         */
-        public $year;
-
-    }
+}
 

@@ -1,13 +1,12 @@
+<?php
 
-    <?php
+class Robots extends \Phalcon\Mvc\Model
+{
 
-    class Robots extends \Phalcon\Mvc\Model
+    public function getSource()
     {
-
-        public function getSource()
-        {
-            return "the_robots";
-        }
-
+        return "the_robots";
     }
+
+}
 

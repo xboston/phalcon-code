@@ -1,7 +1,6 @@
+<?php
 
-    <?php
-
-     var_dump($connection->viewExists("active_users", "posts"));
+ var_dump($connection->viewExists("active_users", "posts"));
 
 
 
