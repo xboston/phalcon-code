@@ -1,6 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Model\Behaviors\Timestampable;
+use Phalcon\Mvc\Model\Behavior\Timestampable;
 
 class Robots extends \Phalcon\Mvc\Model
 {
@@ -8,11 +8,11 @@ class Robots extends \Phalcon\Mvc\Model
    public function initialize()
    {
     $this->addBehavior(new Timestampable(
-        'onCreate' => array(
+        array('onCreate' => array(
             'field' => 'created_at',
             'format' => 'Y-m-d'
         )
-    ));
+    )));
    }
 
 }

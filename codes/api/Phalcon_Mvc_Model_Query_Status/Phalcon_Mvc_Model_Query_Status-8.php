@@ -8,7 +8,7 @@ $status = $app->modelsManager->executeQuery($phql, array(
    'year' => 1959
 ));
 
-\//Check if the update was successful
+ //Check if the update was successful
 if ($status->success() == true) {
    echo 'OK';
 }

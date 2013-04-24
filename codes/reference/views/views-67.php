@@ -2,5 +2,5 @@
 
 <h3>This is show view!</h3>
 
-<p>I have received the parameter <?php $postId ?></p>
+<p>I have received the parameter <?php echo $postId ?></p>
 

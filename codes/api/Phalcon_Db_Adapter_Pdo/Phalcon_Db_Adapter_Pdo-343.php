@@ -1,16 +1,15 @@
 <?php
 
-//Getting all robots
-$robots = $connection->fetchAll("SELECT * FROM robots");
-foreach($robots as $robot){
-    print_r($robot);
-}
+ //Updating existing robot
+ $success = $connection->update(
+     "robots",
+     array("name"),
+     array("New Astro Boy"),
+     "id = 101"
+ );
 
-//Getting all robots with associative indexes only
-$robots = $connection->fetchAll("SELECT * FROM robots", Phalcon\Db::FETCH_ASSOC);
-foreach($robots as $robot){
-    print_r($robot);
-}
+ //Next SQL sentence is sent to the database system
+ UPDATE `robots` SET `name` = "Astro boy" WHERE id = 101
 
 
 
