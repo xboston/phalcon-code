@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\CLI{
-    abstract class Dispatcher implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\DispatcherInterface
+    abstract class Dispatcher extends \Phalcon\Dispatcher implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\DispatcherInterface
     {
         const EXCEPTION_NO_DI = 0;
         const EXCEPTION_CYCLIC_ROUTING = 1;

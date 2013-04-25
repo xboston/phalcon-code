@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Router{
-    abstract class Annotations implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\RouterInterface
+    abstract class Annotations extends \Phalcon\Mvc\Router implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\RouterInterface
     {
         const URI_SOURCE_GET_URL = 0;
         const URI_SOURCE_SERVER_REQUEST_URI = 1;

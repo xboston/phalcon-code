@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations\Adapter{
-    abstract class Apc implements \Phalcon\Annotations\AdapterInterface
+    abstract class Apc extends \Phalcon\Annotations\Adapter implements \Phalcon\Annotations\AdapterInterface
     {
         public function read($key){}
         public function write($key, $data){}

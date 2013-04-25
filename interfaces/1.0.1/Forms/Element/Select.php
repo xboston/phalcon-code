@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms\Element{
-    abstract class Select
+    abstract class Select extends \Phalcon\Forms\Element
     {
         public function __construct($name, $options = NULL, $attributes = NULL){}
         public function setOptions($options){}

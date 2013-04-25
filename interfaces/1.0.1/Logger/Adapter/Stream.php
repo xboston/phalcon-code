@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Logger\Adapter{
-    abstract class Stream implements \Phalcon\Logger\AdapterInterface
+    abstract class Stream extends \Phalcon\Logger\Adapter implements \Phalcon\Logger\AdapterInterface
     {
         public function __construct($name, $options = NULL){}
         public function getFormatter(){}

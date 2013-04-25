@@ -30,7 +30,8 @@ class Writer
         $this->writeString('<?php' . PHP_EOL);
         $this->writeInterfaceSignature(
             $distillate->getInterfaceName(),
-            $distillate->getExtendingInterfaces()
+            $distillate->getExtendingInterfaces(),
+            $distillate->getParentClass()
         );
         $this->writeString('    {');
         $this->writeString(PHP_EOL);
@@ -52,7 +53,7 @@ class Writer
     /**
      * @return void
      */
-    protected function writeInterfaceSignature($interfaceName, $extendingInterfaces = false)
+    protected function writeInterfaceSignature($interfaceName, $extendingInterfaces = false,$getParentClass = false)
     {
         $nameParts = explode('\\',$interfaceName);
         $interfaceShortName = array_pop($nameParts);
@@ -63,6 +64,9 @@ class Writer
             $this->inGlobalNamespace = true;
         }
         $this->writeString("    abstract class $interfaceShortName");
+        if($getParentClass){
+            $this->writeString(" extends \\$getParentClass");
+        }
         if ($extendingInterfaces) {
             $this->writeString(" implements \\$extendingInterfaces");
         }

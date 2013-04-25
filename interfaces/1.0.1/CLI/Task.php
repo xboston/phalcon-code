@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\CLI{
-    abstract class Task implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
+    abstract class Task extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct(){}
         public function setDI($dependencyInjector){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Transaction{
-    abstract class Exception
+    abstract class Exception extends \Phalcon\Mvc\Model\Exception
     {
         protected function __clone(){}
         public function __construct($message = NULL, $code = NULL, $previous = NULL){}

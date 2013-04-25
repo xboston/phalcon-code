@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms\Element{
-    abstract class Hidden
+    abstract class Hidden extends \Phalcon\Forms\Element
     {
         public function render($attributes = NULL){}
         public function __construct($name, $attributes = NULL){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db\Dialect{
-    abstract class Mysql implements \Phalcon\Db\DialectInterface
+    abstract class Mysql extends \Phalcon\Db\Dialect implements \Phalcon\Db\DialectInterface
     {
         public function getColumnDefinition($column){}
         public function addColumn($tableName, $schemaName, $column){}

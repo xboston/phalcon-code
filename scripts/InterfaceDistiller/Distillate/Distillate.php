@@ -1,6 +1,7 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller;
-class Distillate implements Distillate\Accessors, Distillate\Mutators
+
+class Distillate implements Distillate\Accessors , Distillate\Mutators
 {
     /**
      * @var string
@@ -22,6 +23,8 @@ class Distillate implements Distillate\Accessors, Distillate\Mutators
      */
     protected $interfaceConsts;
 
+    protected $parentClass;
+
     /**
      * @return void
      */
@@ -30,7 +33,8 @@ class Distillate implements Distillate\Accessors, Distillate\Mutators
         $this->interfaceName       = 'MyInterface';
         $this->extendingInterfaces = '';
         $this->interfaceMethods    = new \SplObjectStorage;
-        $this->interfaceConsts     = [];
+        $this->interfaceConsts     = [ ];
+        $this->parentClass         = false;
     }
 
     /**
@@ -64,7 +68,7 @@ class Distillate implements Distillate\Accessors, Distillate\Mutators
     {
         $this->interfaceConsts = $reflectionConst;
     }
-    
+
     /**
      * @see \com\github\gooh\InterfaceDistiller\Distillate\Accessors::getInterfaceName()
      */
@@ -88,11 +92,23 @@ class Distillate implements Distillate\Accessors, Distillate\Mutators
     {
         return $this->interfaceConsts;
     }
-        /**
+
+    /**
      * @see \com\github\gooh\InterfaceDistiller\Distillate\Accessors::getExtendingInterfaces()
      */
     public function getExtendingInterfaces()
     {
         return $this->extendingInterfaces;
     }
+
+    public function addParentClass($parentClassName)
+    {
+        $this->parentClass = $parentClassName;
+    }
+
+    public function getParentClass()
+    {
+        return $this->parentClass;
+    }
+    
 }

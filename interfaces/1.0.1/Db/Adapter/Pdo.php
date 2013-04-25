@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db\Adapter{
-    abstract class Pdo implements \Phalcon\Events\EventsAwareInterface
+    abstract class Pdo extends \Phalcon\Db\Adapter implements \Phalcon\Events\EventsAwareInterface
     {
         public function __construct($descriptor){}
         public function connect($descriptor = NULL){}

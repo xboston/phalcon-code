@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Validation\Validator{
-    abstract class Email implements \Phalcon\Validation\ValidatorInterface
+    abstract class Email extends \Phalcon\Validation\Validator implements \Phalcon\Validation\ValidatorInterface
     {
         public function validate($validator, $attribute){}
         public function __construct($options = NULL){}

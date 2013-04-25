@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Session\Adapter{
-    abstract class Files implements \Phalcon\Session\AdapterInterface
+    abstract class Files extends \Phalcon\Session\Adapter implements \Phalcon\Session\AdapterInterface
     {
         public function __construct($options = NULL){}
         public function start(){}

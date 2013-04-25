@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Cache\Backend{
-    abstract class Apc implements \Phalcon\Cache\BackendInterface
+    abstract class Apc extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
     {
         public function get($keyName, $lifetime = NULL){}
         public function save($keyName = NULL, $content = NULL, $lifetime = NULL, $stopBuffer = NULL){}

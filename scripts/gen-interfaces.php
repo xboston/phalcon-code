@@ -31,17 +31,21 @@ foreach ( $phalconClasses as $phalconClass ) {
         implode(',\\' , $reflector->getInterfaceNames())
     );
 
-    $fileName = sprintf('%s/%s.php' , EXAMPLES_DIR , str_replace('\\' , '/' , $phalconClass));
-    $fileName = str_replace('/Phalcon/','/',$fileName);
-    $dirName  = dirname($fileName);
-    is_dir($dirName) ? : mkdir($dirName , 0777 , true);
+    if($reflector->getParentClass()){
+        $distillate->addParentClass($reflector->getParentClass()->getName());       
+    }
 
     foreach ( $methodIterator as $method ) {
         $distillate->addMethod($method);
     }
 
     $distillate->addConsts($consts);
-
+    
+    
+    $fileName = sprintf('%s/%s.php' , EXAMPLES_DIR , str_replace('\\' , '/' , $phalconClass));
+    $fileName = str_replace('/Phalcon/','/',$fileName);
+    $dirName  = dirname($fileName);
+    is_dir($dirName) ? : mkdir($dirName , 0777 , true);
 
     $file = new \SplFileObject($fileName , 'w');
     //$file   = new \SplTempFileObject( );

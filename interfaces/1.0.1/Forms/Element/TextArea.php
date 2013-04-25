@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms\Element{
-    abstract class TextArea
+    abstract class TextArea extends \Phalcon\Forms\Element
     {
         public function render($attributes = NULL){}
         public function __construct($name, $attributes = NULL){}

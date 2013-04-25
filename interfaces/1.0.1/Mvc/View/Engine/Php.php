@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\View\Engine{
-    abstract class Php implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface,\Phalcon\Mvc\View\EngineInterface
+    abstract class Php extends \Phalcon\Mvc\View\Engine implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface,\Phalcon\Mvc\View\EngineInterface
     {
         public function render($path, $params, $mustClean = NULL){}
         public function __construct($view, $dependencyInjector = NULL){}

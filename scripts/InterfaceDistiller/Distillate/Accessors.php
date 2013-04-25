@@ -22,5 +22,8 @@ interface Accessors
      * @return string
      */
     public function getExtendingInterfaces();
+
+
+    public function getParentClass();
 }
 //@codeCoverageIgnoreEnd

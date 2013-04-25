@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Validator{
-    abstract class Url implements \Phalcon\Mvc\Model\ValidatorInterface
+    abstract class Url extends \Phalcon\Mvc\Model\Validator implements \Phalcon\Mvc\Model\ValidatorInterface
     {
         public function validate($record){}
         public function __construct($options){}

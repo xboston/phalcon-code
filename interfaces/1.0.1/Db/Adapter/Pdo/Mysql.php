@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db\Adapter\Pdo{
-    abstract class Mysql implements \Phalcon\Events\EventsAwareInterface,\Phalcon\Db\AdapterInterface
+    abstract class Mysql extends \Phalcon\Db\Adapter\Pdo implements \Phalcon\Events\EventsAwareInterface,\Phalcon\Db\AdapterInterface
     {
         public function escapeIdentifier($identifier){}
         public function describeColumns($table, $schema = NULL){}

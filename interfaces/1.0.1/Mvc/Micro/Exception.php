@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Micro{
-    abstract class Exception
+    abstract class Exception extends \Phalcon\Exception
     {
         protected function __clone(){}
         public function __construct($message = NULL, $code = NULL, $previous = NULL){}
