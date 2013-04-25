@@ -1,6 +1,0 @@
-<!-- app/views/posts/show.phtml -->
-
-<h3>This is show view!</h3>
-
-<p>I have received the parameter <?php echo $postId ?></p>
-

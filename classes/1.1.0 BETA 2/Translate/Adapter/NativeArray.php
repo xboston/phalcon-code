@@ -9,6 +9,6 @@ namespace Phalcon\Translate\Adapter{
         public function offsetSet($offset, $value){}
         public function offsetExists($translateKey){}
         public function offsetUnset($offset){}
-        public function offsetGet($traslateKey){}
+        public function offsetGet($translateKey){}
     }
 }

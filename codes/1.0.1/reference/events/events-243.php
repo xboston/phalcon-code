@@ -1,3 +1,0 @@
-Выполняется beforeSomeTask
-Выполняется afterSomeTask
-

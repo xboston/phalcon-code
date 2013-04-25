@@ -1,7 +1,0 @@
-<?php
-
- unset($user['name']);
-
-
-
-

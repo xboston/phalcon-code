@@ -1,7 +1,0 @@
-<?php
-
- unset($config['database']);
-
-
-
-

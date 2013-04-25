@@ -1,7 +1,0 @@
-<?php
-
-$url->setBaseUri('/invo/');
-
-
-
-
