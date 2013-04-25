@@ -32,9 +32,11 @@ class Writer
             $distillate->getInterfaceName(),
             $distillate->getExtendingInterfaces()
         );
-        $this->writeString('{' . PHP_EOL);
+        $this->writeString('    {');
+        $this->writeString(PHP_EOL);
         $this->writeConsts($distillate->getInterfaceConsts());
         $this->writeMethods($distillate->getInterfaceMethods());
+        $this->writeString('    }'.PHP_EOL);
         $this->writeString('}');
     }
 
@@ -55,12 +57,12 @@ class Writer
         $nameParts = explode('\\',$interfaceName);
         $interfaceShortName = array_pop($nameParts);
         if($nameParts){
-            $this->writeString('namespace ' . implode('\\',$nameParts) . ';' .PHP_EOL);
+            $this->writeString('namespace ' . implode('\\',$nameParts) . '{' .PHP_EOL);
             $this->inGlobalNamespace = false;
         } else {
             $this->inGlobalNamespace = true;
         }
-        $this->writeString("abstract class $interfaceShortName");
+        $this->writeString("    abstract class $interfaceShortName");
         if ($extendingInterfaces) {
             $this->writeString(" implements \\$extendingInterfaces");
         }
@@ -88,7 +90,7 @@ class Writer
     {
         $this->writeString(
             sprintf(
-                '    const %s = %s;',
+                '        const %s = %s;',
                 $constName,$constValue
             )
         );
@@ -113,7 +115,7 @@ class Writer
     {
         $this->writeString(
             sprintf(
-            	'%s    public%sfunction %s(%s){}',
+            	'%s        public%sfunction %s(%s){}',
                 $this->writeDocCommentOfMethod($method),
                 $method->isStatic() ? ' static ' : ' ',
                 $method->name,
