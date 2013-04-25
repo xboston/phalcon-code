@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Filter implements \Phalcon\FilterInterface
+    class Filter implements \Phalcon\FilterInterface
     {
         public function __construct(){}
         public function add($name, $handler){}

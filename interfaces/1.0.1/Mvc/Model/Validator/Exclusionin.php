@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Validator{
-    abstract class Exclusionin extends \Phalcon\Mvc\Model\Validator implements \Phalcon\Mvc\Model\ValidatorInterface
+    class Exclusionin extends \Phalcon\Mvc\Model\Validator implements \Phalcon\Mvc\Model\ValidatorInterface
     {
         public function validate($record){}
         public function __construct($options){}

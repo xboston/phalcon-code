@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms\Element{
-    abstract class Submit extends \Phalcon\Forms\Element
+    class Submit extends \Phalcon\Forms\Element
     {
         public function render($attributes = NULL){}
         public function __construct($name, $attributes = NULL){}

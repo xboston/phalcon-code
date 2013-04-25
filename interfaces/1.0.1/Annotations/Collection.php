@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations{
-    abstract class Collection implements \Iterator,\Traversable,\Countable
+    class Collection implements \Iterator,\Traversable,\Countable
     {
         public function __construct($reflectionData = NULL){}
         public function count(){}

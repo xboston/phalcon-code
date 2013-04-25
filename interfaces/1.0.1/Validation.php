@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Validation
+    class Validation
     {
         public function __construct($validators = NULL){}
         public function validate($data, $entity = NULL){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Cache\Backend{
-    abstract class File extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
+    class File extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
     {
         public function __construct($frontend, $options = NULL){}
         public function get($keyName, $lifetime = NULL){}

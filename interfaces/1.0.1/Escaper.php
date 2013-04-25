@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Escaper implements \Phalcon\EscaperInterface
+    class Escaper implements \Phalcon\EscaperInterface
     {
         public function setEncoding($encoding){}
         public function getEncoding(){}

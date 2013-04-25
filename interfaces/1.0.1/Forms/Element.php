@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms{
-    abstract class Element
+    class Element
     {
         public function __construct($name, $attributes = NULL){}
         public function setForm($form){}

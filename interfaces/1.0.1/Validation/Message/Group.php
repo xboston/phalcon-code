@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Validation\Message{
-    abstract class Group implements \Countable,\ArrayAccess,\Iterator,\Traversable
+    class Group implements \Countable,\ArrayAccess,\Iterator,\Traversable
     {
         public function __construct($messages = NULL){}
         public function offsetGet($index){}

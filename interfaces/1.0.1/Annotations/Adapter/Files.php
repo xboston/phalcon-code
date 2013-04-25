@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations\Adapter{
-    abstract class Files extends \Phalcon\Annotations\Adapter implements \Phalcon\Annotations\AdapterInterface
+    class Files extends \Phalcon\Annotations\Adapter implements \Phalcon\Annotations\AdapterInterface
     {
         public function __construct($options = NULL){}
         public function read($key){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Validation{
-    abstract class Message
+    class Message
     {
         public function __construct($message, $field = NULL, $type = NULL){}
         public function setType($type){}

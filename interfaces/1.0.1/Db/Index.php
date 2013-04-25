@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db{
-    abstract class Index implements \Phalcon\Db\IndexInterface
+    class Index implements \Phalcon\Db\IndexInterface
     {
         public function __construct($indexName, $columns){}
         public function getName(){}

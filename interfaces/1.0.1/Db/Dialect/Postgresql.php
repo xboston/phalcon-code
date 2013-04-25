@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db\Dialect{
-    abstract class Postgresql extends \Phalcon\Db\Dialect implements \Phalcon\Db\DialectInterface
+    class Postgresql extends \Phalcon\Db\Dialect implements \Phalcon\Db\DialectInterface
     {
         public function getColumnDefinition($column){}
         public function addColumn($tableName, $schemaName, $column){}

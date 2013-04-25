@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Acl{
-    abstract class Adapter implements \Phalcon\Events\EventsAwareInterface
+    class Adapter implements \Phalcon\Events\EventsAwareInterface
     {
         public function setEventsManager($eventsManager){}
         public function getEventsManager(){}

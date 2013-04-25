@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\CLI{
-    abstract class Router implements \Phalcon\DI\InjectionAwareInterface
+    class Router implements \Phalcon\DI\InjectionAwareInterface
     {
         public function __construct(){}
         public function setDI($dependencyInjector){}

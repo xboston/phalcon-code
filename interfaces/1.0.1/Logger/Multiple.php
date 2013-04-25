@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Logger{
-    abstract class Multiple
+    class Multiple
     {
         public function push($logger){}
         public function getLoggers(){}

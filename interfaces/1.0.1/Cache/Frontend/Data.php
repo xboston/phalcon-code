@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Cache\Frontend{
-    abstract class Data implements \Phalcon\Cache\FrontendInterface
+    class Data implements \Phalcon\Cache\FrontendInterface
     {
         public function __construct($frontendOptions = NULL){}
         public function getLifetime(){}

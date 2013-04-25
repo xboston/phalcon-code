@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms{
-    abstract class Form implements \Countable,\Iterator,\Traversable
+    class Form implements \Countable,\Iterator,\Traversable
     {
         public function __construct($entity = NULL){}
         public function setEntity($entity){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\DI{
-    abstract class FactoryDefault extends \Phalcon\DI implements \Phalcon\DiInterface
+    class FactoryDefault extends \Phalcon\DI implements \Phalcon\DiInterface
     {
         public function __construct(){}
         public function set($name, $definition, $shared = NULL){}

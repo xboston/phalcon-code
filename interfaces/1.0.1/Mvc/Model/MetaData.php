@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    abstract class MetaData implements \Phalcon\DI\InjectionAwareInterface
+    class MetaData implements \Phalcon\DI\InjectionAwareInterface
     {
         const MODELS_ATTRIBUTES = 0;
         const MODELS_PRIMARY_KEY = 1;

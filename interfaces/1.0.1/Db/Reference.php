@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db{
-    abstract class Reference implements \Phalcon\Db\ReferenceInterface
+    class Reference implements \Phalcon\Db\ReferenceInterface
     {
         public function __construct($referenceName, $definition){}
         public function getName(){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Flash{
-    abstract class Session extends \Phalcon\Flash implements \Phalcon\FlashInterface,\Phalcon\DI\InjectionAwareInterface
+    class Session extends \Phalcon\Flash implements \Phalcon\FlashInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

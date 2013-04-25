@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    abstract class Resultset implements \Phalcon\Mvc\Model\ResultsetInterface,\Iterator,\Traversable,\SeekableIterator,\Countable,\ArrayAccess,\Serializable
+    class Resultset implements \Phalcon\Mvc\Model\ResultsetInterface,\Iterator,\Traversable,\SeekableIterator,\Countable,\ArrayAccess,\Serializable
     {
         const TYPE_RESULT_FULL = 0;
         const TYPE_RESULT_PARTIAL = 1;

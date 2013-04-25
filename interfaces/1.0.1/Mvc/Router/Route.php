@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Router{
-    abstract class Route implements \Phalcon\Mvc\Router\RouteInterface
+    class Route implements \Phalcon\Mvc\Router\RouteInterface
     {
         public function __construct($pattern, $paths = NULL, $httpMethods = NULL){}
         public function compilePattern($pattern){}

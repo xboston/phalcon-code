@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Validation\Validator{
-    abstract class Regex extends \Phalcon\Validation\Validator implements \Phalcon\Validation\ValidatorInterface
+    class Regex extends \Phalcon\Validation\Validator implements \Phalcon\Validation\ValidatorInterface
     {
         public function validate($validator, $attribute){}
         public function __construct($options = NULL){}

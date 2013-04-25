@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Cache\Backend{
-    abstract class Mongo extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
+    class Mongo extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
     {
         public function __construct($frontend, $options = NULL){}
         protected function _getCollection(){}

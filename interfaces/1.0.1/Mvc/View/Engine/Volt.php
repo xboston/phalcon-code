@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\View\Engine{
-    abstract class Volt extends \Phalcon\Mvc\View\Engine implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface,\Phalcon\Mvc\View\EngineInterface
+    class Volt extends \Phalcon\Mvc\View\Engine implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface,\Phalcon\Mvc\View\EngineInterface
     {
         public function setOptions($options){}
         public function getOptions(){}

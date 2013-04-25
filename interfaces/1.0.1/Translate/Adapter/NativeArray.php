@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Translate\Adapter{
-    abstract class NativeArray extends \Phalcon\Translate\Adapter implements \ArrayAccess,\Phalcon\Translate\AdapterInterface
+    class NativeArray extends \Phalcon\Translate\Adapter implements \ArrayAccess,\Phalcon\Translate\AdapterInterface
     {
         public function __construct($options){}
         public function query($index, $placeholders = NULL){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    abstract class Behavior
+    class Behavior
     {
         public function __construct($options = NULL){}
         protected function mustTakeAction(){}

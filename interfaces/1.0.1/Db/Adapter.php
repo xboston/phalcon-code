@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db{
-    abstract class Adapter implements \Phalcon\Events\EventsAwareInterface
+    class Adapter implements \Phalcon\Events\EventsAwareInterface
     {
         protected function __construct(){}
         public function setEventsManager($eventsManager){}

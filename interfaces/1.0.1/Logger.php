@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Logger
+    class Logger
     {
         const SPECIAL = 9;
         const CUSTOM = 8;

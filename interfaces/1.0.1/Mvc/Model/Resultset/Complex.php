@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Resultset{
-    abstract class Complex extends \Phalcon\Mvc\Model\Resultset implements \Serializable,\ArrayAccess,\Countable,\SeekableIterator,\Traversable,\Iterator,\Phalcon\Mvc\Model\ResultsetInterface
+    class Complex extends \Phalcon\Mvc\Model\Resultset implements \Serializable,\ArrayAccess,\Countable,\SeekableIterator,\Traversable,\Iterator,\Phalcon\Mvc\Model\ResultsetInterface
     {
         const TYPE_RESULT_FULL = 0;
         const TYPE_RESULT_PARTIAL = 1;

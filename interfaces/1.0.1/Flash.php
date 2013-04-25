@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Flash
+    class Flash
     {
         public function __construct($cssClasses = NULL){}
         public function setImplicitFlush($implicitFlush){}

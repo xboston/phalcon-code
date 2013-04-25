@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Events{
-    abstract class Manager implements \Phalcon\Events\ManagerInterface
+    class Manager implements \Phalcon\Events\ManagerInterface
     {
         public function attach($eventType, $handler, $priority = NULL){}
         public function collectResponses($collect){}

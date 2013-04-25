@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Tag
+    class Tag
     {
         const HTML32 = 1;
         const HTML401_STRICT = 2;

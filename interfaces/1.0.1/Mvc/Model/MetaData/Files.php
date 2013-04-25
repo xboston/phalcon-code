@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\MetaData{
-    abstract class Files extends \Phalcon\Mvc\Model\MetaData implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\Model\MetaDataInterface
+    class Files extends \Phalcon\Mvc\Model\MetaData implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\Model\MetaDataInterface
     {
         const MODELS_ATTRIBUTES = 0;
         const MODELS_PRIMARY_KEY = 1;

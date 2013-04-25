@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Security implements \Phalcon\DI\InjectionAwareInterface
+    class Security implements \Phalcon\DI\InjectionAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

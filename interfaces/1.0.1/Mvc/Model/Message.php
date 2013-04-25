@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    abstract class Message implements \Phalcon\Mvc\Model\MessageInterface
+    class Message implements \Phalcon\Mvc\Model\MessageInterface
     {
         public function __construct($message, $field = NULL, $type = NULL, $model = NULL){}
         public function setType($type){}

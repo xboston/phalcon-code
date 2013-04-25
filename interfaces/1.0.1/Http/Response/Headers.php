@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Http\Response{
-    abstract class Headers implements \Phalcon\Http\Response\HeadersInterface
+    class Headers implements \Phalcon\Http\Response\HeadersInterface
     {
         public function __construct(){}
         public function set($name, $value){}

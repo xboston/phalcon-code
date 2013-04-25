@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\DI{
-    abstract class Service implements \Phalcon\DI\ServiceInterface
+    class Service implements \Phalcon\DI\ServiceInterface
     {
         public function __construct($name, $definition, $shared = NULL){}
         public function getName(){}

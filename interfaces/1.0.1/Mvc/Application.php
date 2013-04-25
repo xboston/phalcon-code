@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
-    abstract class Application extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
+    class Application extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function registerModules($modules, $merge = NULL){}
         public function getModules(){}

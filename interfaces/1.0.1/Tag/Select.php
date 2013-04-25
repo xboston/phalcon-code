@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Tag{
-    abstract class Select
+    class Select
     {
         public static function selectField($parameters, $data = NULL){}
         protected static function _optionsFromResultset(){}

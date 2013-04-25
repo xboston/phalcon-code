@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Micro{
-    abstract class Collection
+    class Collection
     {
         protected function _addMap(){}
         public function get($routePattern, $handler){}

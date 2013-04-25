@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations{
-    abstract class Annotation
+    class Annotation
     {
         public function __construct($reflectionData){}
         public function getName(){}

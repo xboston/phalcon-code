@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Translate{
-    abstract class Adapter implements \ArrayAccess
+    class Adapter implements \ArrayAccess
     {
         public function _($translateKey, $placeholders = NULL){}
         public function offsetSet($offset, $value){}

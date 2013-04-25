@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations{
-    abstract class Adapter
+    class Adapter
     {
         public function setReader($reader){}
         public function getReader(){}

@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Cache{
-    abstract class Backend
+    class Backend
     {
         public function __construct($frontend, $options = NULL){}
         public function start($keyName, $lifetime = NULL){}

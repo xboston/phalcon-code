@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Router{
-    abstract class Group
+    class Group
     {
         public function __construct($paths = NULL){}
         public function setPrefix($prefix){}

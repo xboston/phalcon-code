@@ -35,7 +35,15 @@ class Writer
         );
         $this->writeString('    {');
         $this->writeString(PHP_EOL);
-        $this->writeConsts($distillate->getInterfaceConsts());
+        $this->writeConsts($distillate->getInterfaceConsts());       
+        
+        if( $distillate->getInterfaceName()=='Phalcon\DI\Injectable' ){
+
+            $this->writeString($this->di);
+            $this->writeString(PHP_EOL);
+            $this->writeString(PHP_EOL);
+        }
+        
         $this->writeMethods($distillate->getInterfaceMethods());
         $this->writeString('    }'.PHP_EOL);
         $this->writeString('}');
@@ -63,7 +71,7 @@ class Writer
         } else {
             $this->inGlobalNamespace = true;
         }
-        $this->writeString("    abstract class $interfaceShortName");
+        $this->writeString("    class $interfaceShortName");
         if($getParentClass){
             $this->writeString(" extends \\$getParentClass");
         }
@@ -214,10 +222,91 @@ class Writer
     protected function handleOptionalParameterWithUnresolvableDefaultValue(\ReflectionParameter $parameter)
     {
         return ' = NULL ';
-        
-        if ($parameter->allowsNull()) {
-            return ' = NULL ';
-        }
-        return ' /* = unresolvable */ ';
     }
+    
+    private $di = '
+        /**
+         * @var \Phalcon\Mvc\View
+         */
+        public $view;
+
+        /**
+         * @var \Phalcon\Mvc\Router
+         */
+        public $router;
+
+        /**
+         * @var \Phalcon\Mvc\Dispatcher
+         */
+        public $dispatcher;
+
+        /**
+         * @var \Phalcon\Mvc\Url
+         */
+        public $url;
+
+        /**
+         * @var \Phalcon\Di
+         */
+        public $di;
+
+        /**
+         * @var \Phalcon\HTTP\Request
+         */
+        public $request;
+
+        /**
+         * @var \Phalcon\HTTP\Response
+         */
+        public $response;
+
+        /**
+         * @var \Phalcon\Flash\Direct
+         */
+        public $flash;
+
+        /**
+         * @var \Phalcon\Flash\Session
+         */
+        public $flashSession;
+
+        /**
+         * @var \Phalcon\Session\Adapter
+         */
+        public $session;
+
+        /**
+         * @var \Phalcon\Session\Bag
+         */
+        public $persistent;
+
+        /**
+         * @var \Phalcon\Mvc\Model\Manager
+         */
+        public $modelsManager;
+
+        /**
+         * @var \Phalcon\Mvc\Model\Metadata
+         */
+        public $modelsMetadata;
+
+        /**
+         * @var \Phalcon\Mvc\Model\Transaction\Manager
+         */
+        public $transactionManager;
+
+        /**
+         * @var \Phalcon\Filter
+         */
+        public $filter;
+
+        /**
+         * @var \Phalcon\Security
+         */
+        public $security;
+
+        /**
+         * @var \Phalcon\Annotations\Adapter\Memory
+         */
+        public $annotations;';
 }

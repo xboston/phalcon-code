@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon{
-    abstract class Text
+    class Text
     {
         const RANDOM_ALNUM = 0;
         const RANDOM_ALPHA = 1;

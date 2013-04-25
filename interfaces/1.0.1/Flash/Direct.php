@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Flash{
-    abstract class Direct extends \Phalcon\Flash implements \Phalcon\FlashInterface
+    class Direct extends \Phalcon\Flash implements \Phalcon\FlashInterface
     {
         public function message($type, $message){}
         public function __construct($cssClasses = NULL){}

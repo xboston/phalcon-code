@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    abstract class Transaction implements \Phalcon\Mvc\Model\TransactionInterface
+    class Transaction implements \Phalcon\Mvc\Model\TransactionInterface
     {
         public function __construct($dependencyInjector, $autoBegin = NULL, $service = NULL){}
         public function setTransactionManager($manager){}

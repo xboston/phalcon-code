@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db{
-    abstract class RawValue
+    class RawValue
     {
         public function __construct($value){}
         public function getValue(){}

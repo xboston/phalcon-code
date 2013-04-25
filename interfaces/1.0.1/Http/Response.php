@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Http{
-    abstract class Response implements \Phalcon\Http\ResponseInterface,\Phalcon\DI\InjectionAwareInterface
+    class Response implements \Phalcon\Http\ResponseInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($content = NULL, $code = NULL, $status = NULL){}
         public function setDI($dependencyInjector){}
