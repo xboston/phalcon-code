@@ -1,7 +1,9 @@
 <?php
 namespace Phalcon\Mvc\Router;
-interface Annotations extends \Phalcon\DI\InjectionAwareInterface,Phalcon\Mvc\RouterInterface
+interface Annotations extends \Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\RouterInterface
 {
+    const URI_SOURCE_GET_URL = 0;
+    const URI_SOURCE_SERVER_REQUEST_URI = 1;
     public function addResource($handler, $prefix = NULL);
     public function addModuleResource($module, $handler, $prefix = NULL);
     public function handle($uri = NULL);

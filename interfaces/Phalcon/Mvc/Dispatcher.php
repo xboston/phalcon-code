@@ -1,7 +1,13 @@
 <?php
 namespace Phalcon\Mvc;
-interface Dispatcher extends \Phalcon\Events\EventsAwareInterface,Phalcon\DI\InjectionAwareInterface,Phalcon\DispatcherInterface,Phalcon\Mvc\DispatcherInterface
+interface Dispatcher extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\DispatcherInterface,\Phalcon\Mvc\DispatcherInterface
 {
+    const EXCEPTION_NO_DI = 0;
+    const EXCEPTION_CYCLIC_ROUTING = 1;
+    const EXCEPTION_HANDLER_NOT_FOUND = 2;
+    const EXCEPTION_INVALID_HANDLER = 3;
+    const EXCEPTION_INVALID_PARAMS = 4;
+    const EXCEPTION_ACTION_NOT_FOUND = 5;
     public function setControllerSuffix($controllerSuffix);
     public function setDefaultController($controllerName);
     public function setControllerName($controllerName);

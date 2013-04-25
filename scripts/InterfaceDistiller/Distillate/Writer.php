@@ -33,6 +33,7 @@ class Writer
             $distillate->getExtendingInterfaces()
         );
         $this->writeString('{' . PHP_EOL);
+        $this->writeConsts($distillate->getInterfaceConsts());
         $this->writeMethods($distillate->getInterfaceMethods());
         $this->writeString('}');
     }
@@ -66,6 +67,33 @@ class Writer
         $this->writeString(PHP_EOL);
     }
 
+    /**
+     * @return void
+     */
+    protected function writeConsts(array $consts)
+    {
+        
+        foreach ($consts as $constName=>$constValue) {
+            $this->writeConst($constName,$constValue);
+            $this->writeString(PHP_EOL);
+        }
+    }
+
+    /**
+     * @param $constName
+     * @param $constValue
+     * @return void
+     */
+    protected function writeConst( $constName,$constValue)
+    {
+        $this->writeString(
+            sprintf(
+                '    const %s = %s;',
+                $constName,$constValue
+            )
+        );
+    }
+    
     /**
      * @return void
      */

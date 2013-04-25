@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db\Adapter\Pdo;
-interface Postgresql extends \Phalcon\Events\EventsAwareInterface,Phalcon\Db\AdapterInterface
+interface Postgresql extends \Phalcon\Events\EventsAwareInterface,\Phalcon\Db\AdapterInterface
 {
     public function connect($descriptor = NULL);
     public function describeColumns($table, $schema = NULL);

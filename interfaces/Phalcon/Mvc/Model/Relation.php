@@ -2,6 +2,12 @@
 namespace Phalcon\Mvc\Model;
 interface Relation extends \Phalcon\Mvc\Model\RelationInterface
 {
+    const BELONGS_TO = 0;
+    const HAS_ONE = 1;
+    const HAS_MANY = 2;
+    const HAS_ONE_THROUGH = 3;
+    const HAS_MANY_THROUGH = 4;
+    const MANY_TO_MANY = 3;
     public function __construct($type, $referencedModel, $fields, $referencedFields, $options = NULL);
     public function getType();
     public function getReferencedModel();

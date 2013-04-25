@@ -1,7 +1,12 @@
 <?php
 namespace Phalcon\Mvc\Model;
-interface Resultset extends \Phalcon\Mvc\Model\ResultsetInterface,Iterator,Traversable,SeekableIterator,Countable,ArrayAccess,Serializable
+interface Resultset extends \Phalcon\Mvc\Model\ResultsetInterface,\Iterator,\Traversable,\SeekableIterator,\Countable,\ArrayAccess,\Serializable
 {
+    const TYPE_RESULT_FULL = 0;
+    const TYPE_RESULT_PARTIAL = 1;
+    const HYDRATE_RECORDS = 0;
+    const HYDRATE_OBJECTS = 2;
+    const HYDRATE_ARRAYS = 1;
     public function next();
     public function key();
     public function rewind();

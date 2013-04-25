@@ -1,7 +1,11 @@
 <?php
 namespace Phalcon\Mvc;
-interface Collection extends \Phalcon\Mvc\CollectionInterface,Phalcon\DI\InjectionAwareInterface,Serializable
+interface Collection extends \Phalcon\Mvc\CollectionInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
 {
+    const OP_NONE = 0;
+    const OP_CREATE = 1;
+    const OP_UPDATE = 2;
+    const OP_DELETE = 3;
     public function __construct($dependencyInjector = NULL, $modelsManager = NULL);
     public function setId($id);
     public function getId();

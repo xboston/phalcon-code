@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Session;
-interface Bag extends \Phalcon\DI\InjectionAwareInterface,Phalcon\Session\BagInterface
+interface Bag extends \Phalcon\DI\InjectionAwareInterface,\Phalcon\Session\BagInterface
 {
     public function __construct($name);
     public function setDI($dependencyInjector);

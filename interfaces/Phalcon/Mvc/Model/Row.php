@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model;
-interface Row extends \ArrayAccess,Phalcon\Mvc\Model\ResultInterface
+interface Row extends \ArrayAccess,\Phalcon\Mvc\Model\ResultInterface
 {
     public function setDirtyState($dirtyState);
     public function offsetExists($index);

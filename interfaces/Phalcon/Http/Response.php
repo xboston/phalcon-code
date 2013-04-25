@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Http;
-interface Response extends \Phalcon\Http\ResponseInterface,Phalcon\DI\InjectionAwareInterface
+interface Response extends \Phalcon\Http\ResponseInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function __construct($content = NULL, $code = NULL, $status = NULL);
     public function setDI($dependencyInjector);

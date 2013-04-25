@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\View;
-interface Engine extends \Phalcon\Events\EventsAwareInterface,Phalcon\DI\InjectionAwareInterface
+interface Engine extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function __construct($view, $dependencyInjector = NULL);
     public function getContent();

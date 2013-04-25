@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc;
-interface Micro extends \Phalcon\Events\EventsAwareInterface,Phalcon\DI\InjectionAwareInterface,ArrayAccess
+interface Micro extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\ArrayAccess
 {
     public function setDI($dependencyInjector);
     public function map($routePattern, $handler);

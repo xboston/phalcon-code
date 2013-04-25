@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model;
-interface Criteria extends \Phalcon\Mvc\Model\CriteriaInterface,Phalcon\DI\InjectionAwareInterface
+interface Criteria extends \Phalcon\Mvc\Model\CriteriaInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function setDI($dependencyInjector);
     public function getDI();

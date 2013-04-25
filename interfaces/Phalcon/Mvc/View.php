@@ -2,6 +2,12 @@
 namespace Phalcon\Mvc;
 interface View extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\ViewInterface
 {
+    const LEVEL_MAIN_LAYOUT = 5;
+    const LEVEL_AFTER_TEMPLATE = 4;
+    const LEVEL_LAYOUT = 3;
+    const LEVEL_BEFORE_TEMPLATE = 2;
+    const LEVEL_ACTION_VIEW = 1;
+    const LEVEL_NO_RENDER = 0;
     public function __construct($options = NULL);
     public function setViewsDir($viewsDir);
     public function getViewsDir();

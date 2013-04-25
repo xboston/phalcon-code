@@ -18,16 +18,18 @@ $phalconClasses = new \RegexIterator(new \ArrayIterator(get_declared_classes()) 
 
 foreach ( $phalconClasses as $phalconClass ) {
 
+    //$phalconClass   = '\Phalcon\Mvc\View';
+    
     $reflector      = new \ReflectionClass($phalconClass);
     $methodIterator = new \ArrayIterator($reflector->getMethods());
+    $consts         = $reflector->getConstants();
 
     $distillate = new Distillate;
     //$distillate->setInterfaceName($reflector->getNamespaceName());
     $distillate->setInterfaceName($phalconClass);
 
-
     $distillate->setExtendingInterfaces(
-        implode(',' , $reflector->getInterfaceNames())
+        implode(',\\' , $reflector->getInterfaceNames())
     );
 
     $fileName = sprintf('%s/%s.php' , EXAMPLES_DIR , str_replace('\\' , '/' , $phalconClass));
@@ -38,6 +40,9 @@ foreach ( $phalconClasses as $phalconClass ) {
         $distillate->addMethod($method);
     }
 
+    $distillate->addConsts($consts);
+
+
     $file = new \SplFileObject($fileName , 'w');
     //$file   = new \SplTempFileObject( );
     $writer = new Distillate\Writer($file);
@@ -45,5 +50,6 @@ foreach ( $phalconClasses as $phalconClass ) {
     $file->rewind();
     $file->fpassthru();
 
-    echo $fileName.PHP_EOL;
+    echo $fileName . PHP_EOL;
+    //die;
 }

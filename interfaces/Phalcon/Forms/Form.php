@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Forms;
-interface Form extends \Countable,Iterator,Traversable
+interface Form extends \Countable,\Iterator,\Traversable
 {
     public function __construct($entity = NULL);
     public function setEntity($entity);

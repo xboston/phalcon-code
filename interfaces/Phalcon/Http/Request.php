@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Http;
-interface Request extends \Phalcon\Http\RequestInterface,Phalcon\DI\InjectionAwareInterface
+interface Request extends \Phalcon\Http\RequestInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function setDI($dependencyInjector);
     public function getDI();

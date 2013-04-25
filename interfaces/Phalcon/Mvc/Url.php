@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc;
-interface Url extends \Phalcon\Mvc\UrlInterface,Phalcon\DI\InjectionAwareInterface
+interface Url extends \Phalcon\Mvc\UrlInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function setDI($dependencyInjector);
     public function getDI();

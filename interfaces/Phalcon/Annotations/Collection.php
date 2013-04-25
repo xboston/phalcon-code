@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Annotations;
-interface Collection extends \Iterator,Traversable,Countable
+interface Collection extends \Iterator,\Traversable,\Countable
 {
     public function __construct($reflectionData = NULL);
     public function count();

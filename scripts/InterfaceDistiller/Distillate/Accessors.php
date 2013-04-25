@@ -14,6 +14,11 @@ interface Accessors
     public function getInterfaceMethods();
 
     /**
+     * @return array
+     */
+    public function getInterfaceConsts();
+    
+    /**
      * @return string
      */
     public function getExtendingInterfaces();

@@ -1,7 +1,14 @@
 <?php
 namespace Phalcon\Mvc;
-interface Model extends \Phalcon\Mvc\ModelInterface,Phalcon\Mvc\Model\ResultInterface,Phalcon\DI\InjectionAwareInterface,Serializable
+interface Model extends \Phalcon\Mvc\ModelInterface,\Phalcon\Mvc\Model\ResultInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
 {
+    const OP_NONE = 0;
+    const OP_CREATE = 1;
+    const OP_UPDATE = 2;
+    const OP_DELETE = 3;
+    const DIRTY_STATE_PERSISTENT = 0;
+    const DIRTY_STATE_TRANSIENT = 1;
+    const DIRTY_STATE_DETACHED = 2;
     public function __construct($dependencyInjector = NULL, $modelsManager = NULL);
     public function setDI($dependencyInjector);
     public function getDI();

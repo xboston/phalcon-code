@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Acl\Adapter;
-interface Memory extends \Phalcon\Events\EventsAwareInterface,Phalcon\Acl\AdapterInterface
+interface Memory extends \Phalcon\Events\EventsAwareInterface,\Phalcon\Acl\AdapterInterface
 {
     public function __construct();
     public function addRole($role, $accessInherits = NULL);

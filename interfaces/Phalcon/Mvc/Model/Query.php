@@ -1,7 +1,11 @@
 <?php
 namespace Phalcon\Mvc\Model;
-interface Query extends \Phalcon\Mvc\Model\QueryInterface,Phalcon\DI\InjectionAwareInterface
+interface Query extends \Phalcon\Mvc\Model\QueryInterface,\Phalcon\DI\InjectionAwareInterface
 {
+    const TYPE_SELECT = 309;
+    const TYPE_INSERT = 306;
+    const TYPE_UPDATE = 300;
+    const TYPE_DELETE = 303;
     public function __construct($phql = NULL);
     public function setDI($dependencyInjector);
     public function getDI();

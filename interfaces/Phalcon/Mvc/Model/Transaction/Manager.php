@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Transaction;
-interface Manager extends \Phalcon\Mvc\Model\Transaction\ManagerInterface,Phalcon\DI\InjectionAwareInterface
+interface Manager extends \Phalcon\Mvc\Model\Transaction\ManagerInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function __construct($dependencyInjector = NULL);
     public function setDI($dependencyInjector);

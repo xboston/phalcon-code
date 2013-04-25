@@ -1,7 +1,9 @@
 <?php
 namespace Phalcon\Mvc;
-interface Router extends \Phalcon\Mvc\RouterInterface,Phalcon\DI\InjectionAwareInterface
+interface Router extends \Phalcon\Mvc\RouterInterface,\Phalcon\DI\InjectionAwareInterface
 {
+    const URI_SOURCE_GET_URL = 0;
+    const URI_SOURCE_SERVER_REQUEST_URI = 1;
     public function __construct($defaultRoutes = NULL);
     public function setDI($dependencyInjector);
     public function getDI();

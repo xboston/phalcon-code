@@ -1,7 +1,12 @@
 <?php
 namespace Phalcon\Mvc\Model\Resultset;
-interface Simple extends \Serializable,ArrayAccess,Countable,SeekableIterator,Traversable,Iterator,Phalcon\Mvc\Model\ResultsetInterface
+interface Simple extends \Serializable,\ArrayAccess,\Countable,\SeekableIterator,\Traversable,\Iterator,\Phalcon\Mvc\Model\ResultsetInterface
 {
+    const TYPE_RESULT_FULL = 0;
+    const TYPE_RESULT_PARTIAL = 1;
+    const HYDRATE_RECORDS = 0;
+    const HYDRATE_OBJECTS = 2;
+    const HYDRATE_ARRAYS = 1;
     public function __construct($columnMap, $model, $result, $cache = NULL, $keepSnapshots = NULL);
     public function valid();
     public function toArray($renameColumns = NULL);

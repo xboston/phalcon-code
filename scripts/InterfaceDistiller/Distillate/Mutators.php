@@ -20,5 +20,11 @@ interface Mutators
      * @return void
      */
     public function addMethod(\ReflectionMethod $reflectionMethod);
+
+    /**
+     * @param array $reflectionConst
+     * @return void
+     */
+    public function addConsts(array $reflectionConst);
 }
 //@codeCoverageIgnoreEnd

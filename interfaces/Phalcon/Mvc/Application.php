@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc;
-interface Application extends \Phalcon\Events\EventsAwareInterface,Phalcon\DI\InjectionAwareInterface
+interface Application extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
 {
     public function registerModules($modules, $merge = NULL);
     public function getModules();
