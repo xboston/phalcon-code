@@ -2,7 +2,7 @@
 namespace Phalcon\Cache{
     abstract class Exception
     {
-        public function __clone(){}
+        protected function __clone(){}
         public function __construct($message = NULL, $code = NULL, $previous = NULL){}
         public function getMessage(){}
         public function getCode(){}

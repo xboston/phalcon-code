@@ -35,8 +35,8 @@ namespace Phalcon\Http{
         public function hasFiles(){}
         public function getUploadedFiles(){}
         public function getHTTPReferer(){}
-        public function _getQualityHeader(){}
-        public function _getBestQuality(){}
+        protected function _getQualityHeader(){}
+        protected function _getBestQuality(){}
         public function getAcceptableContent(){}
         public function getBestAccept(){}
         public function getClientCharsets(){}

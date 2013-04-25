@@ -12,7 +12,7 @@ namespace Phalcon\Db\Dialect{
         public function dropPrimaryKey($tableName, $schemaName){}
         public function addForeignKey($tableName, $schemaName, $reference){}
         public function dropForeignKey($tableName, $schemaName, $referenceName){}
-        public function _getTableOptions(){}
+        protected function _getTableOptions(){}
         public function createTable($tableName, $schemaName, $definition){}
         public function dropTable($tableName, $schemaName, $ifExists = NULL){}
         public function tableExists($tableName, $schemaName = NULL){}

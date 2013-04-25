@@ -5,7 +5,7 @@ namespace Phalcon{
         public function __construct(){}
         public function add($name, $handler){}
         public function sanitize($value, $filters){}
-        public function _sanitize(){}
+        protected function _sanitize(){}
         public function getFilters(){}
     }
 }

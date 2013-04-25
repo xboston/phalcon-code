@@ -10,13 +10,13 @@ namespace Phalcon\Acl\Adapter{
         public function addResource($resource, $accessList = NULL){}
         public function addResourceAccess($resourceName, $accessList){}
         public function dropResourceAccess($resourceName, $accessList){}
-        public function _allowOrDeny(){}
+        protected function _allowOrDeny(){}
         public function allow($roleName, $resourceName, $access){}
         public function deny($roleName, $resourceName, $access){}
         public function isAllowed($role, $resource, $access){}
         public function getRoles(){}
         public function getResources(){}
-        public function _rebuildAccessList(){}
+        protected function _rebuildAccessList(){}
         public function setEventsManager($eventsManager){}
         public function getEventsManager(){}
         public function setDefaultAction($defaultAccess){}

@@ -3,7 +3,7 @@ namespace Phalcon\Cache\Backend{
     abstract class Memcache implements \Phalcon\Cache\BackendInterface
     {
         public function __construct($frontend, $options = NULL){}
-        public function _connect(){}
+        protected function _connect(){}
         public function get($keyName, $lifetime = NULL){}
         public function save($keyName = NULL, $content = NULL, $lifetime = NULL, $stopBuffer = NULL){}
         public function delete($keyName){}

@@ -2,7 +2,7 @@
 namespace Phalcon\Db{
     abstract class Adapter implements \Phalcon\Events\EventsAwareInterface
     {
-        public function __construct(){}
+        protected function __construct(){}
         public function setEventsManager($eventsManager){}
         public function getEventsManager(){}
         public function fetchOne($sqlQuery, $fetchMode = NULL, $bindParams = NULL, $bindTypes = NULL){}

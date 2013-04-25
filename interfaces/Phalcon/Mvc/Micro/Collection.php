@@ -2,7 +2,7 @@
 namespace Phalcon\Mvc\Micro{
     abstract class Collection
     {
-        public function _addMap(){}
+        protected function _addMap(){}
         public function get($routePattern, $handler){}
         public function post($routePattern, $handler){}
         public function put($routePattern, $handler){}

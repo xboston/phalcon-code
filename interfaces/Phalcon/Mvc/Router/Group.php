@@ -8,7 +8,7 @@ namespace Phalcon\Mvc\Router{
         public function setPaths($paths){}
         public function getPaths(){}
         public function getRoutes(){}
-        public function _addRoute(){}
+        protected function _addRoute(){}
         public function add($pattern, $paths = NULL, $httpMethods = NULL){}
         public function addGet($pattern, $paths = NULL){}
         public function addPost($pattern, $paths = NULL){}

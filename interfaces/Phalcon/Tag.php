@@ -26,7 +26,7 @@ namespace Phalcon{
         public static function getValue($name, $params = NULL){}
         public static function resetInput(){}
         public static function linkTo($parameters, $text = NULL){}
-        public static function _inputField(){}
+        protected static function _inputField(){}
         public static function textField($parameters){}
         public static function passwordField($parameters){}
         public static function hiddenField($parameters){}

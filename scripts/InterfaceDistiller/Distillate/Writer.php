@@ -115,8 +115,9 @@ class Writer
     {
         $this->writeString(
             sprintf(
-            	'%s        public%sfunction %s(%s){}',
+            	'%s        %s%sfunction %s(%s){}',
                 $this->writeDocCommentOfMethod($method),
+                ($method->isPublic() ? 'public' : 'protected' ),
                 $method->isStatic() ? ' static ' : ' ',
                 $method->name,
                 $this->methodParametersToString($method)

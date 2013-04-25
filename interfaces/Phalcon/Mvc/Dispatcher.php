@@ -12,7 +12,7 @@ namespace Phalcon\Mvc{
         public function setDefaultController($controllerName){}
         public function setControllerName($controllerName){}
         public function getControllerName(){}
-        public function _throwDispatchException(){}
+        protected function _throwDispatchException(){}
         public function getLastController(){}
         public function getActiveController(){}
         public function __construct(){}

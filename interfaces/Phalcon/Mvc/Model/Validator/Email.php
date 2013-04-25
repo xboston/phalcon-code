@@ -4,10 +4,10 @@ namespace Phalcon\Mvc\Model\Validator{
     {
         public function validate($record){}
         public function __construct($options){}
-        public function appendMessage(){}
+        protected function appendMessage(){}
         public function getMessages(){}
-        public function getOptions(){}
-        public function getOption(){}
-        public function isSetOption(){}
+        protected function getOptions(){}
+        protected function getOption(){}
+        protected function isSetOption(){}
     }
 }

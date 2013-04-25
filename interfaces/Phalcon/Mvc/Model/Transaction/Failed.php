@@ -5,7 +5,7 @@ namespace Phalcon\Mvc\Model\Transaction{
         public function __construct($message, $record){}
         public function getRecordMessages(){}
         public function getRecord(){}
-        public function __clone(){}
+        protected function __clone(){}
         public function getMessage(){}
         public function getCode(){}
         public function getFile(){}

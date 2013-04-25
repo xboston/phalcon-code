@@ -9,9 +9,9 @@ namespace Phalcon\Queue{
         public function choose($tube){}
         public function watch($tube){}
         public function peekReady(){}
-        public function readStatus(){}
+        protected function readStatus(){}
         public function read($length = NULL){}
-        public function write(){}
+        protected function write(){}
         public function disconnect(){}
     }
 }

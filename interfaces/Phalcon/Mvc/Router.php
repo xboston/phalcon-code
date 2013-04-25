@@ -7,7 +7,7 @@ namespace Phalcon\Mvc{
         public function __construct($defaultRoutes = NULL){}
         public function setDI($dependencyInjector){}
         public function getDI(){}
-        public function _getRewriteUri(){}
+        protected function _getRewriteUri(){}
         public function setUriSource($uriSource){}
         public function removeExtraSlashes($remove){}
         public function setDefaultNamespace($namespaceName){}

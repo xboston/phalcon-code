@@ -11,30 +11,30 @@ namespace Phalcon\Mvc\Model{
         public function getDI(){}
         public function setUniqueRow($uniqueRow){}
         public function getUniqueRow(){}
-        public function _getQualified(){}
-        public function _getCallArgument(){}
-        public function _getFunctionCall(){}
-        public function _getExpression(){}
-        public function _getSelectColumn(){}
-        public function _getTable(){}
-        public function _getJoin(){}
-        public function _getJoinType(){}
-        public function _getJoins(){}
-        public function _getOrderClause(){}
-        public function _getGroupClause(){}
-        public function _prepareSelect(){}
-        public function _prepareInsert(){}
-        public function _prepareUpdate(){}
-        public function _prepareDelete(){}
+        protected function _getQualified(){}
+        protected function _getCallArgument(){}
+        protected function _getFunctionCall(){}
+        protected function _getExpression(){}
+        protected function _getSelectColumn(){}
+        protected function _getTable(){}
+        protected function _getJoin(){}
+        protected function _getJoinType(){}
+        protected function _getJoins(){}
+        protected function _getOrderClause(){}
+        protected function _getGroupClause(){}
+        protected function _prepareSelect(){}
+        protected function _prepareInsert(){}
+        protected function _prepareUpdate(){}
+        protected function _prepareDelete(){}
         public function parse(){}
         public function cache($cacheOptions){}
         public function getCacheOptions(){}
         public function getCache(){}
-        public function _executeSelect(){}
-        public function _executeInsert(){}
-        public function _getRelatedRecords(){}
-        public function _executeUpdate(){}
-        public function _executeDelete(){}
+        protected function _executeSelect(){}
+        protected function _executeInsert(){}
+        protected function _getRelatedRecords(){}
+        protected function _executeUpdate(){}
+        protected function _executeDelete(){}
         public function execute($bindParams = NULL, $bindTypes = NULL){}
         public function getSingleResult($bindParams = NULL, $bindTypes = NULL){}
         public function setType($type){}

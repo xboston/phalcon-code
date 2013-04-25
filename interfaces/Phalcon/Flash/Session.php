@@ -4,8 +4,8 @@ namespace Phalcon\Flash{
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}
-        public function _getSessionMessages(){}
-        public function _setSessionMessages(){}
+        protected function _getSessionMessages(){}
+        protected function _setSessionMessages(){}
         public function message($type, $message){}
         public function getMessages($type = NULL, $remove = NULL){}
         public function output($remove = NULL){}

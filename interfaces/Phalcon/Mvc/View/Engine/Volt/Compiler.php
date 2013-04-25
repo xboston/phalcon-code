@@ -16,9 +16,9 @@ namespace Phalcon\Mvc\View\Engine\Volt{
         public function attributeReader($expr){}
         public function functionCall($expr){}
         public function resolveTest($test, $left){}
-        public function resolveFilter(){}
+        protected function resolveFilter(){}
         public function expression($expr){}
-        public function _statementListOrExtends(){}
+        protected function _statementListOrExtends(){}
         public function compileForeach($statement, $extendsMode = NULL){}
         public function compileForElse(){}
         public function compileIf($statement, $extendsMode = NULL){}
@@ -29,8 +29,8 @@ namespace Phalcon\Mvc\View\Engine\Volt{
         public function compileSet($statement){}
         public function compileDo($statement){}
         public function compileAutoEscape($statement, $extendsMode){}
-        public function _statementList(){}
-        public function _compileSource(){}
+        protected function _statementList(){}
+        protected function _compileSource(){}
         public function compileString($viewCode, $extendsMode = NULL){}
         public function compileFile($path, $compiledPath, $extendsMode = NULL){}
         public function compile($templatePath, $extendsMode = NULL){}

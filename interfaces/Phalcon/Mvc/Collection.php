@@ -11,12 +11,12 @@ namespace Phalcon\Mvc{
         public function getId(){}
         public function setDI($dependencyInjector){}
         public function getDI(){}
-        public function setEventsManager(){}
-        public function getEventsManager(){}
+        protected function setEventsManager(){}
+        protected function getEventsManager(){}
         public function getModelsManager(){}
         public function getReservedAttributes(){}
-        public function useImplicitObjectIds(){}
-        public function setSource(){}
+        protected function useImplicitObjectIds(){}
+        protected function setSource(){}
         public function getSource(){}
         public function setConnectionService($connectionService){}
         public function getConnectionService(){}
@@ -24,16 +24,16 @@ namespace Phalcon\Mvc{
         public function readAttribute($attribute){}
         public function writeAttribute($attribute, $value){}
         public static function cloneResult($collection, $document){}
-        public static function _getResultset(){}
-        public static function _getGroupResultset(){}
-        public function _preSave(){}
-        public function _postSave(){}
-        public function validate(){}
+        protected static function _getResultset(){}
+        protected static function _getGroupResultset(){}
+        protected function _preSave(){}
+        protected function _postSave(){}
+        protected function validate(){}
         public function validationHasFailed(){}
         public function fireEvent($eventName){}
         public function fireEventCancel($eventName){}
-        public function _cancelOperation(){}
-        public function _exists(){}
+        protected function _cancelOperation(){}
+        protected function _exists(){}
         public function getMessages(){}
         public function appendMessage($message){}
         public function save(){}

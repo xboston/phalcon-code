@@ -3,7 +3,7 @@ namespace Phalcon\Cache\Backend{
     abstract class Mongo implements \Phalcon\Cache\BackendInterface
     {
         public function __construct($frontend, $options = NULL){}
-        public function _getCollection(){}
+        protected function _getCollection(){}
         public function get($keyName, $lifetime = NULL){}
         public function save($keyName = NULL, $content = NULL, $lifetime = NULL, $stopBuffer = NULL){}
         public function delete($keyName){}

@@ -16,7 +16,7 @@ namespace Phalcon\Mvc\Model{
         const MODELS_AUTOMATIC_DEFAULT_UPDATE = 11;
         const MODELS_COLUMN_MAP = 0;
         const MODELS_REVERSE_COLUMN_MAP = 1;
-        public function _initialize(){}
+        protected function _initialize(){}
         public function setDI($dependencyInjector){}
         public function getDI(){}
         public function setStrategy($strategy){}

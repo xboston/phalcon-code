@@ -17,7 +17,7 @@ namespace Phalcon\Mvc\Model\Transaction{
         public function rollback($collect = NULL){}
         public function notifyRollback($transaction){}
         public function notifyCommit($transaction){}
-        public function _collectTransaction(){}
+        protected function _collectTransaction(){}
         public function collectTransactions(){}
     }
 }

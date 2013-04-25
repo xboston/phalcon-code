@@ -35,15 +35,15 @@ namespace Phalcon\Mvc{
         public function getActionName(){}
         public function getParams(){}
         public function start(){}
-        public function _loadTemplateEngines(){}
-        public function _engineRender(){}
+        protected function _loadTemplateEngines(){}
+        protected function _engineRender(){}
         public function registerEngines($engines){}
         public function render($controllerName, $actionName, $params = NULL){}
         public function pick($renderView){}
         public function partial($partialPath){}
         public function getRender($controllerName, $actionName, $params = NULL){}
         public function finish(){}
-        public function _createCache(){}
+        protected function _createCache(){}
         public function isCaching(){}
         public function getCache(){}
         public function cache($options = NULL){}

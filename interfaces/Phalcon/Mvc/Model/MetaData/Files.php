@@ -19,7 +19,7 @@ namespace Phalcon\Mvc\Model\MetaData{
         public function __construct($options = NULL){}
         public function read($key){}
         public function write($key, $data){}
-        public function _initialize(){}
+        protected function _initialize(){}
         public function setDI($dependencyInjector){}
         public function getDI(){}
         public function setStrategy($strategy){}

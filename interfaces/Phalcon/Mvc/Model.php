@@ -12,14 +12,14 @@ namespace Phalcon\Mvc{
         public function __construct($dependencyInjector = NULL, $modelsManager = NULL){}
         public function setDI($dependencyInjector){}
         public function getDI(){}
-        public function setEventsManager(){}
-        public function getEventsManager(){}
+        protected function setEventsManager(){}
+        protected function getEventsManager(){}
         public function getModelsMetaData(){}
         public function getModelsManager(){}
         public function setTransaction($transaction){}
-        public function setSource(){}
+        protected function setSource(){}
         public function getSource(){}
-        public function setSchema(){}
+        protected function setSchema(){}
         public function getSchema(){}
         public function setConnectionService($connectionService){}
         public function setReadConnectionService($connectionService){}
@@ -37,8 +37,8 @@ namespace Phalcon\Mvc{
         public static function find($parameters = NULL){}
         public static function findFirst($parameters = NULL){}
         public static function query($dependencyInjector = NULL){}
-        public function _exists(){}
-        public static function _groupResult(){}
+        protected function _exists(){}
+        protected static function _groupResult(){}
         public static function count($parameters = NULL){}
         public static function sum($parameters = NULL){}
         public static function maximum($parameters = NULL){}
@@ -46,19 +46,19 @@ namespace Phalcon\Mvc{
         public static function average($parameters = NULL){}
         public function fireEvent($eventName){}
         public function fireEventCancel($eventName){}
-        public function _cancelOperation(){}
+        protected function _cancelOperation(){}
         public function appendMessage($message){}
-        public function validate(){}
+        protected function validate(){}
         public function validationHasFailed(){}
         public function getMessages(){}
-        public function _checkForeignKeys(){}
-        public function _checkForeignKeysReverse(){}
-        public function _preSave(){}
-        public function _postSave(){}
-        public function _doLowInsert(){}
-        public function _doLowUpdate(){}
-        public function _preSaveRelatedRecords(){}
-        public function _postSaveRelatedRecords(){}
+        protected function _checkForeignKeys(){}
+        protected function _checkForeignKeysReverse(){}
+        protected function _preSave(){}
+        protected function _postSave(){}
+        protected function _doLowInsert(){}
+        protected function _doLowUpdate(){}
+        protected function _preSaveRelatedRecords(){}
+        protected function _postSaveRelatedRecords(){}
         public function save($data = NULL, $whiteList = NULL){}
         public function create($data = NULL, $whiteList = NULL){}
         public function update($data = NULL, $whiteList = NULL){}
@@ -68,23 +68,23 @@ namespace Phalcon\Mvc{
         public function skipOperation($skip){}
         public function readAttribute($attribute){}
         public function writeAttribute($attribute, $value){}
-        public function skipAttributes(){}
-        public function skipAttributesOnCreate(){}
-        public function skipAttributesOnUpdate(){}
-        public function hasOne(){}
-        public function belongsTo(){}
-        public function hasMany(){}
-        public function hasManyThrough(){}
-        public function addBehavior(){}
-        public function keepSnapshots(){}
+        protected function skipAttributes(){}
+        protected function skipAttributesOnCreate(){}
+        protected function skipAttributesOnUpdate(){}
+        protected function hasOne(){}
+        protected function belongsTo(){}
+        protected function hasMany(){}
+        protected function hasManyThrough(){}
+        protected function addBehavior(){}
+        protected function keepSnapshots(){}
         public function setSnapshotData($data, $columnMap = NULL){}
         public function hasSnapshotData(){}
         public function getSnapshotData(){}
         public function hasChanged($fieldName = NULL){}
         public function getChangedFields(){}
-        public function useDynamicUpdate(){}
+        protected function useDynamicUpdate(){}
         public function getRelated($alias, $arguments = NULL){}
-        public function _getRelatedRecords(){}
+        protected function _getRelatedRecords(){}
         public function __call($method, $arguments = NULL){}
         public static function __callStatic($method, $arguments = NULL){}
         public function __set($property, $value){}

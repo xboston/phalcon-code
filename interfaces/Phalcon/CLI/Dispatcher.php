@@ -12,7 +12,7 @@ namespace Phalcon\CLI{
         public function setDefaultTask($taskName){}
         public function setTaskName($taskName){}
         public function getTaskName(){}
-        public function _throwDispatchException(){}
+        protected function _throwDispatchException(){}
         public function getLastTask(){}
         public function getActiveTask(){}
         public function __construct(){}
