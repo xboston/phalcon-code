@@ -129,8 +129,8 @@ class Writer
                 ($method->isPublic() ? 'public' : 'protected') ,
                 $method->isStatic() ? ' static ' : ' ' ,
                 $method->name ,
-                $this->methodParametersToString($method),
-                ($this->isInterface?';':'{}')
+                $this->methodParametersToString($method) ,
+                ($this->isInterface ? ';' : '{}')
             )
         );
     }

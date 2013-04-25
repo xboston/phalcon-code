@@ -50,7 +50,7 @@ foreach ( $phalconClasses as $phalconClass ) {
 
     $file = new \SplFileObject($fileName , 'w');
     //$file   = new \SplTempFileObject( );
-    $writer = new Distillate\Writer($file,true);
+    $writer = new Distillate\Writer($file , true);
     $writer->writeToFile($distillate);
     $file->rewind();
     $file->fpassthru();

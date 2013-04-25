@@ -34,6 +34,8 @@ class CodeExampleGenerator
 
                 $this->_getCode($item->getPathname());
             }
+            
+            echo sprintf("%s-ok\n" , $item->getPathname() );
         }
     }
 
@@ -62,7 +64,7 @@ class CodeExampleGenerator
             ) == '.. code-block:: html+php')
             ) {
 
-                if ( trim($line) != '.. code-block:: php' &&  trim($line) != '.. code-block:: html+php' ) {
+                if ( trim($line) != '.. code-block:: php' && trim($line) != '.. code-block:: html+php' ) {
 
                     $line = rtrim($line , ' ');
                     $line = str_replace("\t" , '    ' , $line);
@@ -101,7 +103,6 @@ class CodeExampleGenerator
             $file = sprintf("%s/%s-%s.php" , $locationCodes , $componentName , $line);
 
             file_put_contents($file , $code);
-            echo sprintf("%s-ok\n" , $fileName);
         }
     }
 }

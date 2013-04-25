@@ -25,7 +25,7 @@ class Distillate implements Distillate\Accessors , Distillate\Mutators
 
     protected $parentClass;
 
- 
+
     public function __construct()
     {
 
