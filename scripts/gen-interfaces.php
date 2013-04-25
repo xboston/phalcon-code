@@ -18,32 +18,33 @@ $phalconClasses = new \RegexIterator(new \ArrayIterator(get_declared_classes()) 
 
 foreach ( $phalconClasses as $phalconClass ) {
 
-    //$phalconClass   = '\Phalcon\Mvc\View';
-
-    $reflector      = new \ReflectionClass($phalconClass);
-    $methodIterator = new \ArrayIterator($reflector->getMethods());
-    $consts         = $reflector->getConstants();
+    $reflector = new \ReflectionClass($phalconClass);
 
     $distillate = new Distillate;
     $distillate->setInterfaceName($phalconClass);
 
     $distillate->setExtendingInterfaces(
+
         implode(',\\' , $reflector->getInterfaceNames())
     );
 
-    if($reflector->getParentClass()){
-        $distillate->addParentClass($reflector->getParentClass()->getName());       
+    $parentClass = $reflector->getParentClass();
+    if ( $parentClass ) {
+
+        $distillate->addParentClass($reflector->getParentClass()->getName());
     }
 
+    $methodIterator = new \ArrayIterator($reflector->getMethods());
     foreach ( $methodIterator as $method ) {
+
         $distillate->addMethod($method);
     }
 
+    $consts = $reflector->getConstants();
     $distillate->addConsts($consts);
-    
-    
+
     $fileName = sprintf('%s/%s.php' , EXAMPLES_DIR , str_replace('\\' , '/' , $phalconClass));
-    $fileName = str_replace('/Phalcon/','/',$fileName);
+    $fileName = str_replace('/Phalcon/' , '/' , $fileName);
     $dirName  = dirname($fileName);
     is_dir($dirName) ? : mkdir($dirName , 0777 , true);
 
