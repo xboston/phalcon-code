@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc;
-interface View extends \Phalcon\Events\EventsAwareInterface,Phalcon\DI\InjectionAwareInterface,Phalcon\Mvc\ViewInterface
+interface View extends \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\ViewInterface
 {
     public function __construct($options = NULL);
     public function setViewsDir($viewsDir);
