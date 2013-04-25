@@ -25,11 +25,10 @@ class Distillate implements Distillate\Accessors , Distillate\Mutators
 
     protected $parentClass;
 
-    /**
-     * @return void
-     */
+ 
     public function __construct()
     {
+
         $this->interfaceName       = 'MyInterface';
         $this->extendingInterfaces = '';
         $this->interfaceMethods    = new \SplObjectStorage;
@@ -110,5 +109,5 @@ class Distillate implements Distillate\Accessors , Distillate\Mutators
     {
         return $this->parentClass;
     }
-    
+
 }

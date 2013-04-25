@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Filters;
+
 class NoInheritedMethodsIterator extends \FilterIterator
 {
     /**
@@ -8,10 +9,10 @@ class NoInheritedMethodsIterator extends \FilterIterator
     protected $reflectedClass;
 
     /**
-     * @param \Iterator $iterator
+     * @param \Iterator        $iterator
      * @param \ReflectionClass $reflectedClass
      */
-    public function __construct(\Iterator $iterator, \ReflectionClass $reflectedClass)
+    public function __construct(\Iterator $iterator , \ReflectionClass $reflectedClass)
     {
         $this->reflectedClass = $reflectedClass;
         parent::__construct($iterator);

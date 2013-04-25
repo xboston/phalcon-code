@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Filters;
+
 class NoMagicMethodsIterator extends \FilterIterator
 {
     /**
@@ -8,6 +9,6 @@ class NoMagicMethodsIterator extends \FilterIterator
      */
     public function accept()
     {
-        return substr($this->current()->name, 0, 2) != '__';
+        return substr($this->current()->name , 0 , 2) != '__';
     }
 }

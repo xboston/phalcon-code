@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Distillate;
+
 class Writer
 {
     /**
@@ -11,46 +12,43 @@ class Writer
      * @var bool
      */
     protected $inGlobalNamespace;
-     
-    /**
-     * @param \SplFileObject $fileObject
-     * @return void
-     */
-    public function __construct(\SplFileObject $fileObject)
+
+    private $isInterface;
+
+    public function __construct(\SplFileObject $fileObject , $isInterface = false)
     {
-        $this->fileObject = $fileObject;
+        $this->fileObject  = $fileObject;
+        $this->isInterface = $isInterface;
     }
 
-    /**
-     * @param \com\github\gooh\InterfaceDistiller\Accessors $distillate
-     * @return void
-     */
+
     public function writeToFile(Accessors $distillate)
     {
         $this->writeString('<?php' . PHP_EOL);
         $this->writeInterfaceSignature(
-            $distillate->getInterfaceName(),
-            $distillate->getExtendingInterfaces(),
+            $distillate->getInterfaceName() ,
+            $distillate->getExtendingInterfaces() ,
             $distillate->getParentClass()
         );
         $this->writeString('    {');
         $this->writeString(PHP_EOL);
-        $this->writeConsts($distillate->getInterfaceConsts());       
-        
-        if( $distillate->getInterfaceName()=='Phalcon\DI\Injectable' ){
+        $this->writeConsts($distillate->getInterfaceConsts());
+
+        if ( $distillate->getInterfaceName() == 'Phalcon\DI\Injectable' ) {
 
             $this->writeString($this->di);
             $this->writeString(PHP_EOL);
             $this->writeString(PHP_EOL);
         }
-        
+
         $this->writeMethods($distillate->getInterfaceMethods());
-        $this->writeString('    }'.PHP_EOL);
+        $this->writeString('    }' . PHP_EOL);
         $this->writeString('}');
     }
 
     /**
      * @param string $string
+     *
      * @return void
      */
     protected function writeString($string)
@@ -58,37 +56,33 @@ class Writer
         $this->fileObject->fwrite($string);
     }
 
-    /**
-     * @return void
-     */
-    protected function writeInterfaceSignature($interfaceName, $extendingInterfaces = false,$getParentClass = false)
+
+    protected function writeInterfaceSignature($interfaceName , $extendingInterfaces = false , $getParentClass = false)
     {
-        $nameParts = explode('\\',$interfaceName);
+        $nameParts          = explode('\\' , $interfaceName);
         $interfaceShortName = array_pop($nameParts);
-        if($nameParts){
-            $this->writeString('namespace ' . implode('\\',$nameParts) . '{' .PHP_EOL);
+        if ( $nameParts ) {
+            $this->writeString('namespace ' . implode('\\' , $nameParts) . '{' . PHP_EOL);
             $this->inGlobalNamespace = false;
         } else {
             $this->inGlobalNamespace = true;
         }
-        $this->writeString("    class $interfaceShortName");
-        if($getParentClass){
+        $this->writeString(sprintf("    %s $interfaceShortName" , ($this->isInterface ? 'interface' : 'class')));
+        if ( $getParentClass ) {
             $this->writeString(" extends \\$getParentClass");
         }
-        if ($extendingInterfaces) {
+        if ( $extendingInterfaces ) {
             $this->writeString(" implements \\$extendingInterfaces");
         }
         $this->writeString(PHP_EOL);
     }
 
-    /**
-     * @return void
-     */
+
     protected function writeConsts(array $consts)
     {
-        
-        foreach ($consts as $constName=>$constValue) {
-            $this->writeConst($constName,$constValue);
+
+        foreach ( $consts as $constName => $constValue ) {
+            $this->writeConst($constName , $constValue);
             $this->writeString(PHP_EOL);
         }
     }
@@ -96,24 +90,26 @@ class Writer
     /**
      * @param $constName
      * @param $constValue
+     *
      * @return void
      */
-    protected function writeConst( $constName,$constValue)
+    protected function writeConst($constName , $constValue)
     {
         $this->writeString(
             sprintf(
-                '        const %s = %s;',
-                $constName,$constValue
+                '        const %s = %s;' ,
+                $constName ,
+                $constValue
             )
         );
     }
-    
+
     /**
      * @return void
      */
     protected function writeMethods(array $methods)
     {
-        foreach ($methods as $method) {
+        foreach ( $methods as $method ) {
             $this->writeMethod($method);
             $this->writeString(PHP_EOL);
         }
@@ -121,29 +117,32 @@ class Writer
 
     /**
      * @param \ReflectionMethod $method
+     *
      * @return void
      */
     protected function writeMethod(\ReflectionMethod $method)
     {
         $this->writeString(
             sprintf(
-            	'%s        %s%sfunction %s(%s){}',
-                $this->writeDocCommentOfMethod($method),
-                ($method->isPublic() ? 'public' : 'protected' ),
-                $method->isStatic() ? ' static ' : ' ',
-                $method->name,
-                $this->methodParametersToString($method)
+                '%s        %s%sfunction %s(%s)%s' ,
+                $this->writeDocCommentOfMethod($method) ,
+                ($method->isPublic() ? 'public' : 'protected') ,
+                $method->isStatic() ? ' static ' : ' ' ,
+                $method->name ,
+                $this->methodParametersToString($method),
+                ($this->isInterface?';':'{}')
             )
         );
     }
 
     /**
      * @param \ReflectionMethod $method
+     *
      * @return void
      */
     protected function writeDocCommentOfMethod(\ReflectionMethod $method)
     {
-        if ($method->getDocComment()) {
+        if ( $method->getDocComment() ) {
             $this->writeString('    ');
             $this->writeString($method->getDocComment());
             $this->writeString(PHP_EOL);
@@ -152,14 +151,15 @@ class Writer
 
     /**
      * @param \ReflectionMethod $method
+     *
      * @return string
      */
     protected function methodParametersToString(\ReflectionMethod $method)
     {
         return implode(
-        	', ',
+            ', ' ,
             array_map(
-                array($this, 'parameterToString'),
+                array( $this , 'parameterToString' ) ,
                 $method->getParameters()
             )
         );
@@ -167,18 +167,20 @@ class Writer
 
     /**
      * @param \ReflectionParameter $parameter
+     *
      * @return string
      */
     protected function parameterToString(\ReflectionParameter $parameter)
     {
-        $classPrefix = $this->inGlobalNamespace ? '': '\\';
+        $classPrefix = $this->inGlobalNamespace ? '' : '\\';
+
         return trim(
             sprintf(
-            	'%s%s %s$%s%s',
-                $parameter->getClass() ? $classPrefix.$this->resolveTypeHint($parameter) : '',
-                $parameter->isArray() ? 'array' : '',
-                $parameter->isPassedByReference() ? '&' : '',
-                $parameter->name,
+                '%s%s %s$%s%s' ,
+                $parameter->getClass() ? $classPrefix . $this->resolveTypeHint($parameter) : '' ,
+                $parameter->isArray() ? 'array' : '' ,
+                $parameter->isPassedByReference() ? '&' : '' ,
+                $parameter->name ,
                 $this->resolveDefaultValue($parameter)
             )
         );
@@ -186,44 +188,49 @@ class Writer
 
     /**
      * @param \ReflectionParameter $reflectionParameter
+     *
      * @return string
      */
     protected function resolveTypeHint(\ReflectionParameter $reflectionParameter)
     {
-        if ($reflectionParameter->getDeclaringClass()->inNamespace()) {
+        if ( $reflectionParameter->getDeclaringClass()->inNamespace() ) {
             $typeHint = $reflectionParameter->getClass();
-            return $typeHint->isInternal()
-                ? '\\' . $typeHint->getName()
-                : $typeHint->getName();
+
+            return $typeHint->isInternal() ? '\\' . $typeHint->getName() : $typeHint->getName();
         }
+
         return $reflectionParameter->getClass()->getName();
     }
 
     /**
      * @param \ReflectionParameter $parameter
+     *
      * @return string
      */
     protected function resolveDefaultValue(\ReflectionParameter $parameter)
     {
-        if (false === $parameter->isOptional()) {
+        if ( false === $parameter->isOptional() ) {
             return;
         }
-        if ($parameter->isDefaultValueAvailable()) {
-            $defaultValue = var_export($parameter->getDefaultValue(), true);
-            return ' = ' . preg_replace('(\s)', '', $defaultValue);
+        if ( $parameter->isDefaultValueAvailable() ) {
+            $defaultValue = var_export($parameter->getDefaultValue() , true);
+
+            return ' = ' . preg_replace('(\s)' , '' , $defaultValue);
         }
+
         return $this->handleOptionalParameterWithUnresolvableDefaultValue($parameter);
     }
 
     /**
      * @param \ReflectionParameter $parameter
+     *
      * @return string
      */
     protected function handleOptionalParameterWithUnresolvableDefaultValue(\ReflectionParameter $parameter)
     {
         return ' = NULL ';
     }
-    
+
     private $di = '
         /**
          * @var \Phalcon\Mvc\View

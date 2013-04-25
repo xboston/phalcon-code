@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Filters;
+
 class NoImplementedMethodsIterator extends \FilterIterator
 {
     /**
@@ -8,9 +9,9 @@ class NoImplementedMethodsIterator extends \FilterIterator
      */
     public function accept()
     {
-        try{
+        try {
             return !interface_exists($this->current()->getPrototype()->class);
-        } catch (\ReflectionException $e) {
+        } catch ( \ReflectionException $e ) {
             return true;
         }
     }

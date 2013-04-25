@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Filters;
+
 class NoTraitMethodsIterator extends \FilterIterator
 {
     /**

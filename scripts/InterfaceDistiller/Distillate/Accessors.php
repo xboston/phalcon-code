@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Distillate;
+
 //@codeCoverageIgnoreStart
 interface Accessors
 {
@@ -17,7 +18,7 @@ interface Accessors
      * @return array
      */
     public function getInterfaceConsts();
-    
+
     /**
      * @return string
      */

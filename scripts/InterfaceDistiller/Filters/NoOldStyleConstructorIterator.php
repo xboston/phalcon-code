@@ -1,5 +1,6 @@
 <?php
 namespace com\github\gooh\InterfaceDistiller\Filters;
+
 class NoOldStyleConstructorIterator extends \FilterIterator
 {
     /**
@@ -8,7 +9,7 @@ class NoOldStyleConstructorIterator extends \FilterIterator
      */
     public function accept()
     {
-        if ($this->current()->getDeclaringClass()->inNamespace()) {
+        if ( $this->current()->getDeclaringClass()->inNamespace() ) {
             return true;
         } else {
             return $this->hasMethodNamedAfterClass();
@@ -21,7 +22,7 @@ class NoOldStyleConstructorIterator extends \FilterIterator
     protected function hasMethodNamedAfterClass()
     {
         return strcasecmp(
-            $this->current()->name,
+            $this->current()->name ,
             $this->current()->getDeclaringClass()->getShortName()
         ) !== 0;
     }

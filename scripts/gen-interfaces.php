@@ -14,13 +14,13 @@ include __DIR__ . '/InterfaceDistiller/autoload.php';
 $phalconVersion = \Phalcon\Version::get();
 define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'interfaces' , $phalconVersion));
 
-$phalconClasses = new \RegexIterator(new \ArrayIterator(get_declared_classes()) , '/^Phalcon/');
+$phalconClasses = new \RegexIterator(new \ArrayIterator(get_declared_interfaces()) , '/^Phalcon/');
 
 foreach ( $phalconClasses as $phalconClass ) {
 
     $reflector = new \ReflectionClass($phalconClass);
 
-    $distillate = new Distillate;
+    $distillate = new Distillate();
     $distillate->setInterfaceName($phalconClass);
 
     $distillate->setExtendingInterfaces(
@@ -50,11 +50,10 @@ foreach ( $phalconClasses as $phalconClass ) {
 
     $file = new \SplFileObject($fileName , 'w');
     //$file   = new \SplTempFileObject( );
-    $writer = new Distillate\Writer($file);
+    $writer = new Distillate\Writer($file,true);
     $writer->writeToFile($distillate);
     $file->rewind();
     $file->fpassthru();
 
     echo $fileName . PHP_EOL;
-    //die;
 }
