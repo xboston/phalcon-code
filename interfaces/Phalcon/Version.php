@@ -1,8 +1,8 @@
 <?php
 namespace Phalcon;
-interface Version
+abstract class Version
 {
-    public static function _getVersion();
-    public static function get();
-    public static function getId();
+    public static function _getVersion(){}
+    public static function get(){}
+    public static function getId(){}
 }

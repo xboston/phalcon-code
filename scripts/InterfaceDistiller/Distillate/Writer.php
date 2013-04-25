@@ -60,9 +60,9 @@ class Writer
         } else {
             $this->inGlobalNamespace = true;
         }
-        $this->writeString("interface $interfaceShortName");
+        $this->writeString("abstract class $interfaceShortName");
         if ($extendingInterfaces) {
-            $this->writeString(" extends \\$extendingInterfaces");
+            $this->writeString(" implements \\$extendingInterfaces");
         }
         $this->writeString(PHP_EOL);
     }
@@ -113,7 +113,7 @@ class Writer
     {
         $this->writeString(
             sprintf(
-            	'%s    public%sfunction %s(%s);',
+            	'%s    public%sfunction %s(%s){}',
                 $this->writeDocCommentOfMethod($method),
                 $method->isStatic() ? ' static ' : ' ',
                 $method->name,

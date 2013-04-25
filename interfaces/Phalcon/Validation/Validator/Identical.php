@@ -1,9 +1,9 @@
 <?php
 namespace Phalcon\Validation\Validator;
-interface Identical extends \Phalcon\Validation\ValidatorInterface
+abstract class Identical implements \Phalcon\Validation\ValidatorInterface
 {
-    public function validate($validator, $attribute);
-    public function __construct($options = NULL);
-    public function isSetOption($key);
-    public function getOption($key);
+    public function validate($validator, $attribute){}
+    public function __construct($options = NULL){}
+    public function isSetOption($key){}
+    public function getOption($key){}
 }

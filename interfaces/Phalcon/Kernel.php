@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon;
-interface Kernel
+abstract class Kernel
 {
-    public static function preComputeHashKey($arrKey);
+    public static function preComputeHashKey($arrKey){}
 }

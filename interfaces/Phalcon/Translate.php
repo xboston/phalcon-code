@@ -1,5 +1,5 @@
 <?php
 namespace Phalcon;
-interface Translate
+abstract class Translate
 {
 }

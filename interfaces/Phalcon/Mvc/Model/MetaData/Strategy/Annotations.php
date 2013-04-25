@@ -1,7 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\MetaData\Strategy;
-interface Annotations
+abstract class Annotations
 {
-    public function getMetaData($model, $dependencyInjector);
-    public function getColumnMaps();
+    public function getMetaData($model, $dependencyInjector){}
+    public function getColumnMaps(){}
 }

@@ -1,14 +1,14 @@
 <?php
 namespace Phalcon\Config\Adapter;
-interface Ini extends \ArrayAccess
+abstract class Ini implements \ArrayAccess
 {
-    public function __construct($filePath);
-    public function offsetExists($index);
-    public function get($index, $defaultValue = NULL);
-    public function offsetGet($index);
-    public function offsetSet($index, $value);
-    public function offsetUnset($index);
-    public function merge($config);
-    public function toArray();
-    public static function __set_state($data);
+    public function __construct($filePath){}
+    public function offsetExists($index){}
+    public function get($index, $defaultValue = NULL){}
+    public function offsetGet($index){}
+    public function offsetSet($index, $value){}
+    public function offsetUnset($index){}
+    public function merge($config){}
+    public function toArray(){}
+    public static function __set_state($data){}
 }

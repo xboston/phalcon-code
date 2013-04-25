@@ -1,8 +1,8 @@
 <?php
 namespace Phalcon\Db;
-interface RawValue
+abstract class RawValue
 {
-    public function __construct($value);
-    public function getValue();
-    public function __toString();
+    public function __construct($value){}
+    public function getValue(){}
+    public function __toString(){}
 }

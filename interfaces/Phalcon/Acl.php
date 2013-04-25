@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon;
-interface Acl
+abstract class Acl
 {
     const ALLOW = 1;
     const DENY = 0;

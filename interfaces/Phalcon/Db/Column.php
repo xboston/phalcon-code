@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Db;
-interface Column extends \Phalcon\Db\ColumnInterface
+abstract class Column implements \Phalcon\Db\ColumnInterface
 {
     const TYPE_INTEGER = 0;
     const TYPE_DATE = 1;
@@ -17,19 +17,19 @@ interface Column extends \Phalcon\Db\ColumnInterface
     const BIND_PARAM_BOOL = 5;
     const BIND_PARAM_DECIMAL = 32;
     const BIND_SKIP = 1024;
-    public function __construct($columnName, $definition);
-    public function getSchemaName();
-    public function getName();
-    public function getType();
-    public function getSize();
-    public function getScale();
-    public function isUnsigned();
-    public function isNotNull();
-    public function isPrimary();
-    public function isAutoIncrement();
-    public function isNumeric();
-    public function isFirst();
-    public function getAfterPosition();
-    public function getBindType();
-    public static function __set_state($data);
+    public function __construct($columnName, $definition){}
+    public function getSchemaName(){}
+    public function getName(){}
+    public function getType(){}
+    public function getSize(){}
+    public function getScale(){}
+    public function isUnsigned(){}
+    public function isNotNull(){}
+    public function isPrimary(){}
+    public function isAutoIncrement(){}
+    public function isNumeric(){}
+    public function isFirst(){}
+    public function getAfterPosition(){}
+    public function getBindType(){}
+    public static function __set_state($data){}
 }

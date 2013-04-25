@@ -1,5 +1,5 @@
 <?php
 namespace Phalcon;
-interface Session
+abstract class Session
 {
 }

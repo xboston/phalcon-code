@@ -1,7 +1,7 @@
 <?php
 namespace Phalcon\Logger\Formatter;
-interface Json extends \Phalcon\Logger\FormatterInterface
+abstract class Json implements \Phalcon\Logger\FormatterInterface
 {
-    public function format($message, $type, $timestamp);
-    public function getTypeString($type);
+    public function format($message, $type, $timestamp){}
+    public function getTypeString($type){}
 }

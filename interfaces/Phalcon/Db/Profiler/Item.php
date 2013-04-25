@@ -1,12 +1,12 @@
 <?php
 namespace Phalcon\Db\Profiler;
-interface Item
+abstract class Item
 {
-    public function setSQLStatement($sqlStatement);
-    public function getSQLStatement();
-    public function setInitialTime($initialTime);
-    public function setFinalTime($finalTime);
-    public function getInitialTime();
-    public function getFinalTime();
-    public function getTotalElapsedSeconds();
+    public function setSQLStatement($sqlStatement){}
+    public function getSQLStatement(){}
+    public function setInitialTime($initialTime){}
+    public function setFinalTime($finalTime){}
+    public function getInitialTime(){}
+    public function getFinalTime(){}
+    public function getTotalElapsedSeconds(){}
 }

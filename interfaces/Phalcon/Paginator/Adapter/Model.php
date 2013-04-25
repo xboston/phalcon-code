@@ -1,8 +1,8 @@
 <?php
 namespace Phalcon\Paginator\Adapter;
-interface Model extends \Phalcon\Paginator\AdapterInterface
+abstract class Model implements \Phalcon\Paginator\AdapterInterface
 {
-    public function __construct($config);
-    public function setCurrentPage($page);
-    public function getPaginate();
+    public function __construct($config){}
+    public function setCurrentPage($page){}
+    public function getPaginate(){}
 }

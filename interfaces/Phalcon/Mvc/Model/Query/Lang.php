@@ -1,6 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model\Query;
-interface Lang
+abstract class Lang
 {
-    public static function parsePHQL($phql);
+    public static function parsePHQL($phql){}
 }
