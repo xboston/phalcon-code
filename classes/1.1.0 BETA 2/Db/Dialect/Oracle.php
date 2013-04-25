@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db\Dialect{
-    class Oracle extends \Phalcon\Db\Dialect implements \Phalcon\Db\DialectInterface
+
+    abstract class Oracle extends \Phalcon\Db\Dialect implements \Phalcon\Db\DialectInterface
     {
         public function getColumnDefinition($column){}
         public function addColumn($tableName, $schemaName, $column){}

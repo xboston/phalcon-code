@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Cache{
-    class Multiple
+
+    abstract class Multiple
     {
         public function __construct($backends = NULL){}
         public function push($backend){}

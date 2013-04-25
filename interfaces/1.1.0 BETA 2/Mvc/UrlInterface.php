@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface UrlInterface
     {
         public function setBaseUri($baseUri);

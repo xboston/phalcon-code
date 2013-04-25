@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class Relation implements \Phalcon\Mvc\Model\RelationInterface
+
+    abstract class Relation implements \Phalcon\Mvc\Model\RelationInterface
     {
         const BELONGS_TO = 0;
         const HAS_ONE = 1;

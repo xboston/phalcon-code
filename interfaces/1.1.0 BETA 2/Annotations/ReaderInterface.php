@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Annotations{
+
     interface ReaderInterface
     {
         public function parse($className);

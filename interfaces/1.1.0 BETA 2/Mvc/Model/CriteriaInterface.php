@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface CriteriaInterface
     {
         public function setModelName($modelName);

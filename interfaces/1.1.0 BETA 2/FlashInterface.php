@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon{
+
     interface FlashInterface
     {
         public function error($message);

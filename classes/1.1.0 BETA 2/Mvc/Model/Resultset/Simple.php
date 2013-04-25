@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Resultset{
-    class Simple extends \Phalcon\Mvc\Model\Resultset implements \Serializable,\ArrayAccess,\Countable,\SeekableIterator,\Traversable,\Iterator,\Phalcon\Mvc\Model\ResultsetInterface
+
+    abstract class Simple extends \Phalcon\Mvc\Model\Resultset implements \Serializable,\ArrayAccess,\Countable,\SeekableIterator,\Traversable,\Iterator,\Phalcon\Mvc\Model\ResultsetInterface
     {
         const TYPE_RESULT_FULL = 0;
         const TYPE_RESULT_PARTIAL = 1;

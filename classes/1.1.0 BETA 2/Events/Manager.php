@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Events{
-    class Manager implements \Phalcon\Events\ManagerInterface
+
+    abstract class Manager implements \Phalcon\Events\ManagerInterface
     {
         public function attach($eventType, $handler, $priority = NULL){}
         public function enablePriorities($enablePriorities){}

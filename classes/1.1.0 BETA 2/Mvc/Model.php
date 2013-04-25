@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class Model implements \Phalcon\Mvc\ModelInterface,\Phalcon\Mvc\Model\ResultInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
+
+    abstract class Model implements \Phalcon\Mvc\ModelInterface,\Phalcon\Mvc\Model\ResultInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
     {
         const OP_NONE = 0;
         const OP_CREATE = 1;

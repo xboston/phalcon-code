@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Validation extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Validation extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($validators = NULL){}
         public function validate($data = NULL, $entity = NULL){}

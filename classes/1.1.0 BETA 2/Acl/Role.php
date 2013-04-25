@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Acl{
-    class Role implements \Phalcon\Acl\RoleInterface
+
+    abstract class Role implements \Phalcon\Acl\RoleInterface
     {
         public function __construct($name, $description = NULL){}
         public function getName(){}

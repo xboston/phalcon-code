@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Http{
-    class Cookie implements \Phalcon\DI\InjectionAwareInterface
+
+    abstract class Cookie implements \Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($name, $value = NULL, $expire = NULL, $path = NULL){}
         public function setDI($dependencyInjector){}

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Session{
+
     interface BagInterface
     {
         public function initialize();

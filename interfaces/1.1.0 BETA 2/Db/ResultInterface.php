@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Db{
+
     interface ResultInterface
     {
         public function __construct($connection, $result, $sqlStatement = NULL, $bindParams = NULL, $bindTypes = NULL);

@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Assets{
-    class Collection implements \Countable,\Iterator,\Traversable
+
+    abstract class Collection implements \Countable,\Iterator,\Traversable
     {
         public function add($resource){}
         public function addCss($path, $local = NULL){}

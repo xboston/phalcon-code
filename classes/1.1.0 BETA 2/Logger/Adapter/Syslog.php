@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Logger\Adapter{
-    class Syslog extends \Phalcon\Logger\Adapter implements \Phalcon\Logger\AdapterInterface
+
+    abstract class Syslog extends \Phalcon\Logger\Adapter implements \Phalcon\Logger\AdapterInterface
     {
         public function __construct($name, $options = NULL){}
         public function getFormatter(){}

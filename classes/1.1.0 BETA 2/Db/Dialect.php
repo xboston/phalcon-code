@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db{
-    class Dialect
+
+    abstract class Dialect
     {
         public function limit($sqlQuery, $number){}
         public function forUpdate($sqlQuery){}

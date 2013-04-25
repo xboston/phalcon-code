@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Config implements \ArrayAccess
+
+    abstract class Config implements \ArrayAccess
     {
         public function __construct($arrayConfig = NULL){}
         public function offsetExists($index){}

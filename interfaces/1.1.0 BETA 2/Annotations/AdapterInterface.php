@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Annotations{
+
     interface AdapterInterface
     {
         public function setReader($reader);

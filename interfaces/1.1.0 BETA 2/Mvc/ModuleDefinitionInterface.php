@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface ModuleDefinitionInterface
     {
         public function registerAutoloaders();

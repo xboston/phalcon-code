@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db\Result{
-    class Pdo
+
+    abstract class Pdo
     {
         public function __construct($connection, $result, $sqlStatement = NULL, $bindParams = NULL, $bindTypes = NULL){}
         public function execute(){}

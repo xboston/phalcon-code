@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\DI{
+
     interface ServiceInterface
     {
         public function __construct($name, $definition, $shared = NULL);

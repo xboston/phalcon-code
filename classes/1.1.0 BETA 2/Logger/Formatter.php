@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Logger{
-    class Formatter
+
+    abstract class Formatter
     {
         public function getTypeString($type){}
     }

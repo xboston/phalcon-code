@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Session{
+
     interface AdapterInterface
     {
         public function __construct($options = NULL);

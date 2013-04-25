@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Logger{
-    class Adapter
+
+    abstract class Adapter
     {
         public function setLogLevel($level){}
         public function getLogLevel(){}

@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db\Adapter\Pdo{
-    class Sqlite extends \Phalcon\Db\Adapter\Pdo implements \Phalcon\Events\EventsAwareInterface,\Phalcon\Db\AdapterInterface
+
+    abstract class Sqlite extends \Phalcon\Db\Adapter\Pdo implements \Phalcon\Events\EventsAwareInterface,\Phalcon\Db\AdapterInterface
     {
         public function connect($descriptor = NULL){}
         public function describeColumns($table, $schema = NULL){}

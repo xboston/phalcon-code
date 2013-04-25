@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Acl
+
+    abstract class Acl
     {
         const ALLOW = 1;
         const DENY = 0;

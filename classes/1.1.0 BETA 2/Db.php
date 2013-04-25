@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Db
+
+    abstract class Db
     {
         const FETCH_ASSOC = 1;
         const FETCH_BOTH = 2;

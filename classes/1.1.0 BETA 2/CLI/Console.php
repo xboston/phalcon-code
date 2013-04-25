@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\CLI{
-    class Console implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
+
+    abstract class Console implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

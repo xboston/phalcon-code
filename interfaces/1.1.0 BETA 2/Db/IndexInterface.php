@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Db{
+
     interface IndexInterface
     {
         public function __construct($indexName, $columns);

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Cache{
+
     interface BackendInterface
     {
         public function start($keyName, $lifetime = NULL);

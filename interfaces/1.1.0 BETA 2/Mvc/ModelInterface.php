@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface ModelInterface
     {
         public function __construct($dependencyInjector = NULL, $modelsManager = NULL);

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Db{
+
     interface AdapterInterface
     {
         public function __construct($descriptor);

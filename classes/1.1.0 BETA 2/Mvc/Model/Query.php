@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class Query implements \Phalcon\Mvc\Model\QueryInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Query implements \Phalcon\Mvc\Model\QueryInterface,\Phalcon\DI\InjectionAwareInterface
     {
         const TYPE_SELECT = 309;
         const TYPE_INSERT = 306;

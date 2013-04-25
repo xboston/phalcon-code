@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Validation\Validator{
-    class Confirmation extends \Phalcon\Validation\Validator implements \Phalcon\Validation\ValidatorInterface
+
+    abstract class Confirmation extends \Phalcon\Validation\Validator implements \Phalcon\Validation\ValidatorInterface
     {
         public function validate($validator, $attribute){}
         public function __construct($options = NULL){}

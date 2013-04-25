@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface BehaviorInterface
     {
         public function __construct($options = NULL);

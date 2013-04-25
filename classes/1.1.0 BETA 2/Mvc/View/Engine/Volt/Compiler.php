@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\View\Engine\Volt{
-    class Compiler implements \Phalcon\DI\InjectionAwareInterface
+
+    abstract class Compiler implements \Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($view = NULL){}
         public function setOptions($options){}

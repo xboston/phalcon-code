@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Query{
-    class Status implements \Phalcon\Mvc\Model\Query\StatusInterface
+
+    abstract class Status implements \Phalcon\Mvc\Model\Query\StatusInterface
     {
         public function __construct($success, $model){}
         public function getModel(){}

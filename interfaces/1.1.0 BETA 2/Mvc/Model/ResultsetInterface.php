@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface ResultsetInterface
     {
         public function getType();

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface MessageInterface
     {
         public function __construct($message, $field = NULL, $type = NULL);

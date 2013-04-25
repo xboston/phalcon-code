@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface RouterInterface
     {
         public function setDefaultModule($moduleName);

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Http{
+
     interface ResponseInterface
     {
         public function setStatusCode($code, $message);

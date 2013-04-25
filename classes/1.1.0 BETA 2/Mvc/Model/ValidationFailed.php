@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class ValidationFailed extends \Phalcon\Mvc\Model\Exception
+
+    abstract class ValidationFailed extends \Phalcon\Mvc\Model\Exception
     {
         public function __construct($model, $validationMessages){}
         public function getMessages(){}

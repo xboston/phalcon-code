@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon{
+
     interface EscaperInterface
     {
         public function setEncoding($encoding);

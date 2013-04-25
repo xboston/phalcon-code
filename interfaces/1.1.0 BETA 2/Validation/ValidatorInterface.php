@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Validation{
+
     interface ValidatorInterface
     {
         public function isSetOption($key);

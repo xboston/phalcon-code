@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Behavior{
-    class Timestampable extends \Phalcon\Mvc\Model\Behavior implements \Phalcon\Mvc\Model\BehaviorInterface
+
+    abstract class Timestampable extends \Phalcon\Mvc\Model\Behavior implements \Phalcon\Mvc\Model\BehaviorInterface
     {
         public function notify($type, $model){}
         public function __construct($options = NULL){}

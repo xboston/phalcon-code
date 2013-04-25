@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Db{
+
     interface ReferenceInterface
     {
         public function __construct($referenceName, $definition);

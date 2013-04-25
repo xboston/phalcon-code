@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Db{
+
     interface DialectInterface
     {
         public function limit($sqlQuery, $number);

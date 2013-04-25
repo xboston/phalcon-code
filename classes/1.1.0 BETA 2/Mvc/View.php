@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class View extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\ViewInterface
+
+    abstract class View extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Mvc\ViewInterface
     {
         const LEVEL_MAIN_LAYOUT = 5;
         const LEVEL_AFTER_TEMPLATE = 4;

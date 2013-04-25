@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db{
-    class Profiler
+
+    abstract class Profiler
     {
         public function __construct(){}
         public function startProfile($sqlStatement){}

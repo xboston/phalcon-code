@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface MetaDataInterface
     {
         public function setStrategy($strategy);

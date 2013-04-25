@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class Manager implements \Phalcon\Mvc\Model\ManagerInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
+
+    abstract class Manager implements \Phalcon\Mvc\Model\ManagerInterface,\Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

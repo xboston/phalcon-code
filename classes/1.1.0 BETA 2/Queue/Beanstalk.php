@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Queue{
-    class Beanstalk
+
+    abstract class Beanstalk
     {
         public function __construct($options = NULL){}
         public function connect(){}

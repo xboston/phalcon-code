@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Exception extends \Exception
+
+    abstract class Exception extends \Exception
     {
         protected function __clone(){}
         public function __construct($message = NULL, $code = NULL, $previous = NULL){}

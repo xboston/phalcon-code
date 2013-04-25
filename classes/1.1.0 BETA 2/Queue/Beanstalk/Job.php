@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Queue\Beanstalk{
-    class Job
+
+    abstract class Job
     {
         public function __construct($queue, $id, $body){}
         public function getId(){}

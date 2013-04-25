@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class Micro extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\ArrayAccess
+
+    abstract class Micro extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\ArrayAccess
     {
         public function setDI($dependencyInjector){}
         public function map($routePattern, $handler){}

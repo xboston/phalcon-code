@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon{
+
     interface DispatcherInterface
     {
         public function setActionSuffix($actionSuffix);

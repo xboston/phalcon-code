@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Events{
-    class Event
+
+    abstract class Event
     {
         public function __construct($type, $source, $data = NULL, $cancelable = NULL){}
         public function setType($eventType){}

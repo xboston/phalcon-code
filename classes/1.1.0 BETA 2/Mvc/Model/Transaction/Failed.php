@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Transaction{
-    class Failed extends \Exception
+
+    abstract class Failed extends \Exception
     {
         public function __construct($message, $record){}
         public function getRecordMessages(){}

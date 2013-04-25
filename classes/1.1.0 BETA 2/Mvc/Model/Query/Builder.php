@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Query{
-    class Builder implements \Phalcon\Mvc\Model\Query\BuilderInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Builder implements \Phalcon\Mvc\Model\Query\BuilderInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($params = NULL){}
         public function setDI($dependencyInjector){}

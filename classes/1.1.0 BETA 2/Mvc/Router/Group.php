@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Router{
-    class Group
+
+    abstract class Group
     {
         public function __construct($paths = NULL){}
         public function setHostname($hostname){}

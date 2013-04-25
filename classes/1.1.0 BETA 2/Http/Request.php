@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Http{
-    class Request implements \Phalcon\Http\RequestInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Request implements \Phalcon\Http\RequestInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

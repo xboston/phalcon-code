@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Version
+
+    abstract class Version
     {
         protected static function _getVersion(){}
         public static function get(){}

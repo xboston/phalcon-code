@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface ViewInterface
     {
         public function setViewsDir($viewsDir);

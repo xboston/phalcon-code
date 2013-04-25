@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Config\Adapter{
-    class Ini extends \Phalcon\Config implements \ArrayAccess
+
+    abstract class Ini extends \Phalcon\Config implements \ArrayAccess
     {
         public function __construct($filePath){}
         public function offsetExists($index){}

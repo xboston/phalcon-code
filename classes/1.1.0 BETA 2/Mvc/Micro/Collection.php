@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Micro{
-    class Collection
+
+    abstract class Collection
     {
         protected function _addMap(){}
         public function getHandlers(){}

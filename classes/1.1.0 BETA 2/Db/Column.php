@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db{
-    class Column implements \Phalcon\Db\ColumnInterface
+
+    abstract class Column implements \Phalcon\Db\ColumnInterface
     {
         const TYPE_INTEGER = 0;
         const TYPE_DATE = 1;

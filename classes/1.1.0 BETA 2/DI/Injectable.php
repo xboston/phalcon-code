@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\DI{
-    class Injectable implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
+
+    abstract class Injectable implements \Phalcon\DI\InjectionAwareInterface,\Phalcon\Events\EventsAwareInterface
     {
 
         /**

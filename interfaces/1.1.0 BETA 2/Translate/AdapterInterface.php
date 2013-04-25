@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Translate{
+
     interface AdapterInterface
     {
         public function __construct($options);

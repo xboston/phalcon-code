@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\View{
+
     interface EngineInterface
     {
         public function __construct($view, $dependencyInjector = NULL);

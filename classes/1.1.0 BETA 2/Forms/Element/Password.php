@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Forms\Element{
-    class Password extends \Phalcon\Forms\Element
+
+    abstract class Password extends \Phalcon\Forms\Element
     {
         public function render($attributes = NULL){}
         public function __construct($name, $attributes = NULL){}

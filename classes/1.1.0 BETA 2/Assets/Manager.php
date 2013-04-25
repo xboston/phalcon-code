@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Assets{
-    class Manager
+
+    abstract class Manager
     {
         public function useImplicitOutput($implicitOutput){}
         public function addCss($path, $local = NULL){}

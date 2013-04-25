@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Router{
+
     interface RouteInterface
     {
         public function __construct($pattern, $paths = NULL, $httpMethods = NULL);

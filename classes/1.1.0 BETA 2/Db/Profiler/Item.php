@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Db\Profiler{
-    class Item
+
+    abstract class Item
     {
         public function setSQLStatement($sqlStatement){}
         public function getSQLStatement(){}

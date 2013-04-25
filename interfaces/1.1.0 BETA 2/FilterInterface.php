@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon{
+
     interface FilterInterface
     {
         public function add($name, $handler);

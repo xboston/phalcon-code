@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc{
+
     interface CollectionInterface
     {
         public function __construct($dependencyInjector = NULL);

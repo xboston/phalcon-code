@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Loader implements \Phalcon\Events\EventsAwareInterface
+
+    abstract class Loader implements \Phalcon\Events\EventsAwareInterface
     {
         public function __construct(){}
         public function setEventsManager($eventsManager){}

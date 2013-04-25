@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Http\Response{
-    class Headers implements \Phalcon\Http\Response\HeadersInterface
+
+    abstract class Headers implements \Phalcon\Http\Response\HeadersInterface
     {
         public function set($name, $value){}
         public function get($name){}

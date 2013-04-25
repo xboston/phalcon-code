@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class Row implements \ArrayAccess,\Phalcon\Mvc\Model\ResultInterface
+
+    abstract class Row implements \ArrayAccess,\Phalcon\Mvc\Model\ResultInterface
     {
         public function setDirtyState($dirtyState){}
         public function offsetExists($index){}

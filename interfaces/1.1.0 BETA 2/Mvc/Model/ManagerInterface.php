@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Mvc\Model{
+
     interface ManagerInterface
     {
         public function initialize($model);

@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Http\Request{
+
     interface FileInterface
     {
         public function __construct($file);

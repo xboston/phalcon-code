@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Session{
-    class Adapter
+
+    abstract class Adapter
     {
         public function __construct($options = NULL){}
         public function start(){}

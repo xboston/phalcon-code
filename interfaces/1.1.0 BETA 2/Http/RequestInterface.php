@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Http{
+
     interface RequestInterface
     {
         public function get($name, $filters = NULL, $defaultValue = NULL);

@@ -63,11 +63,12 @@ class Writer
         $interfaceShortName = array_pop($nameParts);
         if ( $nameParts ) {
             $this->writeString('namespace ' . implode('\\' , $nameParts) . '{' . PHP_EOL);
+            $this->writeString(PHP_EOL);
             $this->inGlobalNamespace = false;
         } else {
             $this->inGlobalNamespace = true;
         }
-        $this->writeString(sprintf("    %s $interfaceShortName" , ($this->isInterface ? 'interface' : 'class')));
+        $this->writeString(sprintf("    %s $interfaceShortName" , ($this->isInterface ? 'interface' : 'abstract class')));
         if ( $getParentClass ) {
             $this->writeString(" extends \\$getParentClass");
         }

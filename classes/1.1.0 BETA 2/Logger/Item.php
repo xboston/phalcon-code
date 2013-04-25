@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Logger{
-    class Item
+
+    abstract class Item
     {
         public function __construct($message, $type, $time = NULL){}
         public function getMessage(){}

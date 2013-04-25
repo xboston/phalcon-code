@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class DI implements \Phalcon\DiInterface
+
+    abstract class DI implements \Phalcon\DiInterface
     {
         public function __construct(){}
         public function set($name, $definition, $shared = NULL){}

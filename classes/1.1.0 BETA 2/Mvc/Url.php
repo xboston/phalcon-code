@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class Url implements \Phalcon\Mvc\UrlInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Url implements \Phalcon\Mvc\UrlInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function setDI($dependencyInjector){}
         public function getDI(){}

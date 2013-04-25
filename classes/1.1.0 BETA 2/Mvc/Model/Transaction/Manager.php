@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model\Transaction{
-    class Manager implements \Phalcon\Mvc\Model\Transaction\ManagerInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Manager implements \Phalcon\Mvc\Model\Transaction\ManagerInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct($dependencyInjector = NULL){}
         public function setDI($dependencyInjector){}

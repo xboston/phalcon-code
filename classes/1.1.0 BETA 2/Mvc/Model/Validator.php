@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc\Model{
-    class Validator
+
+    abstract class Validator
     {
         public function __construct($options){}
         protected function appendMessage(){}

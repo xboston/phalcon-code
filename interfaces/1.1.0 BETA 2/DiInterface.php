@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon{
+
     interface DiInterface extends \ArrayAccess
     {
         public function set($alias, $definition, $shared = NULL);

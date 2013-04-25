@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Annotations\Adapter{
-    class Memory extends \Phalcon\Annotations\Adapter implements \Phalcon\Annotations\AdapterInterface
+
+    abstract class Memory extends \Phalcon\Annotations\Adapter implements \Phalcon\Annotations\AdapterInterface
     {
         public function read($key){}
         public function write($key, $data){}

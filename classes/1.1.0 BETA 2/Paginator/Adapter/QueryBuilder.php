@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Paginator\Adapter{
-    class QueryBuilder implements \Phalcon\Paginator\AdapterInterface
+
+    abstract class QueryBuilder implements \Phalcon\Paginator\AdapterInterface
     {
         public function __construct($config){}
         public function setCurrentPage($currentPage){}

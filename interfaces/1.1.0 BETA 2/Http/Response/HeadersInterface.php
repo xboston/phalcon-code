@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Http\Response{
+
     interface HeadersInterface
     {
         public function set($name, $value);

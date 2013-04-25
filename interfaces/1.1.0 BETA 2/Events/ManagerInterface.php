@@ -1,5 +1,6 @@
 <?php
 namespace Phalcon\Events{
+
     interface ManagerInterface
     {
         public function attach($eventType, $handler);

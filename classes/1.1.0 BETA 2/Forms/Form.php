@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Forms{
-    class Form extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Countable,\Iterator,\Traversable
+
+    abstract class Form extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface,\Countable,\Iterator,\Traversable
     {
         public function __construct($entity = NULL, $userOptions = NULL){}
         public function setAction($action){}

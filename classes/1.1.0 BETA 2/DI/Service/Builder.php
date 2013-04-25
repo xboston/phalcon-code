@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\DI\Service{
-    class Builder
+
+    abstract class Builder
     {
         protected function _buildParameter(){}
         protected function _buildParameters(){}

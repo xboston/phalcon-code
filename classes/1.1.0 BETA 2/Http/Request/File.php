@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Http\Request{
-    class File implements \Phalcon\Http\Request\FileInterface
+
+    abstract class File implements \Phalcon\Http\Request\FileInterface
     {
         public function __construct($file){}
         public function getSize(){}

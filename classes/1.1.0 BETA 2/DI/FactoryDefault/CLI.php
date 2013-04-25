@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\DI\FactoryDefault{
-    class CLI extends \Phalcon\DI\FactoryDefault implements \Phalcon\DiInterface
+
+    abstract class CLI extends \Phalcon\DI\FactoryDefault implements \Phalcon\DiInterface
     {
         public function __construct(){}
         public function set($name, $definition, $shared = NULL){}

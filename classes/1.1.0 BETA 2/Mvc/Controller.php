@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class Controller extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
+
+    abstract class Controller extends \Phalcon\DI\Injectable implements \Phalcon\Events\EventsAwareInterface,\Phalcon\DI\InjectionAwareInterface
     {
         public function __construct(){}
         public function setDI($dependencyInjector){}

@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon\Mvc{
-    class Collection implements \Phalcon\Mvc\CollectionInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
+
+    abstract class Collection implements \Phalcon\Mvc\CollectionInterface,\Phalcon\DI\InjectionAwareInterface,\Serializable
     {
         const OP_NONE = 0;
         const OP_CREATE = 1;

@@ -1,6 +1,7 @@
 <?php
 namespace Phalcon{
-    class Crypt
+
+    abstract class Crypt
     {
         public function setCipher($cipher){}
         public function getCipher(){}
