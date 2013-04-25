@@ -8,8 +8,11 @@
  */
 
 define('ROOT_DIR' , '/home/boston/www/phalcon-docs/ru/');
-define('CODES_DIR' , dirname(__DIR__) . '/codes');
-define('EXAMPLES_DIR' , dirname(__DIR__) . '/examples');
+
+$phalconVersion = \Phalcon\Version::get();
+
+define('CODES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'codes' , $phalconVersion));
+define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'examples' , $phalconVersion));
 
 class CodeExampleGenerator
 {
