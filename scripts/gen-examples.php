@@ -9,7 +9,7 @@
 
 define('ROOT_DIR' , '/home/boston/www/phalcon-docs/ru/');
 
-$phalconVersion = \Phalcon\Version::get();
+$phalconVersion = '1.1.0';
 
 define('CODES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'codes' , $phalconVersion));
 define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'examples' , $phalconVersion));
@@ -33,9 +33,8 @@ class CodeExampleGenerator
             if ( $item->getExtension() == 'rst' ) {
 
                 $this->_getCode($item->getPathname());
+                echo sprintf("%s-ok\n" , $item->getPathname() );
             }
-            
-            echo sprintf("%s-ok\n" , $item->getPathname() );
         }
     }
 
