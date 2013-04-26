@@ -11,7 +11,10 @@ namespace com\github\gooh\InterfaceDistiller;
 
 include __DIR__ . '/InterfaceDistiller/autoload.php';
 
-$phalconVersion = '1.1.0';
+$version = \Phalcon\Version::get();
+$versionPieces = explode(' ', $version);
+$phalconVersion = $versionPieces[0];
+
 define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'interfaces' , $phalconVersion));
 
 $phalconClasses = new \RegexIterator(new \ArrayIterator(get_declared_interfaces()) , '/^Phalcon/');

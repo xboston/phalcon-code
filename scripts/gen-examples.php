@@ -9,7 +9,9 @@
 
 define('ROOT_DIR' , '/home/boston/www/phalcon-docs/ru/');
 
-$phalconVersion = '1.1.0';
+$version = \Phalcon\Version::get();
+$versionPieces = explode(' ', $version);
+$phalconVersion = $versionPieces[0];
 
 define('CODES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'codes' , $phalconVersion));
 define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'examples' , $phalconVersion));
