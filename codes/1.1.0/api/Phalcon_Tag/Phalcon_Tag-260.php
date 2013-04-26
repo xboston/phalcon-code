@@ -1,4 +1,4 @@
 <?php
 
- echo Phalcon\Tag::submitButton("Save");
+ echo Phalcon\Tag::imageInput(array("src" => "/img/button.png"));
 

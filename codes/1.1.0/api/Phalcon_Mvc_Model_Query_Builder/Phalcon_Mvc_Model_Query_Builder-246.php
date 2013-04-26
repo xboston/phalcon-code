@@ -1,6 +1,6 @@
 <?php
 
-$builder->offset(30);
+$builder->having('SUM(Robots.price) > 0');
 
 
 

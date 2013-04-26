@@ -1,6 +1,6 @@
 <?php
 
- {{ submit_button('Save') }}
+ {{ image_input('src': '/img/button.png') }}
 
 
 

@@ -1,6 +1,7 @@
 <?php
 
  $app = new Phalcon\Mvc\Micro();
+
  $collection = new Phalcon\Mvc\Micro\Collection();
 
  $collection->setHandler(new PostsController());

@@ -1,7 +1,7 @@
 <?php
 
-$builder->limit(100);
-$builder->limit(100, 20);
+$builder->orderBy('Robots.name');
+$builder->orderBy(array('1', 'Robots.name'));
 
 
 

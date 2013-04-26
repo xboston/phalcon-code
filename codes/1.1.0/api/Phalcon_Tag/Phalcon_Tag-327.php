@@ -1,6 +1,6 @@
 <?php
 
- {{ text_area("comments", "cols": 10, "rows": 4) }}
+ {{ select("robotId", robots, "using": ["id", "name"]) }}
 
 
 

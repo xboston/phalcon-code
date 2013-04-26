@@ -1,6 +1,6 @@
 <?php
 
-$builder->having('SUM(Robots.price) > 0');
+$builder->notInWhere('id', [1, 2, 3]);
 
 
 

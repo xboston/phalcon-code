@@ -1,5 +1,4 @@
 <?php
 
- echo Phalcon\Tag::form("posts/save");
- echo Phalcon\Tag::form(array("posts/save", "method" => "post"));
+ echo Phalcon\Tag::textArea(array("comments", "cols" => 10, "rows" => 4))
 

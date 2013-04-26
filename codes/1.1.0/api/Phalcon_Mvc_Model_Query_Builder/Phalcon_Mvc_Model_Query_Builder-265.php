@@ -1,6 +1,7 @@
 <?php
 
-$builder->groupBy(array('Robots.name'));
+$builder->limit(100);
+$builder->limit(100, 20);
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
- {{ radio_field('Save') }}
+ echo Phalcon\Tag::checkField(array("name"));
 
 
 
