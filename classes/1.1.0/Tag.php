@@ -53,5 +53,6 @@ namespace Phalcon{
         public static function setDocType($doctype){}
         public static function getDocType(){}
         public static function tagHtml($tagName, $parameters = NULL, $selfClose = NULL, $onlyStart = NULL, $useEol = NULL){}
+        public static function tagHtmlClose($tagName, $useEol = NULL){}
     }
 }
