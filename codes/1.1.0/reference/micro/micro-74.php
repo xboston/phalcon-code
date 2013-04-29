@@ -19,6 +19,6 @@ $app->options('/api/products/info/{id}', "info_product");
 $app->patch('/api/products/update/{id}', "info_product");
 
 //Matches if the HTTP method is GET or POST
-$app->map('/repos/store/refs',"action_product")->via(array('GET', 'POST'));
+$app->map('/repos/store/refs')->via(array('GET', 'POST'));
 
 

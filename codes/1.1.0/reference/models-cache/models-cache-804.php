@@ -10,7 +10,7 @@ class Robots extends Phalcon\Mvc\Model
         }
 
         $builder = new CustomQueryBuilder($parameters);
-        $builder->from(get_called_class());
+        $builder->from(get_called_class())
 
         if (isset($parameters['bind'])) {
             return $builder->getQuery()->execute($parameters['bind']);

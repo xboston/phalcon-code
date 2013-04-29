@@ -26,7 +26,7 @@ $success = $connection->execute($sql, array('Astroy Boy', 101));
 // Generating dynamically the necessary SQL
 $success = $connection->update(
    "robots",
-   array("name"),
+   array("name")
    array("New Astro Boy"),
    "id = 101"
 );

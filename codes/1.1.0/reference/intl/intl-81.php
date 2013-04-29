@@ -8,6 +8,6 @@ $collator->setStrength(Collator::PRIMARY);
 var_dump($collator->compare("una canción", "una cancion"));
 
 // Returns that the strings are not equal
-$collator->setStrength(Collator::DEFAULT_VALUE);
+$collator->setStrength(Collator::DEFAULT);
 var_dump($collator->compare("una canción", "una cancion"));
 

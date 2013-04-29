@@ -1,4 +1,0 @@
-<?php
-
-$robots->getParts()->delete();
-
