@@ -1,7 +1,0 @@
-<?php
-
- $route->setHostname('localhost');
-
-
-
-

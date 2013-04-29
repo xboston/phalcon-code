@@ -1,7 +1,7 @@
 <?php
 
  $robot = new Robots();
- $robot->type = 'mechanical';
+ $robot->type = 'mechanical'
  $robot->name = 'Astro Boy';
  $robot->year = 1952;
  if ($robot->save() == false) {
