@@ -3,7 +3,7 @@
 $config = new \Phalcon\Config(array(
     'database' => array(
         'host' => 'localhost',
-        'name' => 'test_db'
+        'dbname' => 'test_db'
     ),
     'debug' => 1
 ));
