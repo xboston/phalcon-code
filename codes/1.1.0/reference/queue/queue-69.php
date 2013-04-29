@@ -1,4 +1,4 @@
 <?php
 
-$jobId = $queue->put(array('proccessVideo' => 4871));
+$jobId = $queue->put(array('processVideo' => 4871));
 

@@ -18,7 +18,7 @@ class IpValidator extends Validator implements ValidatorInterface
     {
         $value = $validator->getValue($attribute);
 
-        if (filter_var($value, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED))) {
+        if (filter_var($value, FILTER_VALIDATE_URL, FILTER_FLAG_PATH_REQUIRED)) {
 
             $message = $this->getOption('message');
             if (!$message) {

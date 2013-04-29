@@ -2,7 +2,7 @@
 
 class Robots extends Phalcon\Mvc\Model
 {
-    public function initalize()
+    public function initialize()
     {
         $this->useDynamicUpdate(true);
     }

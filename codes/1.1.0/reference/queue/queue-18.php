@@ -6,5 +6,5 @@ $queue = new Phalcon\Queue\Beanstalk(array(
 ));
 
 //Insert the job in the queue
-$queue->put(array('proccessVideo' => 4871));
+$queue->put(array('processVideo' => 4871));
 

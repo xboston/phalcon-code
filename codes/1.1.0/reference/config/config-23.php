@@ -6,7 +6,7 @@ $settings = array(
         "host"     => "localhost",
         "username" => "scott",
         "password" => "cheetah",
-        "name"     => "test_db",
+        "dbname"     => "test_db",
     ),
      "app" => array(
         "controllersDir" => "../app/controllers/",
