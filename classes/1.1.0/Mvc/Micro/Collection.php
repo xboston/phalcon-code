@@ -4,8 +4,12 @@ namespace Phalcon\Mvc\Micro{
     abstract class Collection
     {
         protected function _addMap(){}
+        public function setPrefix($prefix){}
+        public function getPrefix(){}
         public function getHandlers(){}
-        public function setHandler($handler){}
+        public function setHandler($handler, $lazy = NULL){}
+        public function setLazy($lazy){}
+        public function isLazy(){}
         public function getHandler(){}
         public function map($routePattern, $handler){}
         public function get($routePattern, $handler){}

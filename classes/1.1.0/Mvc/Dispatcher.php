@@ -39,5 +39,6 @@ namespace Phalcon\Mvc{
         public function getReturnedValue(){}
         public function dispatch(){}
         public function forward($forward){}
+        public function wasForwarded(){}
     }
 }

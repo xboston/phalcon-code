@@ -1,7 +1,7 @@
 <?php
 namespace Phalcon{
 
-    abstract class Crypt
+    abstract class Crypt implements \Phalcon\CryptInterface
     {
         public function setCipher($cipher){}
         public function getCipher(){}
@@ -14,5 +14,6 @@ namespace Phalcon{
         public function encryptBase64($text, $key = NULL){}
         public function decryptBase64($text, $key = NULL){}
         public function getAvailableCiphers(){}
+        public function getAvailableModes(){}
     }
 }
