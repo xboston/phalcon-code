@@ -1,23 +1,23 @@
 <?php
 
-// Создание маршрутизатора
+// Creating a router
 $router = new \Phalcon\Mvc\Router();
 
-// Тут устанавливаются правила маршрутизации
+// Define routes here if any
 // ...
 
-// Бдует использован $_GET["_url"]
+// Taking URI from $_GET["_url"]
 $router->handle();
 
-// Можно указать параметр самостоятельно
+// or Setting the URI value directly
 $router->handle("/employees/edit/17");
 
-// Получаем выбранный контроллер
+// Getting the processed controller
 echo $router->getControllerName();
 
-// .. и соответсвющее действие
+// Getting the processed action
 echo $router->getActionName();
 
-// Получаем сам выбранный для ссылки маршрут
+//Get the matched route
 $route = $router->getMatchedRoute();
 

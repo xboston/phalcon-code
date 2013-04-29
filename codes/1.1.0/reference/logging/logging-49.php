@@ -1,15 +1,17 @@
 <?php
 
-// Создание логгера
-$logger = new \Phalcon\Logger\Adapter\File("app/logs/test.log");
+use Phalcon\Logger\Adapter\File as FileAdapter;
 
-// Начало транзакции
+// Create the logger
+$logger = new FileAdapter("app/logs/test.log");
+
+// Start a transaction
 $logger->begin();
 
-// Добавление записей
+// Add messages
 $logger->alert("This is an alert");
 $logger->error("This is another error");
 
-// Размещение записей в файл
+// Commit messages to file
 $logger->commit();
 

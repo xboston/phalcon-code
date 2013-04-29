@@ -1,11 +1,11 @@
 <?php
 
-// Маршрут соответствует только HTTP методу GET
+// This route only will be matched if the HTTP method is GET
 $router->addGet("/products/edit/{id}", "Posts::edit");
 
-// Маршрут соответствует только HTTP методу POST
+// This route only will be matched if the HTTP method is POST
 $router->addPost("/products/save", "Posts::save");
 
-// Маршрут соответствует сразу двум HTTP методам POST и PUT
+// This route will be matched if the HTTP method is POST or PUT
 $router->add("/products/update")->via(array("POST", "PUT"));
 

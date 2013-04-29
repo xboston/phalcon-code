@@ -1,21 +1,21 @@
-<?php           
+<?php
 
-// Ручная фильтрация
+// Manually applying the filter
 $filter = new Phalcon\Filter();
 
 $email  = $filter->sanitize($_POST["user_email"], "email");
 
-// Ручная фильтрация значения
+// Manually applying the filter to the value
 $filter = new Phalcon\Filter();
 $email  = $filter->sanitize($request->getPost("user_email"), "email");
 
-// Автоматическая фильтрация значения
+// Automatically applying the filter
 $email = $request->getPost("user_email", "email");
 
-// Получение значения по умолчанию, если параметр равен NULL
+// Setting a default value if the param is null
 $email = $request->getPost("user_email", "email", "some@example.com");
 
-// Получение значения по умолчанию, если параметр равен NULL без использования фильтрации
+// Setting a default value if the param is null without filtering
 $email = $request->getPost("user_email", null, "some@example.com");
 
 

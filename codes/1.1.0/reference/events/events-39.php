@@ -1,23 +1,26 @@
 <?php
 
-$eventsManager = new \Phalcon\Events\Manager();
+use Phalcon\Events\Manager as EventsManager,
+    Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
-// Создание слушателе базы данных
+$eventsManager = new EventsManager();
+
+//Create a database listener
 $dbListener = new MyDbListener();
 
-// Слушать все события базы данных
+//Listen all the database events
 $eventsManager->attach('db', $dbListener);
 
-$connection = new \Phalcon\Db\Adapter\Pdo\Mysql(array(
+$connection = new DbAdapter(array(
     "host" => "localhost",
     "username" => "root",
     "password" => "secret",
     "dbname" => "invo"
 ));
 
-// Совмещение менеджера событий с адаптером базы данных
+//Assign the eventsManager to the db adapter instance
 $connection->setEventsManager($eventsManager);
 
-// Выполнение SQL запроса
+//Send a SQL command to the database server
 $connection->query("SELECT * FROM products p WHERE p.status = 1");
 

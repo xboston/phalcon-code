@@ -1,26 +1,27 @@
 <?php
 
-// Создание frontend для выходных данных. Кэшируем файлы на 2 дня
+//Create an Output frontend. Cache the files for 2 days
 $frontCache = new Phalcon\Cache\Frontend\Output(array(
     "lifetime" => 172800
 ));
 
-// Создаем компонент, который будем кэшировать из "Выходных данных" в "Файл"
-// Устанавливаем папку для кэшируемых файлов - важно указать символ "/" в конце пути
+// Create the component that will cache from the "Output" to a "File" backend
+// Set the cache file directory - it's important to keep the "/" at the end of
+// the value for the folder
 $cache = new Phalcon\Cache\Backend\File($frontCache, array(
     "cacheDir" => "../app/cache/"
 ));
 
-// Получить/Создать кэшируемый файл ../app/cache/my-cache.html
+// Get/Set the cache file to ../app/cache/my-cache.html
 $content = $cache->start("my-cache.html");
 
-// Если $content является значением NULL, значит данных в кэше нет и их надо сгенерировать
+// If $content is null then the content will be generated for the cache
 if ($content === null) {
 
-    // Выводим дату и время
+    //Print date and time
     echo date("r");
 
-    // Генерируем ссылку на "регистрацию"
+    //Generate a link to the sign-up action
     echo Phalcon\Tag::linkTo(
         array(
             "user/signup",
@@ -29,12 +30,12 @@ if ($content === null) {
         )
     );
 
-    // Сохраняем вывод в кэш
+    // Store the output into the cache file
     $cache->save();
 
 } else {
 
-    // Ввыводим кэшируемые данные
+    // Echo the cached output
     echo $content;
 }
 

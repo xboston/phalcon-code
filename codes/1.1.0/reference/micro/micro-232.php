@@ -1,12 +1,16 @@
 <?php
 
-$di = new \Phalcon\DI\FactoryDefault();
+use Phalcon\DI\FactoryDefault,
+    Phalcon\Mvc\Micro,
+    Phalcon\Config\Adapter\Ini as IniConfig;
+
+$di = new FactoryDefault();
 
 $di->set('config', function() {
-    return new \Phalcon\Config\Adapter\Ini("config.ini");
+    return new IniConfig("config.ini");
 });
 
-$app = new Phalcon\Mvc\Micro();
+$app = new Micro();
 
 $app->setDI($di);
 

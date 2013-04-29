@@ -11,5 +11,5 @@ $robots->getParts()->update($data, function($part) {
         return false;
     }
     return true;
-});
+}
 

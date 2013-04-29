@@ -1,6 +1,6 @@
 <?php
 
-// Регистрируем компонент сообщений с CSS классами
+//Register the flash service with custom CSS classes
 $di->set('flash', function(){
     $flash = new \Phalcon\Flash\Direct(array(
         'error' => 'alert alert-error',

@@ -6,18 +6,18 @@ class UserController extends \Phalcon\Mvc\Controller
   protected function _getTranslation()
   {
 
-    // Получение оптимального языка из браузера
+    //Ask browser what is the best language
     $language = $this->request->getBestLanguage();
 
-    // Проверка существования перевода для полученного языка
+    //Check if we have a translation file for that lang
     if (file_exists("app/messages/".$language.".php")) {
        require "app/messages/".$language.".php";
     } else {
-       // Переключение на язык по умолчанию
+       // fallback to some default
        require "app/messages/en.php";
     }
 
-    // Возвращение объекта работы с переводом
+    //Return a translation object
     return new \Phalcon\Translate\Adapter\NativeArray(array(
        "content" => $messages
     ));

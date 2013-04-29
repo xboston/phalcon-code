@@ -1,13 +1,13 @@
 <?php
 
-// Получение инстации request 
+// Getting a request instance
 $request = new \Phalcon\Http\Request();
 
-// Проверка что даные пришли методом POST
+// Check whether the request was made with method POST
 if ($request->isPost() == true) {
-    // Проверка что request создан через Ajax
+    // Check whether the request was made with Ajax
     if ($request->isAjax() == true) {
-        echo "Request создан используя POST и AJAX";
+        echo "Request was made using POST and AJAX";
     }
 }
 

@@ -1,10 +1,10 @@
 <?php
 
-//app/messages/ru.php
+//app/messages/fr.php
 $messages = array(
-    "hi"      => "Здарова",
-    "bye"     => "Прощай",
-    "hi-name" => "Здарова %name%",
-    "song"    => "Композиция %song%"
+    "hi"      => "Bonjour",
+    "bye"     => "Au revoir",
+    "hi-name" => "Bonjour %name%",
+    "song"    => "La chanson est %song%"
 );
 

@@ -1,6 +1,6 @@
 <?php
 
-// пример - "/system/admin/a/edit/7001"
+// matches "/system/admin/a/edit/7001"
 $router->add(
     "/system/:controller/a/:action/:params",
     array(
@@ -10,7 +10,7 @@ $router->add(
     )
 );
 
-// пример - "/es/news"
+// matches "/es/news"
 $router->add(
     "/([a-z]{2})/:controller",
     array(
@@ -20,7 +20,7 @@ $router->add(
     )
 );
 
-// пример - "/es/news"
+// matches "/es/news"
 $router->add(
     "/{language:[a-z]{2}}/:controller",
     array(
@@ -29,7 +29,7 @@ $router->add(
     )
 );
 
-// пример - "/admin/posts/edit/100"
+// matches "/admin/posts/edit/100"
 $router->add(
     "/admin/:controller/:action/:int",
     array(
@@ -39,7 +39,7 @@ $router->add(
     )
 );
 
-// пример - "/posts/2010/02/some-cool-content"
+// matches "/posts/2010/02/some-cool-content"
 $router->add(
     "/posts/([0-9]{4})/([0-9]{2})/([a-z\-]+)",
     array(
@@ -51,7 +51,7 @@ $router->add(
     )
 );
 
-// пример - "/manual/en/translate.adapter.html"
+// matches "/manual/en/translate.adapter.html"
 $router->add(
     "/manual/([a-z]{2})/([a-z\.]+)\.html",
     array(
@@ -62,13 +62,13 @@ $router->add(
     )
 );
 
-// пример - /feed/fr/le-robots-hot-news.atom
+// matches /feed/fr/le-robots-hot-news.atom
 $router->add(
     "/feed/{lang:[a-z]+}/{blog:[a-z\-]+}\.{type:[a-z\-]+}",
     "Feed::get"
 );
 
-// пример - /api/v1/users/peter.json
+// matches /api/v1/users/peter.json
 $router->add('/api/(v1|v2)/{method:[a-z]+}/{param:[a-z]+}\.(json|xml)', array(
     'controller' => 'api',
     'version' => 1,

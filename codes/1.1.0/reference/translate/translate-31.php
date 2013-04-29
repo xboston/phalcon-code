@@ -1,6 +1,6 @@
 <?php
 
-//app/messages/en.php
+//app/messages/es.php
 $messages = array(
     "hi"      => "Hello",
     "bye"     => "Good Bye",

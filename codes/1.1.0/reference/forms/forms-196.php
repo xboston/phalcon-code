@@ -1,11 +1,6 @@
 <?php
 
-$form->bind($_POST, $robot);
-
-// Проверка правильности введённых данных формы
-if ($form->isValid()) {
-
-    // Сохранение сущности
-    $robot->save();
+foreach ($form->getMessagesFor('name') as $message) {
+    echo $message, '<br>';
 }
 

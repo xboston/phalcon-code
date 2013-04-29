@@ -1,6 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Model\Behavior,
+use Phalcon\Mvc\ModelInterface,
     Phalcon\Mvc\Model\BehaviorInterface;
 
 class Blameable extends Behavior implements BehaviorInterface

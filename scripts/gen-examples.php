@@ -7,7 +7,7 @@
  * php scripts/gen-examples.php
  */
 
-define('ROOT_DIR' , '/home/boston/www/phalcon-docs/ru/');
+define('ROOT_DIR' , '/home/boston/www/phalcon-docs/en/');
 
 $version = \Phalcon\Version::get();
 $versionPieces = explode(' ', $version);

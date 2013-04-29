@@ -1,19 +1,19 @@
 <?php
 
-// Цикл диспетчера
+//Dispatch loop
 while (!$finished) {
 
     $finished = true;
 
     $controllerClass = $controllerName."Controller";
 
-    // Создание экземпляра класса контроллера, работает автопогрузчика
+    //Instantiating the controller class via autoloaders
     $controller = new $controllerClass();
 
-    // Выполнение действия
+    // Execute the action
     call_user_func_array(array($controller, $actionName . "Action"), $params);
 
-    // Значение переменной должно быть изменено при необходимости запуска другого контроллера
+    // Finished should be reloaded to check if the flow was forwarded to another controller
     // $finished = false;
 
 }

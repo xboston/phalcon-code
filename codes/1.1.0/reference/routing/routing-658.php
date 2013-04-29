@@ -1,5 +1,13 @@
 <?php
 
-$router->setUriSource(Router::URI_SOURCE_GET_URL); // use $_GET['_url'] (default)
-$router->setUriSource(Router::URI_SOURCE_SERVER_REQUEST_URI); // use $_SERVER['REQUEST_URI'] (default)
+$router->add('/login', array(
+    'module' => 'admin',
+    'controller' => 'session'
+))->beforeMatch(function($uri, $route) {
+    //Check if the request was made with Ajax
+    if ($_SERVER['X_REQUESTED_WITH'] == 'xmlhttprequest') {
+        return false;
+    }
+    return true;
+});
 

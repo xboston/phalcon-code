@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Logger\Adapter\File as Logger;
+
 class MyDbListener
 {
 
@@ -7,7 +9,7 @@ class MyDbListener
 
     public function __construct()
     {
-        $this->_logger = new \Phalcon\Logger\Adapter\File("../apps/logs/db.log");
+        $this->_logger = new Logger("../apps/logs/db.log");
     }
 
     public function afterQuery($event, $connection)

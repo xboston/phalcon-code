@@ -12,7 +12,7 @@ $di->setShared('modelsManager', function() {
         if (get_class($model) == 'Robots') {
 
             if ($event->getType() == 'beforeSave') {
-                if ($model->name == 'Scooby Doo') {
+                if ($modle->name == 'Scooby Doo') {
                     echo "Scooby Doo isn't a robot!";
                     return false;
                 }
@@ -23,7 +23,7 @@ $di->setShared('modelsManager', function() {
     });
 
     //Setting a default EventsManager
-    $modelsManager = new Phalcon\Mvc\Model\Manager();
+    $modelsManager = new ModelsManager();
     $modelsManager->setEventsManager($eventsManager);
     return $modelsManager;
 });

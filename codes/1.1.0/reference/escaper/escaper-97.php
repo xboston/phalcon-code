@@ -1,2 +1,2 @@
-<table width="<?php echo $e->escapeHtmlAttr('"><h1>Привет</table'); ?>"><tr><td>Привет</td></tr></table>
+<table width="<?php echo $e->escapeHtmlAttr('"><h1>Hello</table'); ?>"><tr><td>Hello</td></tr></table>
 

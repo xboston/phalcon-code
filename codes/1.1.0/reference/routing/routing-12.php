@@ -1,9 +1,9 @@
 <?php
 
-// Создание маршрутизатора
+// Create the router
 $router = new \Phalcon\Mvc\Router();
 
-// Определение правила маршрутизации
+//Define a route
 $router->add(
     "/admin/users/my-profile",
     array(
@@ -12,7 +12,7 @@ $router->add(
     )
 );
 
-// Еще одно правило
+//Another route
 $router->add(
     "/admin/users/change-password",
     array(

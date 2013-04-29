@@ -2,31 +2,31 @@
 
 $router = new \Phalcon\Mvc\Router();
 
-// Создаётся группа с общим модулем и контроллером
+//Create a group with a common module and controller
 $blog = new \Phalcon\Mvc\Router\Group(array(
     'module' => 'blog',
     'controller' => 'index'
 ));
 
-// Маршруты начинаются с /blog
+//All the routes start with /blog
 $blog->setPrefix('/blog');
 
-// Добавление маршрута в группу
+//Add a route to the group
 $blog->add('/save', array(
     'action' => 'save'
 ));
 
-// Еще один маршрут
+//Add another route to the group
 $blog->add('/edit/{id}', array(
     'action' => 'edit'
 ));
 
-// Маршрут для действия по умолчанию
+//This route maps to a controller different than the default
 $blog->add('/blog', array(
     'controller' => 'about',
     'action' => 'index'
 ));
 
-// Добавление группы в общие правила маршрутизации
+//Add the group to the router
 $router->mount($blog);
 
