@@ -3,7 +3,7 @@
 //Check whether acl data already exist
 if (!file_exists("app/security/acl.data")) {
 
-    $acl = new \Phalcon\Acl("Memory");
+    $acl = new \Phalcon\Acl\Adapter\Memory();
 
     //... Define roles, resources, access, etc
 

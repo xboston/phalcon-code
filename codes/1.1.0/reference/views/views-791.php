@@ -14,7 +14,7 @@ $di->set('view', function() {
     $view->setViewsDir("../app/views/");
 
     //Bind the eventsManager to the view component
-    $view->setEventsManager($eventManagers);
+    $view->setEventsManager($eventsManager);
 
     return $view;
 

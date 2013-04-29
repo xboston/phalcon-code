@@ -18,7 +18,7 @@ class PostsController extends \Phalcon\Mvc\Controller
         // Using more than one template engine
         $this->view->registerEngines(
             array(
-                ".my-html" => 'MyTemplateAdapter'
+                ".my-html" => 'MyTemplateAdapter',
                 ".phtml" => 'Phalcon\Mvc\View\Engine\Php'
             )
         );

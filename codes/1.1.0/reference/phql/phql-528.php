@@ -11,7 +11,7 @@ $process = function() use (&$messages) {
         }
     }
     return true;
-}
+};
 
 $success = $process();
 

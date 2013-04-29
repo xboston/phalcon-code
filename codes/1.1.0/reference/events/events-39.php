@@ -6,7 +6,7 @@ use Phalcon\Events\Manager as EventsManager,
 $eventsManager = new EventsManager();
 
 //Create a database listener
-$dbListener = new MyDbListener()
+$dbListener = new MyDbListener();
 
 //Listen all the database events
 $eventsManager->attach('db', $dbListener);
