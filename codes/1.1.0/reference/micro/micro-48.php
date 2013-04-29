@@ -1,20 +1,20 @@
 <?php
 
-//С помощью функции
+// With a function
 function say_hello($name) {
     echo "<h1>Hello! $name</h1>";
 }
 
 $app->get('/say/hello/{name}', "say_hello");
 
-// С помощью статичного метода
+// With a static method
 $app->get('/say/hello/{name}', "SomeClass::someSayMethod");
 
-// С помощью метода объекта
+// With a method in an object
 $myController = new MyController();
 $app->get('/say/hello/{name}', array($myController, "someAction"));
 
-//Анонимная функция (замыкание)
+//Anonymous function
 $app->get('/say/hello/{name}', function ($name) {
     echo "<h1>Hello! $name</h1>";
 });

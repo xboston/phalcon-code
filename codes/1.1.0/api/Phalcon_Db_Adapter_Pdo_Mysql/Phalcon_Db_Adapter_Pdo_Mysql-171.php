@@ -1,7 +1,6 @@
 <?php
 
-$sql = $connection->bindParams('SELECT * FROM robots WHERE name = ?0', array('Bender'));
-  echo $sql; // SELECT * FROM robots WHERE name = 'Bender'
+ print_r($connection->convertBoundParams('SELECT * FROM robots WHERE name = :name:', array('Bender')));
 
 
 
