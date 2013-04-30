@@ -6,6 +6,10 @@
  * 
  */
 
+/**
+ * Для mb_* функций лучше сразу указать кодирочку, используемую по умолчанию
+ */
+mb_internal_encoding("UTF-8");
 
 /**
  * Работа валидатора идёт через общий объект Phalcon\Validation
@@ -53,7 +57,7 @@ $validation->add(
  * Тексты сообщений при несоответсвии условиям длины строки так же можно указывать для каждого случая
  */
 $validation->add(
-    'name3' ,
+    'name4' ,
     new Phalcon\Validation\Validator\StringLength(array(
                                                        'min'            => 5 ,
                                                        'max'            => 10 ,
