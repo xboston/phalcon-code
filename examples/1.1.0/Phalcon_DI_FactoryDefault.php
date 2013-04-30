@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\DI\FactoryDefault
+ * Phalcon\DI\FactoryDefault
  * 
  */

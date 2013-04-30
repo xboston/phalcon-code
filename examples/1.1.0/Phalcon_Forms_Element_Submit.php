@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Forms\Element\Submit
+ * Phalcon\Forms\Element\Submit
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Router\Annotations
+ * Phalcon\Mvc\Router\Annotations
  * 
  */

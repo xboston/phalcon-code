@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Cache\Frontend\None
+ * Phalcon\Cache\Frontend\None
  * 
  */

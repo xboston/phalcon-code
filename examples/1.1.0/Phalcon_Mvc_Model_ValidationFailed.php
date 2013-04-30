@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\ValidationFailed
+ * Phalcon\Mvc\Model\ValidationFailed
  * 
  */

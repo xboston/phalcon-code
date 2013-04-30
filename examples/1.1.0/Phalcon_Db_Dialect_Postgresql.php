@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Dialect\Postgresql
+ * Phalcon\Db\Dialect\Postgresql
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Annotations\Reader
+ * Phalcon\Annotations\Reader
  * 
  */

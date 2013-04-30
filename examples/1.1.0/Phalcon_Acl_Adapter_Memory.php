@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Acl\Adapter\Memory
+ * Phalcon\Acl\Adapter\Memory
  * 
  */

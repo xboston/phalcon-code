@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Transaction
+ * Phalcon\Mvc\Model\Transaction
  * 
  */

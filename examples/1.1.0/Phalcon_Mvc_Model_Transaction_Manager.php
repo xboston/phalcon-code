@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Transaction\Manager
+ * Phalcon\Mvc\Model\Transaction\Manager
  * 
  */

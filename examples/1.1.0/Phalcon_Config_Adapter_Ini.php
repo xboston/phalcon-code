@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Config\Adapter\Ini
+ * Phalcon\Config\Adapter\Ini
  * 
  */

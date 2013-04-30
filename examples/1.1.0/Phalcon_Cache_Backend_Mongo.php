@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Cache\Backend\Mongo
+ * Phalcon\Cache\Backend\Mongo
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Logger\Adapter\Stream
+ * Phalcon\Logger\Adapter\Stream
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Translate\Adapter\NativeArray
+ * Phalcon\Translate\Adapter\NativeArray
  * 
  */

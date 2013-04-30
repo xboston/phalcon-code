@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Paginator\Adapter\Model
+ * Phalcon\Paginator\Adapter\Model
  * 
  */

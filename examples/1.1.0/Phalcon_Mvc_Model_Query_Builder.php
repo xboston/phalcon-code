@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Query\Builder
+ * Phalcon\Mvc\Model\Query\Builder
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Profiler\Item
+ * Phalcon\Db\Profiler\Item
  * 
  */

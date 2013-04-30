@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Validator\Numericality
+ * Phalcon\Mvc\Model\Validator\Numericality
  * 
  */

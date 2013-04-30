@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Cache\Backend\Apc
+ * Phalcon\Cache\Backend\Apc
  * 
  */

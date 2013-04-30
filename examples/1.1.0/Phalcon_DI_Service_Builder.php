@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\DI\Service\Builder
+ * Phalcon\DI\Service\Builder
  * 
  */

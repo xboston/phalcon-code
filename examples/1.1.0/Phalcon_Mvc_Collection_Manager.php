@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Collection\Manager
+ * Phalcon\Mvc\Collection\Manager
  * 
  */

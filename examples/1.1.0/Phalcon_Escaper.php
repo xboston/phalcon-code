@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Escaper
+ * Phalcon\Escaper
  * 
  */

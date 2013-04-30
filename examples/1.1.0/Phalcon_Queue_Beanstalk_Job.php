@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Queue\Beanstalk\Job
+ * Phalcon\Queue\Beanstalk\Job
  * 
  */

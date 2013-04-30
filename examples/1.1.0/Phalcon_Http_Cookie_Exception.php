@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Http\Cookie\Exception
+ * Phalcon\Http\Cookie\Exception
  * 
  */

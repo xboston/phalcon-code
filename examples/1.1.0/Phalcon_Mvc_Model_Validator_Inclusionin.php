@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Validator\Inclusionin
+ * Phalcon\Mvc\Model\Validator\Inclusionin
  * 
  */

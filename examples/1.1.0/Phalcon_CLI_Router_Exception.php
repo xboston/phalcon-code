@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\CLI\Router\Exception
+ * Phalcon\CLI\Router\Exception
  * 
  */

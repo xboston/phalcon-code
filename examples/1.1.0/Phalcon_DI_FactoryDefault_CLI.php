@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\DI\FactoryDefault\CLI
+ * Phalcon\DI\FactoryDefault\CLI
  * 
  */

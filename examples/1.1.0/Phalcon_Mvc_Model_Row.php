@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Row
+ * Phalcon\Mvc\Model\Row
  * 
  */

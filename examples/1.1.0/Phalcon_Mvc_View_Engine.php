@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\View\Engine
+ * Phalcon\Mvc\View\Engine
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\CLI\Console\Exception
+ * Phalcon\CLI\Console\Exception
  * 
  */

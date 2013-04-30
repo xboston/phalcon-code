@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Http\Request\File
+ * Phalcon\Http\Request\File
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Validation\Validator\Identical
+ * Phalcon\Validation\Validator\Identical
  * 
  */

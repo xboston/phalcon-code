@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Forms\Element\Date
+ * Phalcon\Forms\Element\Date
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Annotations\Annotation
+ * Phalcon\Annotations\Annotation
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Assets\Resource\Js
+ * Phalcon\Assets\Resource\Js
  * 
  */

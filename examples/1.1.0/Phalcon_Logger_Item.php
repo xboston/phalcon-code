@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Logger\Item
+ * Phalcon\Logger\Item
  * 
  */

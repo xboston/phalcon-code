@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Http\Response\Cookies
+ * Phalcon\Http\Response\Cookies
  * 
  */

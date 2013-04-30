@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Dialect
+ * Phalcon\Db\Dialect
  * 
  */

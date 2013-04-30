@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Reference
+ * Phalcon\Db\Reference
  * 
  */

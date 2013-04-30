@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\View\Engine\Volt
+ * Phalcon\Mvc\View\Engine\Volt
  * 
  */

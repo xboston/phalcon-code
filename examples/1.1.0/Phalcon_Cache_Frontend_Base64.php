@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Cache\Frontend\Base64
+ * Phalcon\Cache\Frontend\Base64
  * 
  */

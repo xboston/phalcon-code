@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Session\Bag
+ * Phalcon\Session\Bag
  * 
  */

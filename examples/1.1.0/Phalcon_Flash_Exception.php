@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Flash\Exception
+ * Phalcon\Flash\Exception
  * 
  */

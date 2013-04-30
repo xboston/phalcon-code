@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Text
+ * Phalcon\Text
  * 
  */

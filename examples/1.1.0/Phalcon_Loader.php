@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Loader
+ * Phalcon\Loader
  * 
  */

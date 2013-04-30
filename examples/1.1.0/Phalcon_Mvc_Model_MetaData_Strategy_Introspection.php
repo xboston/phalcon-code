@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\MetaData\Strategy\Introspection
+ * Phalcon\Mvc\Model\MetaData\Strategy\Introspection
  * 
  */

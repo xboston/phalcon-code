@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Exception
+ * Phalcon\Db\Exception
  * 
  */

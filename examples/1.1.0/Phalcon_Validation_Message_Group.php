@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Validation\Message\Group
+ * Phalcon\Validation\Message\Group
  * 
  */

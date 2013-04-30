@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Adapter\Pdo
+ * Phalcon\Db\Adapter\Pdo
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Logger\Formatter\Line
+ * Phalcon\Logger\Formatter\Line
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Forms\Element\Password
+ * Phalcon\Forms\Element\Password
  * 
  */

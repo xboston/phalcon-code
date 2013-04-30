@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Router\Route
+ * Phalcon\Mvc\Router\Route
  * 
  */

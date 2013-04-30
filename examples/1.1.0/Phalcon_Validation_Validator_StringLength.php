@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Validation\Validator\StringLength
+ * Phalcon\Validation\Validator\StringLength
  * 
  */

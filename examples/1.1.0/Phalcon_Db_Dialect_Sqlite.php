@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Dialect\Sqlite
+ * Phalcon\Db\Dialect\Sqlite
  * 
  */

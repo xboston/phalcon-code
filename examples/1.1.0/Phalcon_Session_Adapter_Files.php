@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Session\Adapter\Files
+ * Phalcon\Session\Adapter\Files
  * 
  */

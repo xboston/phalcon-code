@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Acl\Role
+ * Phalcon\Acl\Role
  * 
  */

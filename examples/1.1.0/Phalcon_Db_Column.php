@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\Column
+ * Phalcon\Db\Column
  * 
  */

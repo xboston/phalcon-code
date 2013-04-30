@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Http\Response\Headers
+ * Phalcon\Http\Response\Headers
  * 
  */

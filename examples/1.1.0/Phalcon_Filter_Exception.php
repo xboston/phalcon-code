@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Filter\Exception
+ * Phalcon\Filter\Exception
  * 
  */

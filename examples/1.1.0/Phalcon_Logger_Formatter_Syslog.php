@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Logger\Formatter\Syslog
+ * Phalcon\Logger\Formatter\Syslog
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Validation\Validator\Regex
+ * Phalcon\Validation\Validator\Regex
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Logger\Formatter\Json
+ * Phalcon\Logger\Formatter\Json
  * 
  */

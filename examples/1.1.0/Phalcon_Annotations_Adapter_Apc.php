@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Annotations\Adapter\Apc
+ * Phalcon\Annotations\Adapter\Apc
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Validator\PresenceOf
+ * Phalcon\Mvc\Model\Validator\PresenceOf
  * 
  */

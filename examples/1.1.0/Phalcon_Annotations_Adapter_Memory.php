@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Annotations\Adapter\Memory
+ * Phalcon\Annotations\Adapter\Memory
  * 
  */

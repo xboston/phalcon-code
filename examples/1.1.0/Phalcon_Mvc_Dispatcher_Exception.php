@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Dispatcher\Exception
+ * Phalcon\Mvc\Dispatcher\Exception
  * 
  */

@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Db\RawValue
+ * Phalcon\Db\RawValue
  * 
  */

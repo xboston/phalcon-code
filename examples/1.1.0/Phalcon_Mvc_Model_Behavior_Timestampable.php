@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Mvc\Model\Behavior\Timestampable
+ * Phalcon\Mvc\Model\Behavior\Timestampable
  * 
  */

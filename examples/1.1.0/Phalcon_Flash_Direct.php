@@ -1,5 +1,5 @@
 <?php
 /**
- * Примеры использования класса Phalcon\Flash\Direct
+ * Phalcon\Flash\Direct
  * 
  */
