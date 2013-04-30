@@ -31,14 +31,15 @@ class ExamplesGenerator
 
         foreach ( $iterator as $item ) {
 
-            if ( $item->getExtension() == 'rst' ) {
+            $file = $item->getPathname();
+            
+            if ( $item->getExtension() == 'rst' && !strpos($file,'Interface') && !strpos($file,'index')  ) {
 
-                $file = $item->getPathname();
 
                 $fileName      = basename($file);
                 $componentName = str_replace('.rst' , '' , $fileName);
 
-                $locationExamples = EXAMPLES_DIR .  str_replace(ROOT_DIR , '' , dirname($file)) . '/' . $componentName;
+                $locationExamples = EXAMPLES_DIR;
 
                 is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
 
