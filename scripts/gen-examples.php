@@ -13,7 +13,8 @@ $version        = \Phalcon\Version::get();
 $versionPieces  = explode(' ' , $version);
 $phalconVersion = $versionPieces[0];
 
-define('EXAMPLES_DIR' , sprintf("%s/%s/%s" , dirname(__DIR__) , 'examples' , $phalconVersion));
+define('EXAMPLES_ROOT' , sprintf("%s/%s" , dirname(__DIR__) , 'examples'));
+define('EXAMPLES_DIR' , sprintf("%s/%s" , EXAMPLES_ROOT , $phalconVersion));
 
 class ExamplesGenerator
 {
@@ -23,8 +24,8 @@ class ExamplesGenerator
 
     public function __construct($directory)
     {
+        $this->template = file_get_contents(EXAMPLES_ROOT . '/template.php');
         $this->_scanSources($directory);
-        $this->template = file_get_contents(EXAMPLES_DIR . '/template.php');
     }
 
     protected function _scanSources($directory)
@@ -55,9 +56,10 @@ class ExamplesGenerator
 
         if ( !is_file($fileNull) ) {
 
-            $fileBody = str_replace('{ClassName}' , $componentName , $this->template);
-            file_put_contents($fileName , $fileBody);
+            $componentClass = str_replace('_' , '\\' , $componentName);
+            $fileBody       = str_replace('{ClassName}' , $componentClass , $this->template);
 
+            file_put_contents($fileNull , $fileBody);
         }
 
         echo sprintf("%s-ok\n" , $file);
