@@ -19,10 +19,12 @@ class ExamplesGenerator
 {
 
     protected $_docs = array();
+    private $template;
 
     public function __construct($directory)
     {
         $this->_scanSources($directory);
+        $this->template = file_get_contents(EXAMPLES_DIR . '/template.php');
     }
 
     protected function _scanSources($directory)
@@ -32,24 +34,36 @@ class ExamplesGenerator
         foreach ( $iterator as $item ) {
 
             $file = $item->getPathname();
-            
-            if ( $item->getExtension() == 'rst' && !strpos($file,'Interface') && !strpos($file,'index')  ) {
 
+            if ( $item->getExtension() == 'rst' && !strpos($file , 'Interface') && !strpos($file , 'index') ) {
 
-                $fileName      = basename($file);
-                $componentName = str_replace('.rst' , '' , $fileName);
-
-                $locationExamples = EXAMPLES_DIR;
-
-                is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
-
-                $fileNull = sprintf("%s/%s.php" , $locationExamples , $componentName);
-                is_file($fileNull) ? null : touch($fileNull);
-
-                echo sprintf("%s-ok\n" , $file);
+                $this->createFile($file);
             }
         }
     }
+
+    private function  createFile($file)
+    {
+        $fileName      = basename($file);
+        $componentName = str_replace('.rst' , '' , $fileName);
+
+        $locationExamples = EXAMPLES_DIR;
+
+        is_dir($locationExamples) ? : mkdir($locationExamples , 0777 , true);
+
+        $fileNull = sprintf("%s/%s.php" , $locationExamples , $componentName);
+
+        if ( !is_file($fileNull) ) {
+
+            $fileBody = str_replace('{ClassName}' , $componentName , $this->template);
+            file_put_contents($fileName , $fileBody);
+
+        }
+
+        echo sprintf("%s-ok\n" , $file);
+
+    }
+
 }
 
 $api = new ExamplesGenerator(ROOT_DIR);
