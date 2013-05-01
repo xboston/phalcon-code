@@ -15,6 +15,8 @@ namespace Phalcon{
         public function setEventsManager($eventsManager){}
         public function getEventsManager(){}
         public function setActionSuffix($actionSuffix){}
+        public function setModuleName($moduleName){}
+        public function getModuleName(){}
         public function setNamespaceName($namespaceName){}
         public function getNamespaceName(){}
         public function setDefaultNamespace($namespace){}

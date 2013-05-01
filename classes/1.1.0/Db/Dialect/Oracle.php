@@ -22,8 +22,8 @@ namespace Phalcon\Db\Dialect{
         public function describeIndexes($table, $schema = NULL){}
         public function describeReferences($table, $schema = NULL){}
         public function tableOptions($table, $schema = NULL){}
-        public function select($definition){}
         public function limit($sqlQuery, $number){}
+        public function select($definition){}
         public function forUpdate($sqlQuery){}
         public function sharedLock($sqlQuery){}
         public function getColumnList($columnList){}
