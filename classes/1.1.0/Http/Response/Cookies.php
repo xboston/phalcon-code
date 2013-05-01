@@ -10,6 +10,7 @@ namespace Phalcon\Http\Response{
         public function set($name, $value = NULL, $expire = NULL, $path = NULL, $secure = NULL, $httpOnly = NULL){}
         public function get($name){}
         public function has($name){}
+        public function delete(){}
         public function send(){}
         public function reset(){}
     }
