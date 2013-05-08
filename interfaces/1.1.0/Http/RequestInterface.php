@@ -3,9 +3,9 @@ namespace Phalcon\Http{
 
     interface RequestInterface
     {
-        public function get($name, $filters = NULL, $defaultValue = NULL);
-        public function getPost($name, $filters = NULL, $defaultValue = NULL);
-        public function getQuery($name, $filters = NULL, $defaultValue = NULL);
+        public function get($name = NULL, $filters = NULL, $defaultValue = NULL);
+        public function getPost($name = NULL, $filters = NULL, $defaultValue = NULL);
+        public function getQuery($name = NULL, $filters = NULL, $defaultValue = NULL);
         public function getServer($name);
         public function has($name);
         public function hasPost($name);
@@ -30,8 +30,8 @@ namespace Phalcon\Http{
         public function isHead();
         public function isDelete();
         public function isOptions();
-        public function hasFiles();
-        public function getUploadedFiles();
+        public function hasFiles($notErrored = NULL);
+        public function getUploadedFiles($notErrored = NULL);
         public function getHTTPReferer();
         public function getAcceptableContent();
         public function getBestAccept();
