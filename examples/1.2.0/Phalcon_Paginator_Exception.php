@@ -1,0 +1,5 @@
+<?php
+/**
+ * Phalcon\Paginator\Exception
+ * 
+ */

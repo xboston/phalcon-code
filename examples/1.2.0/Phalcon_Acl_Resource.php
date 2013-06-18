@@ -1,0 +1,5 @@
+<?php
+/**
+ * Phalcon\Acl\Resource
+ * 
+ */

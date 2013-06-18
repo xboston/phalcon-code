@@ -102,4 +102,4 @@ class CodeBlocksGenerator
     }
 }
 
-$api = new ExamplesGenerator(ROOT_DIR);
+$api = new CodeBlocksGenerator(ROOT_DIR);
