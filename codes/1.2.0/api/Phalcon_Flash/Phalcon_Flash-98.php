@@ -1,6 +1,6 @@
 <?php
 
- $flash->outputMessage('error', $message);
+$flash->outputMessage('error' , $message);
 
 
 

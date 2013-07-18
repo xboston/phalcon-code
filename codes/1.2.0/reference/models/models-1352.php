@@ -9,15 +9,20 @@ class Robots extends Phalcon\Mvc\Model
         $eventsManager = new \Phalcon\Events\Manager();
 
         //Attach an anonymous function as a listener for "model" events
-        $eventsManager->attach('model', function($event, $robot) {
-            if ($event->getType() == 'beforeSave') {
-                if ($robot->name == 'Scooby Doo') {
-                    echo "Scooby Doo isn't a robot!";
-                    return false;
+        $eventsManager->attach(
+            'model' ,
+            function ($event , $robot) {
+                if ( $event->getType() == 'beforeSave' ) {
+                    if ( $robot->name == 'Scooby Doo' ) {
+                        echo "Scooby Doo isn't a robot!";
+
+                        return false;
+                    }
                 }
+
+                return true;
             }
-            return true;
-        });
+        );
 
         //Attach the events manager to the event
         $this->setEventsManager($eventsManager);
@@ -25,7 +30,7 @@ class Robots extends Phalcon\Mvc\Model
 
 }
 
-$robot = new Robots();
+$robot       = new Robots();
 $robot->name = 'Scooby Doo';
 $robot->year = 1969;
 $robot->save();

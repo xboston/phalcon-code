@@ -7,8 +7,10 @@ $router->setDefaultController("index");
 $router->setDefaultAction("index");
 
 //Using an array
-$router->setDefaults(array(
-    "controller" => "index",
-    "action" => "index"
-));
+$router->setDefaults(
+    array(
+         "controller" => "index" ,
+         "action"     => "index"
+    )
+);
 

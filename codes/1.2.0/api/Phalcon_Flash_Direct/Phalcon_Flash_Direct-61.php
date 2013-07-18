@@ -1,6 +1,6 @@
 <?php
 
- $flash->notice('This is an information');
+$flash->notice('This is an information');
 
 
 

@@ -14,7 +14,7 @@ class PostsController extends \Phalcon\Mvc\Controller
 
     public function saveAction()
     {
-        if ($this->settings["mySetting"] == "value") {
+        if ( $this->settings["mySetting"] == "value" ) {
             //...
         }
     }

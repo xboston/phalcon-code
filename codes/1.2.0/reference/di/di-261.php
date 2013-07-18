@@ -12,12 +12,12 @@ class SomeComponent
     {
 
         $connection = new Connection();
-        $session = new Session();
+        $session    = new Session();
         $fileSystem = new FileSystem();
-        $filter = new Filter();
-        $selector = new Selector();
+        $filter     = new Filter();
+        $selector   = new Selector();
 
-        return new self($connection, $session, $fileSystem, $filter, $selector);
+        return new self($connection , $session , $fileSystem , $filter , $selector);
     }
 
 }

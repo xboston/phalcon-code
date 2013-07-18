@@ -1,8 +1,10 @@
 <?php
 
-$session->setOptions(array(
-    'uniqueId' => 'my-private-app'
-));
+$session->setOptions(
+    array(
+         'uniqueId' => 'my-private-app'
+    )
+);
 
 
 

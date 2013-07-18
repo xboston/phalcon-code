@@ -1,6 +1,6 @@
 <?php
 
- echo 'There are ', Robots::count(), ' robots';
+echo 'There are ' , Robots::count() , ' robots';
 
 
 

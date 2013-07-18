@@ -1,7 +1,7 @@
 <?php
 
 //Dispatch loop
-while (!$finished) {
+while ( !$finished ) {
 
     $finished = true;
 
@@ -11,7 +11,7 @@ while (!$finished) {
     $controller = new $controllerClass();
 
     // Execute the action
-    call_user_func_array(array($controller, $actionName . "Action"), $params);
+    call_user_func_array(array( $controller , $actionName . "Action" ) , $params);
 
     // '$finished' should be reloaded to check if the flow
     // was forwarded to another controller

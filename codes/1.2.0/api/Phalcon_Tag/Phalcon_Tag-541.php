@@ -1,6 +1,6 @@
 <?php
 
-echo Phalcon\Tag::tagHtmlClose('script', true)
+echo Phalcon\Tag::tagHtmlClose('script' , true)
 
 
 

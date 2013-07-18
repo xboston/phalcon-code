@@ -1,9 +1,9 @@
 <html>
-    <head>
-        <?php echo \Phalcon\Tag::getTitle(); ?>
-    </head>
-    <body>
+<head>
+    <?php echo \Phalcon\Tag::getTitle(); ?>
+</head>
+<body>
 
-    </body>
+</body>
 </html>
 

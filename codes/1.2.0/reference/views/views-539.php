@@ -7,20 +7,24 @@ class DownloadController extends \Phalcon\Mvc\Controller
     {
 
         //Check whether the cache with key "downloads" exists or has expired
-        if ($this->view->getCache()->exists('downloads')) {
+        if ( $this->view->getCache()->exists('downloads') ) {
 
             //Query the latest downloads
-            $latest = Downloads::find(array(
-                'order' => 'created_at DESC'
-            ));
+            $latest = Downloads::find(
+                array(
+                     'order' => 'created_at DESC'
+                )
+            );
 
-            $this->view->setVar('latest', $latest);
+            $this->view->setVar('latest' , $latest);
         }
 
         //Enable the cache with the same key "downloads"
-        $this->view->cache(array(
-            'key' => 'downloads'
-        ));
+        $this->view->cache(
+            array(
+                 'key' => 'downloads'
+            )
+        );
     }
 
 }

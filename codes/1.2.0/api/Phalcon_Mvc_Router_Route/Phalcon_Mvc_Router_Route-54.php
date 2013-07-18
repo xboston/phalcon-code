@@ -1,8 +1,11 @@
 <?php
 
- $router->add('/about', array(
-     'controller' => 'about'
- ))->setName('about');
+$router->add(
+    '/about' ,
+    array(
+         'controller' => 'about'
+    )
+)->setName('about');
 
 
 

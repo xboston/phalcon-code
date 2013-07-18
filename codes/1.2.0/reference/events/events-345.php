@@ -8,17 +8,23 @@ $evManager = new EventsManager();
 $evManager->collectResponses(true);
 
 //Attach a listener
-$evManager->attach('custom:custom', function() {
-    return 'first response';
-});
+$evManager->attach(
+    'custom:custom' ,
+    function () {
+        return 'first response';
+    }
+);
 
 //Attach a listener
-$evManager->attach('custom:custom', function() {
-    return 'second response';
-});
+$evManager->attach(
+    'custom:custom' ,
+    function () {
+        return 'second response';
+    }
+);
 
 //Fire the event
-$evManager->fire('custom:custom', null);
+$evManager->fire('custom:custom' , null);
 
 //Get all the collected responses
 print_r($evManager->getResponses());

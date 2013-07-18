@@ -6,8 +6,8 @@ use Phalcon\Logger\Adapter\Syslog as SyslogAdapter;
 $logger = new SyslogAdapter(null);
 
 // Setting ident/mode/facility
-$logger = new SyslogAdapter("ident-name", array(
-    'option' => LOG_NDELAY,
-    'facility' => LOG_MAIL
-));
+$logger = new SyslogAdapter("ident-name" , array(
+                                                'option'   => LOG_NDELAY ,
+                                                'facility' => LOG_MAIL
+                                           ));
 

@@ -1,6 +1,6 @@
 <?php
 
- $flash->warning('Hey, this is important');
+$flash->warning('Hey, this is important');
 
 
 

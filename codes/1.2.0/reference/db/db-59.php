@@ -2,10 +2,10 @@
 
 // Required
 $config = array(
-    "host" => "127.0.0.1",
-    "username" => "mike",
-    "password" => "sigma",
-    "dbname" => "test_db"
+    "host"     => "127.0.0.1" ,
+    "username" => "mike" ,
+    "password" => "sigma" ,
+    "dbname"   => "test_db"
 );
 
 // Optional

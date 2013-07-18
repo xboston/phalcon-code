@@ -4,7 +4,10 @@
 $cars = $this->modelsManager->executeQuery("SELECT * FROM Cars");
 
 //Executing with bound parameters
-$cars = $this->modelsManager->executeQuery("SELECT * FROM Cars WHERE name = :name:", array(
-    'name' => 'Audi'
-));
+$cars = $this->modelsManager->executeQuery(
+    "SELECT * FROM Cars WHERE name = :name:" ,
+    array(
+         'name' => 'Audi'
+    )
+);
 

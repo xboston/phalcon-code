@@ -1,10 +1,10 @@
 <div class="categories">
-<?php
+    <?php
 
-foreach (Catergories::find("status = 1") as $category) {
-   echo "<span class='category'>", $category->name, "</span>";
-}
+    foreach ( Catergories::find("status = 1") as $category ) {
+        echo "<span class='category'>" , $category->name , "</span>";
+    }
 
-?>
+    ?>
 </div>
 

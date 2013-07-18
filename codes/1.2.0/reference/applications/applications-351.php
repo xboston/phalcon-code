@@ -22,8 +22,8 @@ $dispatcher->dispatch();
 
 // Render the related views
 $view->render(
-    $dispatcher->getControllerName(),
-    $dispatcher->getActionName(),
+    $dispatcher->getControllerName() ,
+    $dispatcher->getActionName() ,
     $dispatcher->getParams()
 );
 

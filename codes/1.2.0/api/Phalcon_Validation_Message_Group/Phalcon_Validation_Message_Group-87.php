@@ -1,6 +1,6 @@
 <?php
 
- $messages->appendMessages($messagesArray);
+$messages->appendMessages($messagesArray);
 
 
 

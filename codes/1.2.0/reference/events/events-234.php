@@ -10,7 +10,7 @@ $myComponent = new MyComponent();
 $myComponent->setEventsManager($myComponent);
 
 //Attach the listener to the EventsManager
-$eventsManager->attach('my-component', new SomeListener());
+$eventsManager->attach('my-component' , new SomeListener());
 
 //Execute methods in the component
 $myComponent->someTask();

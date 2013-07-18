@@ -1,10 +1,10 @@
 <?php
 
 $router->add(
-    "/documentation/{chapter}/{name}.{type:[a-z]+}",
+    "/documentation/{chapter}/{name}.{type:[a-z]+}" ,
     array(
-        "controller" => "documentation",
-        "action"     => "show"
+         "controller" => "documentation" ,
+         "action"     => "show"
     )
 );
 

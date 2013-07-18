@@ -1,6 +1,6 @@
 <?php
 
- $flash->error('This is an error');
+$flash->error('This is an error');
 
 
 

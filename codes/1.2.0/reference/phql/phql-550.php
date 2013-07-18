@@ -11,10 +11,10 @@ $manager->executeQuery($phql);
 // Using placeholders
 $phql = "DELETE FROM Cars WHERE id BETWEEN :initial: AND :final:";
 $manager->executeQuery(
-    $phql,
+    $phql ,
     array(
-        'initial' => 1,
-        'final' => 100
+         'initial' => 1 ,
+         'final'   => 100
     )
 );
 

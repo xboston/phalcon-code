@@ -1,6 +1,6 @@
 <?php
 
- $config['database'] = array('type' => 'Sqlite');
+$config['database'] = array( 'type' => 'Sqlite' );
 
 
 

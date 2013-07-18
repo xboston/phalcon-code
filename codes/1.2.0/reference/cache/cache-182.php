@@ -2,9 +2,9 @@
 
 // Query all keys used in the cache
 $keys = $cache->queryKeys();
-foreach ($keys as $key) {
+foreach ( $keys as $key ) {
     $data = $cache->get($key);
-    echo "Key=", $key, " Data=", $data;
+    echo "Key=" , $key , " Data=" , $data;
 }
 
 //Query keys in the cache that begins with "my-prefix"

@@ -1,8 +1,6 @@
 <?php
 
-use Phalcon\Forms\Form,
-    Phalcon\Forms\Element\Text,
-    Phalcon\Forms\Element\Select;
+use Phalcon\Forms\Form , Phalcon\Forms\Element\Text , Phalcon\Forms\Element\Select;
 
 class ContactForm extends Form
 {
@@ -12,9 +10,11 @@ class ContactForm extends Form
 
         $this->add(new Text("telephone"));
 
-        $this->add(new Select("telephoneType", TelephoneTypes::find(), array(
-            'using' => array('id', 'name')
-        )));
+        $this->add(
+            new Select("telephoneType" , TelephoneTypes::find() , array(
+                                                                       'using' => array( 'id' , 'name' )
+                                                                  ))
+        );
     }
 }
 

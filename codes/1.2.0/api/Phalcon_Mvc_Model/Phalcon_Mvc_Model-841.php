@@ -3,10 +3,10 @@
 class Robots extends \Phalcon\Mvc\Model
 {
 
-   public function initialize()
-   {
-       $this->hasMany('id', 'RobotsParts', 'robots_id');
-   }
+    public function initialize()
+    {
+        $this->hasMany('id' , 'RobotsParts' , 'robots_id');
+    }
 
 }
 

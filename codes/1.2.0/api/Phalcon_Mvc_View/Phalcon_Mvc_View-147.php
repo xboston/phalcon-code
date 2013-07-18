@@ -1,7 +1,7 @@
 <?php
 
-     //Renders as main view views-dir/inicio.phtml
-     $this->view->setMainView('inicio');
+//Renders as main view views-dir/inicio.phtml
+$this->view->setMainView('inicio');
 
 
 

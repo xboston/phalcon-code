@@ -11,11 +11,11 @@ class Registry
     protected static function _createConnection()
     {
         return new Connection(array(
-            "host" => "localhost",
-            "username" => "root",
-            "password" => "secret",
-            "dbname" => "invo"
-        ));
+                                   "host"     => "localhost" ,
+                                   "username" => "root" ,
+                                   "password" => "secret" ,
+                                   "dbname"   => "invo"
+                              ));
     }
 
     /**
@@ -23,10 +23,11 @@ class Registry
      */
     public static function getSharedConnection()
     {
-        if (self::$_connection===null){
-            $connection = self::_createConnection();
+        if ( self::$_connection === null ) {
+            $connection        = self::_createConnection();
             self::$_connection = $connection;
         }
+
         return self::$_connection;
     }
 
@@ -48,7 +49,8 @@ class SomeComponent
     /**
      * Sets the connection externally
      */
-    public function setConnection($connection){
+    public function setConnection($connection)
+    {
         $this->_connection = $connection;
     }
 

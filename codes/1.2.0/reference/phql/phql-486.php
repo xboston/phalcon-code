@@ -14,9 +14,12 @@ $manager->executeQuery($phql);
 
 // Using placeholders
 $phql = "UPDATE Cars SET price = ?0, type = ?1 WHERE brands_id > ?2";
-$manager->executeQuery($phql, array(
-    0 => 7000.00,
-    1 => 'Sedan',
-    2 => 5
-));
+$manager->executeQuery(
+    $phql ,
+    array(
+         0 => 7000.00 ,
+         1 => 'Sedan' ,
+         2 => 5
+    )
+);
 

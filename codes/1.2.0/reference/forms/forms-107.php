@@ -1,8 +1,6 @@
 <?php
 
-use Phalcon\Forms\Form,
-    Phalcon\Forms\Element\Text,
-    Phalcon\Forms\Element\Hidden;
+use Phalcon\Forms\Form , Phalcon\Forms\Element\Text , Phalcon\Forms\Element\Hidden;
 
 class ContactForm extends Form
 {

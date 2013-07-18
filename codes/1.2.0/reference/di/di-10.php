@@ -11,11 +11,11 @@ class SomeComponent
     public function someDbTask()
     {
         $connection = new Connection(array(
-            "host" => "localhost",
-            "username" => "root",
-            "password" => "secret",
-            "dbname" => "invo"
-        ));
+                                          "host"     => "localhost" ,
+                                          "username" => "root" ,
+                                          "password" => "secret" ,
+                                          "dbname"   => "invo"
+                                     ));
 
         // ...
     }

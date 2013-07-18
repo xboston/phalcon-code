@@ -1,6 +1,9 @@
 <?php
 
-     {{ get_title() }}
+{
+    {
+        get_title() }
+}
 
 
 

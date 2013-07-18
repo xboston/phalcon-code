@@ -1,6 +1,6 @@
 <?php
 
-     var_dump($connection->tableExists("blog", "posts"));
+var_dump($connection->tableExists("blog" , "posts"));
 
 
 

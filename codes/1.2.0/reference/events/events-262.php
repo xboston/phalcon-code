@@ -1,4 +1,4 @@
 <?php
 
-$eventsManager->fire("my-component:afterSomeTask", $this, $extraData);
+$eventsManager->fire("my-component:afterSomeTask" , $this , $extraData);
 

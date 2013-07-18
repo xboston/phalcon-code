@@ -17,7 +17,7 @@ class ContactController extends \Phalcon\Mvc\Controller
         $this->flash->success("Your information were stored correctly!");
 
         //Forward to the index action
-        return $this->dispatcher->forward(array("action" => "index"));
+        return $this->dispatcher->forward(array( "action" => "index" ));
     }
 
 }

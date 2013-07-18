@@ -4,8 +4,11 @@
 $di->getService('logger')->setClassName('MyCustomLogger');
 
 //Change the first parameter without instantiating the logger
-$di->getService('logger')->setParameter(0, array(
-    'type' => 'parameter',
-    'value' => '../apps/logs/error.log'
-));
+$di->getService('logger')->setParameter(
+    0 ,
+    array(
+         'type'  => 'parameter' ,
+         'value' => '../apps/logs/error.log'
+    )
+);
 

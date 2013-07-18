@@ -1,4 +1,4 @@
 <?php
 
-$this->view->setVar("page", $page);
+$this->view->setVar("page" , $page);
 

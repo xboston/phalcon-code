@@ -1,6 +1,6 @@
 <?php
 
- var_dump(isset($user['name']));
+var_dump(isset($user['name']));
 
 
 

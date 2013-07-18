@@ -16,7 +16,7 @@ class PostsController extends \Phalcon\Mvc\Controller
 
         // Get the post's year passed in the URL as parameter
         // also filtering it
-        $year = $this->dispatcher->getParam("year", "int");
+        $year = $this->dispatcher->getParam("year" , "int");
     }
 
 }

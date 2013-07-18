@@ -1,6 +1,6 @@
 <?php
 
-$this->view->setVar('products', $products);
+$this->view->setVar('products' , $products);
 
 
 

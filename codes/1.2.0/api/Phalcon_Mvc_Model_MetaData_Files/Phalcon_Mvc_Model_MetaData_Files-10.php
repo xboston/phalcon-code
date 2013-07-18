@@ -1,8 +1,8 @@
 <?php
 
- $metaData = new \Phalcon\Mvc\Model\Metadata\Files(array(
-    'metaDataDir' => 'app/cache/metadata/'
- ));
+$metaData = new \Phalcon\Mvc\Model\Metadata\Files(array(
+                                                       'metaDataDir' => 'app/cache/metadata/'
+                                                  ));
 
 
 

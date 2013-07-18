@@ -1,7 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Controller,
-    Phalcon\Mvc\View;
+use Phalcon\Mvc\Controller , Phalcon\Mvc\View;
 
 class PostsController extends Controller
 {

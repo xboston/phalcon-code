@@ -2,10 +2,7 @@
 
 namespace Multiple\Backend;
 
-use Phalcon\Loader,
-    Phalcon\Mvc\Dispatcher,
-    Phalcon\Mvc\View,
-    Phalcon\Mvc\ModuleDefinitionInterface;
+use Phalcon\Loader , Phalcon\Mvc\Dispatcher , Phalcon\Mvc\View , Phalcon\Mvc\ModuleDefinitionInterface;
 
 class Module implements ModuleDefinitionInterface
 {
@@ -20,8 +17,8 @@ class Module implements ModuleDefinitionInterface
 
         $loader->registerNamespaces(
             array(
-                'Multiple\Backend\Controllers' => '../apps/backend/controllers/',
-                'Multiple\Backend\Models'      => '../apps/backend/models/',
+                 'Multiple\Backend\Controllers' => '../apps/backend/controllers/' ,
+                 'Multiple\Backend\Models'      => '../apps/backend/models/' ,
             )
         );
 
@@ -35,18 +32,26 @@ class Module implements ModuleDefinitionInterface
     {
 
         //Registering a dispatcher
-        $di->set('dispatcher', function() {
-            $dispatcher = new Dispatcher();
-            $dispatcher->setDefaultNamespace("Multiple\Backend\Controllers");
-            return $dispatcher;
-        });
+        $di->set(
+            'dispatcher' ,
+            function () {
+                $dispatcher = new Dispatcher();
+                $dispatcher->setDefaultNamespace("Multiple\Backend\Controllers");
+
+                return $dispatcher;
+            }
+        );
 
         //Registering the view component
-        $di->set('view', function() {
-            $view = new View();
-            $view->setViewsDir('../apps/backend/views/');
-            return $view;
-        });
+        $di->set(
+            'view' ,
+            function () {
+                $view = new View();
+                $view->setViewsDir('../apps/backend/views/');
+
+                return $view;
+            }
+        );
     }
 
 }

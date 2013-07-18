@@ -4,19 +4,19 @@
 
 <?php echo Tag::form("signup/register"); ?>
 
- <p>
+<p>
     <label for="name">Name</label>
     <?php echo Tag::textField("name") ?>
- </p>
+</p>
 
- <p>
+<p>
     <label for="name">E-Mail</label>
     <?php echo Tag::textField("email") ?>
- </p>
+</p>
 
- <p>
+<p>
     <?php echo Tag::submitButton("Register") ?>
- </p>
+</p>
 
 </form>
 

@@ -2,17 +2,17 @@
 
 // get the Http-X-Requested-With header
 $requestedWith = $response->getHeader("X_REQUESTED_WITH");
-if ($requestedWith == "XMLHttpRequest") {
+if ( $requestedWith == "XMLHttpRequest" ) {
     echo "The request was made with Ajax";
 }
 
 // Same as above
-if ($request->isAjax()) {
+if ( $request->isAjax() ) {
     echo "The request was made with Ajax";
 }
 
 // Check the request layer
-if ($request->isSecureRequest() == true) {
+if ( $request->isSecureRequest() == true ) {
     echo "The request was made using a secure layer";
 }
 

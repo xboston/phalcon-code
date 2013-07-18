@@ -1,12 +1,15 @@
 <?php
 
- $dependencyInjector = new Phalcon\DI();
+$dependencyInjector = new Phalcon\DI();
 
- $dependencyInjector->set('modelsManager', function(){
-      return new Phalcon\Mvc\Model\Manager();
- });
+$dependencyInjector->set(
+    'modelsManager' ,
+    function () {
+        return new Phalcon\Mvc\Model\Manager();
+    }
+);
 
- $robot = new Robots($dependencyInjector);
+$robot = new Robots($dependencyInjector);
 
 
 

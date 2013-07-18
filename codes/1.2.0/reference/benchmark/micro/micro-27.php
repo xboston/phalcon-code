@@ -26,20 +26,20 @@ Time per request:       0.882 [ms] (mean, across all concurrent requests)
 Transfer rate:          228.17 [Kbytes/sec] received
 
 Connection Times (ms)
-              min  mean[+/-sd] median   max
+min  mean[+/-sd] median   max
 Connect:        0    4   2.4      4      33
 Processing:     0    0   0.5      0      11
 Waiting:        0    0   0.5      0      11
 Total:          2    4   2.4      4      33
 
 Percentage of the requests served within a certain time (ms)
-  50%      4
-  66%      4
-  75%      5
-  80%      5
-  90%      6
-  95%      8
-  98%     12
-  99%     14
- 100%     33 (longest request)
+50%      4
+66%      4
+75%      5
+80%      5
+90%      6
+95%      8
+98%     12
+99%     14
+100%     33 (longest request)
 

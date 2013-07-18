@@ -17,12 +17,12 @@ class Users extends \Phalcon\Mvc\Model
 
     public function initialize()
     {
-        $this->addBehavior(new SoftDelete(
-            array(
-                'field' => 'status',
-                'value' => Users::DELETED
-            )
-        ));
+        $this->addBehavior(
+            new SoftDelete(array(
+                                'field' => 'status' ,
+                                'value' => Users::DELETED
+                           ))
+        );
     }
 
 }

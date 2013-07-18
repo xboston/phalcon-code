@@ -1,6 +1,6 @@
 <?php
 
-$robot->writeAttribute('name', 'Rosey');
+$robot->writeAttribute('name' , 'Rosey');
 
 
 

@@ -8,7 +8,7 @@ class PostsController extends \Phalcon\Mvc\Controller
 
     }
 
-    public function showAction($year=2012, $postTitle='some default title')
+    public function showAction($year = 2012 , $postTitle = 'some default title')
     {
 
     }

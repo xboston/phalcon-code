@@ -7,5 +7,5 @@ $invoice = Invoices::findFirst();
 $customer = $invoice->customer;
 
 //Print his/her name
-echo $customer->name, "\n";
+echo $customer->name , "\n";
 

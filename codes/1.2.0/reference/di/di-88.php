@@ -8,12 +8,12 @@ class Registry
      */
     public static function getConnection()
     {
-       return new Connection(array(
-            "host" => "localhost",
-            "username" => "root",
-            "password" => "secret",
-            "dbname" => "invo"
-        ));
+        return new Connection(array(
+                                   "host"     => "localhost" ,
+                                   "username" => "root" ,
+                                   "password" => "secret" ,
+                                   "dbname"   => "invo"
+                              ));
     }
 
 }
@@ -26,7 +26,8 @@ class SomeComponent
     /**
      * Sets the connection externally
      */
-    public function setConnection($connection){
+    public function setConnection($connection)
+    {
         $this->_connection = $connection;
     }
 

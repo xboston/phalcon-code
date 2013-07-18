@@ -1,14 +1,14 @@
 <?php
 
- $session = new Phalcon\Session\Adapter\Files(array(
-    'uniqueId' => 'my-private-app'
- ));
+$session = new Phalcon\Session\Adapter\Files(array(
+                                                  'uniqueId' => 'my-private-app'
+                                             ));
 
- $session->start();
+$session->start();
 
- $session->set('var', 'some-value');
+$session->set('var' , 'some-value');
 
- echo $session->get('var');
+echo $session->get('var');
 
 
 

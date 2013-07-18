@@ -1,6 +1,6 @@
 <?php
 
- var_dump(isset($config['database']));
+var_dump(isset($config['database']));
 
 
 

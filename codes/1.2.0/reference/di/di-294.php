@@ -36,24 +36,33 @@ class SomeComponent
 $di = new Phalcon\DI();
 
 //Register a "db" service in the container
-$di->set('db', function() {
-    return new Connection(array(
-        "host" => "localhost",
-        "username" => "root",
-        "password" => "secret",
-        "dbname" => "invo"
-    ));
-});
+$di->set(
+    'db' ,
+    function () {
+        return new Connection(array(
+                                   "host"     => "localhost" ,
+                                   "username" => "root" ,
+                                   "password" => "secret" ,
+                                   "dbname"   => "invo"
+                              ));
+    }
+);
 
 //Register a "filter" service in the container
-$di->set('filter', function() {
-    return new Filter();
-});
+$di->set(
+    'filter' ,
+    function () {
+        return new Filter();
+    }
+);
 
 //Register a "session" service in the container
-$di->set('session', function() {
-    return new Session();
-});
+$di->set(
+    'session' ,
+    function () {
+        return new Session();
+    }
+);
 
 //Pass the service container as unique parameter
 $some = new SomeComponent($di);

@@ -3,16 +3,16 @@
 class HelloTask extends \Phalcon\CLI\Task
 {
 
-  //This action will be executed by default
-  public function mainAction()
-  {
+    //This action will be executed by default
+    public function mainAction()
+    {
 
-  }
+    }
 
-  public function findAction()
-  {
+    public function findAction()
+    {
 
-  }
+    }
 
 }
 

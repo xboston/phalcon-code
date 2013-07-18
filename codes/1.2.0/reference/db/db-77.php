@@ -2,10 +2,10 @@
 
 // Required
 $config = array(
-    "host" => "localhost",
-    "username" => "postgres",
-    "password" => "secret1",
-    "dbname" => "template"
+    "host"     => "localhost" ,
+    "username" => "postgres" ,
+    "password" => "secret1" ,
+    "dbname"   => "template"
 );
 
 // Optional

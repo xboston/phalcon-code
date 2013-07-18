@@ -12,8 +12,8 @@ class SignupController extends \Phalcon\Mvc\Controller
     {
 
         // Request variables from html form
-        $name  = $this->request->getPost("name", "string");
-        $email = $this->request->getPost("email", "email");
+        $name  = $this->request->getPost("name" , "string");
+        $email = $this->request->getPost("email" , "email");
 
         // Stop execution and show a backtrace
         return xdebug_print_function_stack("stop here!");

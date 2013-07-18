@@ -1,6 +1,6 @@
 <?php
 
-$builder->notInWhere('id', [1, 2, 3]);
+$builder->notInWhere('id' , [ 1 , 2 , 3 ]);
 
 
 

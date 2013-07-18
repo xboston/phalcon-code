@@ -1,9 +1,9 @@
 <html>
-    <head>
-        <title>Index of Posts - Your Website</title>
-    </head>
-      <body>
+<head>
+    <title>Index of Posts - Your Website</title>
+</head>
+<body>
 
-      </body>
+</body>
 </html>
 

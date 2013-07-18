@@ -1,6 +1,6 @@
 <?php
 
- $assets->get('js', $collection);
+$assets->get('js' , $collection);
 
 
 

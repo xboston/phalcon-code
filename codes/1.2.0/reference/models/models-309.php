@@ -4,13 +4,13 @@
 $parts = Parts::find();
 
 // Store the resultset into a file
-file_put_contents("cache.txt", serialize($parts));
+file_put_contents("cache.txt" , serialize($parts));
 
 // Get parts from file
 $parts = unserialize(file_get_contents("cache.txt"));
 
 // Traverse the parts
-foreach ($parts as $part) {
-   echo $part->id;
+foreach ( $parts as $part ) {
+    echo $part->id;
 }
 

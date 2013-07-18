@@ -1,6 +1,6 @@
 <?php
 
- $router->add('/about', 'About::index');
+$router->add('/about' , 'About::index');
 
 
 

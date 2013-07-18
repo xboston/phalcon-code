@@ -19,11 +19,11 @@ class MyComponent implements EventsAwareInterface
 
     public function someTask()
     {
-        $this->_eventsManager->fire("my-component:beforeSomeTask", $this);
+        $this->_eventsManager->fire("my-component:beforeSomeTask" , $this);
 
         // do some task
 
-        $this->_eventsManager->fire("my-component:afterSomeTask", $this);
+        $this->_eventsManager->fire("my-component:afterSomeTask" , $this);
     }
 
 }

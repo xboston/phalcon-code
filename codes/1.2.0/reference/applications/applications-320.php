@@ -13,7 +13,7 @@ try {
     $application->setDI($di);
     echo $application->handle()->getContent();
 
-} catch (\Phalcon\Exception $e) {
-    echo "PhalconException: ", $e->getMessage();
+} catch ( \Phalcon\Exception $e ) {
+    echo "PhalconException: " , $e->getMessage();
 }
 

@@ -1,6 +1,6 @@
 <?php
 
- echo Phalcon\Tag::checkField(array("name"));
+echo Phalcon\Tag::checkField(array( "name" ));
 
 
 

@@ -10,10 +10,12 @@ $robotsParts = $robot->robotsParts;
 $robotsParts = $robot->getRobotsParts("created_at = '2012-03-15'");
 
 // Or using bound parameters
-$robotsParts = $robot->getRobotsParts(array(
-    "created_at = :date:",
-    "bind" => array("date" => "2012-03-15")
-));
+$robotsParts = $robot->getRobotsParts(
+    array(
+         "created_at = :date:" ,
+         "bind" => array( "date" => "2012-03-15" )
+    )
+);
 
 $robotPart = RobotsParts::findFirst(1);
 

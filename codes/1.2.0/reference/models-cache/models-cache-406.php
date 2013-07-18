@@ -8,17 +8,19 @@ class CustomModelsManager extends \Phalcon\Mvc\Model\Manager
      *
      * @param string $modelName
      * @param string $key
+     *
      * @return object
      */
-    public function getReusableRecords($modelName, $key){
+    public function getReusableRecords($modelName , $key)
+    {
 
         //If the model is Products use the APC cache
-        if ($modelName == 'Products'){
+        if ( $modelName == 'Products' ) {
             return apc_fetch($key);
         }
 
         //For the rest, use the memory cache
-        return parent::getReusableRecords($modelName, $key);
+        return parent::getReusableRecords($modelName , $key);
     }
 
     /**
@@ -26,18 +28,20 @@ class CustomModelsManager extends \Phalcon\Mvc\Model\Manager
      *
      * @param string $modelName
      * @param string $key
-     * @param mixed $records
+     * @param mixed  $records
      */
-    public function setReusableRecords($modelName, $key, $records){
+    public function setReusableRecords($modelName , $key , $records)
+    {
 
         //If the model is Products use the APC cache
-        if ($modelName == 'Products'){
-            apc_store($key, $records);
+        if ( $modelName == 'Products' ) {
+            apc_store($key , $records);
+
             return;
         }
 
         //For the rest, use the memory cache
-        parent::setReusableRecords($modelName, $key, $records);
+        parent::setReusableRecords($modelName , $key , $records);
     }
 }
 

@@ -10,8 +10,8 @@ class FeedController extends Phalcon\Mvc\Controller
 
         $feed = //.. load here the feed
 
-        //Set the content of the response
-        $response->setContent($feed->asString());
+            //Set the content of the response
+            $response->setContent($feed->asString());
 
         //Return the response
         return $response;

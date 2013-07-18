@@ -11,7 +11,7 @@ class SomeComponent
 
     protected $_someFlag;
 
-    public function __construct(Response $response, $someFlag)
+    public function __construct(Response $response , $someFlag)
     {
         $this->_response = $response;
         $this->_someFlag = $someFlag;

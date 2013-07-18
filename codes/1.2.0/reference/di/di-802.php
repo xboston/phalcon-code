@@ -1,15 +1,17 @@
 <?php
 
 //Register the session service as "always shared"
-$di->set('request', 'Phalcon\Http\Request');
+$di->set('request' , 'Phalcon\Http\Request');
 
 //Get the service
 $requestService = $di->getService('request');
 
 //Change its definition
-$requestService->setDefinition(function() {
-    return new Phalcon\Http\Request();
-});
+$requestService->setDefinition(
+    function () {
+        return new Phalcon\Http\Request();
+    }
+);
 
 //Change it to shared
 $request->setShared(true);

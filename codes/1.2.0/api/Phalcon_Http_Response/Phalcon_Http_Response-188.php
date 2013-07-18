@@ -1,6 +1,6 @@
 <?php
 
-$response->setJsonContent(array("status" => "OK"));
+$response->setJsonContent(array( "status" => "OK" ));
 
 
 

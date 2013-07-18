@@ -6,10 +6,10 @@ $loader = new \Phalcon\Loader();
 // Register some directories
 $loader->registerDirs(
     array(
-        "library/MyComponent/",
-        "library/OtherComponent/Other/",
-        "vendor/example/adapters/",
-        "vendor/example/"
+         "library/MyComponent/" ,
+         "library/OtherComponent/Other/" ,
+         "vendor/example/adapters/" ,
+         "vendor/example/"
     )
 );
 

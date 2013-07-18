@@ -7,8 +7,8 @@ $eventsManager = new EventsManager();
 $application->setEventsManager($eventsManager);
 
 $eventsManager->attach(
-    "application",
-    function($event, $application) {
+    "application" ,
+    function ($event , $application) {
         // ...
     }
 );

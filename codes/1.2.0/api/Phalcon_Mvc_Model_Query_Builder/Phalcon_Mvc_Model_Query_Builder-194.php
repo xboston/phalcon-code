@@ -1,6 +1,6 @@
 <?php
 
-$builder->inWhere('id', [1, 2, 3]);
+$builder->inWhere('id' , [ 1 , 2 , 3 ]);
 
 
 

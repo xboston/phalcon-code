@@ -12,9 +12,9 @@ class MyDbListener
         $this->_logger = new Logger("../apps/logs/db.log");
     }
 
-    public function afterQuery($event, $connection)
+    public function afterQuery($event , $connection)
     {
-        $this->_logger->log($connection->getSQLStatement(), \Phalcon\Logger::INFO);
+        $this->_logger->log($connection->getSQLStatement() , \Phalcon\Logger::INFO);
     }
 
 }

@@ -27,7 +27,7 @@ class Cars extends Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->belongsTo('brand_id', 'Brands', 'id');
+        $this->belongsTo('brand_id' , 'Brands' , 'id');
     }
 }
 

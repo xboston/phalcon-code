@@ -1,14 +1,16 @@
 <?php
 
-$data = Article::aggregate(array(
+$data = Article::aggregate(
     array(
-        '$project' => array('category' => 1)
-    ),
-    array(
-        '$group' => array(
-            '_id' => array('category' => '$category'),
-            'id' => array('$max' => '$_id')
-        )
+         array(
+             '$project' => array( 'category' => 1 )
+         ) ,
+         array(
+             '$group' => array(
+                 '_id' => array( 'category' => '$category' ) ,
+                 'id'  => array( '$max' => '$_id' )
+             )
+         )
     )
-));
+);
 

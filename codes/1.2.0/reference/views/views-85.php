@@ -1,14 +1,14 @@
 <!-- app/views/index.phtml -->
 <html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
+<head>
+    <title>Example</title>
+</head>
+<body>
 
-        <h1>This is main layout!</h1>
+<h1>This is main layout!</h1>
 
-        <?php echo $this->getContent() ?>
+<?php echo $this->getContent() ?>
 
-    </body>
+</body>
 </html>
 

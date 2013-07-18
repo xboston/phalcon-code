@@ -1,6 +1,8 @@
 <?php
 
-$view->registerEngines(array(
-    ".phtml" => 'Phalcon\Mvc\View\Engine\Volt'
-));
+$view->registerEngines(
+    array(
+         ".phtml" => 'Phalcon\Mvc\View\Engine\Volt'
+    )
+);
 

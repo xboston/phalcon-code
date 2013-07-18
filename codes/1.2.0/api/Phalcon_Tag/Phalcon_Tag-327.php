@@ -1,6 +1,9 @@
 <?php
 
- {{ select("robotId", robots, "using": ["id", "name"]) }}
+{
+    {
+        select("robotId" , robots , "using": [ "id" , "name" ]) }
+}
 
 
 

@@ -12,25 +12,26 @@ class Robots extends Phalcon\Mvc\Model
     protected static function _createKey($parameters)
     {
         $uniqueKey = array();
-        foreach ($parameters as $key => $value) {
-            if (is_scalar($value)) {
+        foreach ( $parameters as $key => $value ) {
+            if ( is_scalar($value) ) {
                 $uniqueKey[] = $key . ':' . $value;
             } else {
-                if (is_array($value)) {
-                    $uniqueKey[] = $key . ':[' . self::_createKey($value) .']';
+                if ( is_array($value) ) {
+                    $uniqueKey[] = $key . ':[' . self::_createKey($value) . ']';
                 }
             }
         }
-        return join(',', $uniqueKey);
+
+        return join(',' , $uniqueKey);
     }
 
-    public static function find($parameters=null)
+    public static function find($parameters = null)
     {
 
         //Create an unique key based on the parameters
         $key = self::_createKey($parameters);
 
-        if (!isset(self::$_cache[$key])) {
+        if ( !isset(self::$_cache[$key]) ) {
             //Store the result in the memory cache
             self::$_cache[$key] = parent::find($parameters);
         }
@@ -39,7 +40,7 @@ class Robots extends Phalcon\Mvc\Model
         return self::$_cache[$key];
     }
 
-    public static function findFirst($parameters=null)
+    public static function findFirst($parameters = null)
     {
         // ...
     }

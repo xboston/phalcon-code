@@ -1,15 +1,16 @@
 <?php
 
-public static function find($parameters=null)
+public
+static function find($parameters = null)
 {
 
     //Create an unique key based on the parameters
     $key = self::_createKey($parameters);
 
-    if (!isset(self::$_cache[$key])) {
+    if ( !isset(self::$_cache[$key]) ) {
 
         //We're using APC as second cache
-        if (apc_exists($key)) {
+        if ( apc_exists($key) ) {
 
             $data = apc_fetch($key);
 
@@ -26,7 +27,7 @@ public static function find($parameters=null)
         self::$_cache[$key] = $data;
 
         //Store the result in APC
-        apc_store($key, $data);
+        apc_store($key , $data);
 
         return $data;
     }

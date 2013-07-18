@@ -4,15 +4,15 @@
 $robots = Robots::find();
 
 // Traversing with a foreach
-foreach ($robots as $robot) {
-    echo $robot->name, "\n";
+foreach ( $robots as $robot ) {
+    echo $robot->name , "\n";
 }
 
 // Traversing with a while
 $robots->rewind();
-while ($robots->valid()) {
+while ( $robots->valid() ) {
     $robot = $robots->current();
-    echo $robot->name, "\n";
+    echo $robot->name , "\n";
     $robots->next();
 }
 
@@ -30,8 +30,8 @@ $robot = $robots->current()
 $robot = $robots[5];
 
 // Check if there is a record in certain position
-if (isset($robots[3]) {
-   $robot = $robots[3];
+if ( isset($robots[3]) {
+    $robot = $robots[3];
 }
 
 // Get the first record in the resultset

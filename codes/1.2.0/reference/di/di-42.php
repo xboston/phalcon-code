@@ -26,11 +26,11 @@ $some = new SomeComponent();
 
 //Create the connection
 $connection = new Connection(array(
-    "host" => "localhost",
-    "username" => "root",
-    "password" => "secret",
-    "dbname" => "invo"
-));
+                                  "host"     => "localhost" ,
+                                  "username" => "root" ,
+                                  "password" => "secret" ,
+                                  "dbname"   => "invo"
+                             ));
 
 //Inject the connection in the component
 $some->setConnection($connection);

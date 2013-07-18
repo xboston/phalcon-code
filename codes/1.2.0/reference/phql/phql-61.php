@@ -20,7 +20,7 @@ class Brands extends Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->hasMany('id', 'Cars', 'brand_id');
+        $this->hasMany('id' , 'Cars' , 'brand_id');
     }
 }
 

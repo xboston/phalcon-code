@@ -7,7 +7,7 @@ $di = new Phalcon\DI();
 $di["request"] = 'Phalcon\Http\Request';
 
 //Using an anonymous function, the instance will be lazy loaded
-$di["request"] = function() {
+$di["request"] = function () {
     return new Phalcon\Http\Request();
 };
 

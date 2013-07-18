@@ -1,6 +1,6 @@
 <?php
 
- echo $user->get('name', 'Kimbra');
+echo $user->get('name' , 'Kimbra');
 
 
 

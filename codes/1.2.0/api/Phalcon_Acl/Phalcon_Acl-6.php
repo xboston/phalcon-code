@@ -6,7 +6,7 @@ $acl = new Phalcon\Acl\Adapter\Memory();
 $acl->setDefaultAction(Phalcon\Acl::DENY);
 
 //Create some roles
-$roleAdmins = new Phalcon\Acl\Role('Administrators', 'Super-User role');
+$roleAdmins = new Phalcon\Acl\Role('Administrators' , 'Super-User role');
 $roleGuests = new Phalcon\Acl\Role('Guests');
 
 //Add "Guests" role to acl
@@ -16,21 +16,21 @@ $acl->addRole($roleGuests);
 $acl->addRole('Designers');
 
 //Define the "Customers" resource
-$customersResource = new Phalcon\Acl\Resource('Customers', 'Customers management');
+$customersResource = new Phalcon\Acl\Resource('Customers' , 'Customers management');
 
 //Add "customers" resource with a couple of operations
-$acl->addResource($customersResource, 'search');
-$acl->addResource($customersResource, array('create', 'update'));
+$acl->addResource($customersResource , 'search');
+$acl->addResource($customersResource , array( 'create' , 'update' ));
 
 //Set access level for roles into resources
-$acl->allow('Guests', 'Customers', 'search');
-$acl->allow('Guests', 'Customers', 'create');
-$acl->deny('Guests', 'Customers', 'update');
+$acl->allow('Guests' , 'Customers' , 'search');
+$acl->allow('Guests' , 'Customers' , 'create');
+$acl->deny('Guests' , 'Customers' , 'update');
 
 //Check whether role has access to the operations
-$acl->isAllowed('Guests', 'Customers', 'edit'); //Returns 0
-$acl->isAllowed('Guests', 'Customers', 'search'); //Returns 1
-$acl->isAllowed('Guests', 'Customers', 'create'); //Returns 1
+$acl->isAllowed('Guests' , 'Customers' , 'edit'); //Returns 0
+$acl->isAllowed('Guests' , 'Customers' , 'search'); //Returns 1
+$acl->isAllowed('Guests' , 'Customers' , 'create'); //Returns 1
 
 
 

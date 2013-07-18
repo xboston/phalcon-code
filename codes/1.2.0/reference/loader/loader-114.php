@@ -6,8 +6,8 @@ $loader = new \Phalcon\Loader();
 // Register some classes
 $loader->registerClasses(
     array(
-        "Some"         => "library/OtherComponent/Other/Some.php",
-        "Example\Base" => "vendor/example/adapters/Example/BaseClass.php",
+         "Some"         => "library/OtherComponent/Other/Some.php" ,
+         "Example\Base" => "vendor/example/adapters/Example/BaseClass.php" ,
     )
 );
 

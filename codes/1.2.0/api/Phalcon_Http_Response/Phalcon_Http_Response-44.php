@@ -1,6 +1,6 @@
 <?php
 
-$response->setStatusCode(404, "Not Found");
+$response->setStatusCode(404 , "Not Found");
 
 
 

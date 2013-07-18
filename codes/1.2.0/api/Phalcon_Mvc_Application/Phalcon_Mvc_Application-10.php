@@ -1,7 +1,7 @@
 <?php
 
- class Application extends \Phalcon\Mvc\Application
- {
+class Application extends \Phalcon\Mvc\Application
+{
 
     /**
      * Register the services here to make them general or register
@@ -17,16 +17,18 @@
      */
     public function main()
     {
-        $this->registerModules(array(
-            'frontend' => array(
-                'className' => 'Multiple\Frontend\Module',
-                'path' => '../apps/frontend/Module.php'
-            ),
-            'backend' => array(
-                'className' => 'Multiple\Backend\Module',
-                'path' => '../apps/backend/Module.php'
+        $this->registerModules(
+            array(
+                 'frontend' => array(
+                     'className' => 'Multiple\Frontend\Module' ,
+                     'path'      => '../apps/frontend/Module.php'
+                 ) ,
+                 'backend'  => array(
+                     'className' => 'Multiple\Backend\Module' ,
+                     'path'      => '../apps/backend/Module.php'
+                 )
             )
-        ));
+        );
     }
 }
 

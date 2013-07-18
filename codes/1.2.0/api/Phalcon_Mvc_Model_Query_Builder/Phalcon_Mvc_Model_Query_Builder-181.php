@@ -1,6 +1,6 @@
 <?php
 
-$builder->betweenWhere('price', 100.25, 200.50);
+$builder->betweenWhere('price' , 100.25 , 200.50);
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-$di['forms'] = function() {
+$di['forms'] = function () {
     return new Phalcon\Forms\Manager();
 }
 

@@ -36,6 +36,7 @@ class Products extends \Phalcon\Mvc\Model
 
     /**
      * Method to set the value of field id
+     *
      * @param integer $id
      */
     public function setId($id)
@@ -45,6 +46,7 @@ class Products extends \Phalcon\Mvc\Model
 
     /**
      * Method to set the value of field types_id
+     *
      * @param integer $types_id
      */
     public function setTypesId($types_id)
@@ -52,7 +54,7 @@ class Products extends \Phalcon\Mvc\Model
         $this->types_id = $types_id;
     }
 
-    ...
+...
 
     /**
      * Returns the value of field status

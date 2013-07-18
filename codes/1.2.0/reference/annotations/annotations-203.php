@@ -11,17 +11,17 @@ class CacheEnablerPlugin extends \Phalcon\Mvc\User\Plugin
      * This event is executed before every route is executed in the dispatcher
      *
      */
-    public function beforeExecuteRoute($event, $dispatcher)
+    public function beforeExecuteRoute($event , $dispatcher)
     {
 
         //Parse the annotations in the method currently executed
         $annotations = $this->annotations->getMethod(
-            $dispatcher->getActiveController(),
+            $dispatcher->getActiveController() ,
             $dispatcher->getActiveMethod()
         );
 
         //Check if the method has an annotation 'Cache'
-        if ($annotations->has('Cache')) {
+        if ( $annotations->has('Cache') ) {
 
             //The method has the annotation 'Cache'
             $annotation = $annotations->get('Cache');
@@ -29,10 +29,10 @@ class CacheEnablerPlugin extends \Phalcon\Mvc\User\Plugin
             //Get the lifetime
             $lifetime = $annotation->getNamedParameter('lifetime');
 
-            $options = array('lifetime' => $lifetime);
+            $options = array( 'lifetime' => $lifetime );
 
             //Check if there is an user defined cache key
-            if ($annotation->hasNamedParameter('key')) {
+            if ( $annotation->hasNamedParameter('key') ) {
                 $options['key'] = $annotation->getNamedParameter('key');
             }
 

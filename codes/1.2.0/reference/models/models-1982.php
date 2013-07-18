@@ -1,14 +1,13 @@
 <?php
 
-use Phalcon\Mvc\ModelInterface,
-    Phalcon\Mvc\Model\BehaviorInterface;
+use Phalcon\Mvc\ModelInterface , Phalcon\Mvc\Model\BehaviorInterface;
 
 class Blameable extends Behavior implements BehaviorInterface
 {
 
-    public function notify($eventType, $model)
+    public function notify($eventType , $model)
     {
-        switch ($eventType) {
+        switch ( $eventType ) {
 
             case 'afterCreate':
             case 'afterDelete':
@@ -17,8 +16,8 @@ class Blameable extends Behavior implements BehaviorInterface
 
                 $userName = // ... get the current user from session
 
-                //Store in a log the username - event type and primary key
-                file_put_contents('logs/blamable-log.txt', $userName.' '.$eventType.' '.$model->id);
+                    //Store in a log the username - event type and primary key
+                    file_put_contents('logs/blamable-log.txt' , $userName . ' ' . $eventType . ' ' . $model->id);
 
                 break;
 

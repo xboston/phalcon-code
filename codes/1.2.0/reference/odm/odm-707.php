@@ -9,7 +9,7 @@ class Robots extends \Phalcon\Mvc\Collection
         $flash = $this->getDI()->getShared('flash');
 
         // Show validation messages
-        foreach ($this->getMesages() as $message){
+        foreach ( $this->getMesages() as $message ) {
             $flash->error((string) $message);
         }
     }

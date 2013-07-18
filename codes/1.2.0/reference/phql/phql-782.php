@@ -13,7 +13,7 @@ class Robots extends Phalcon\Mvc\Model
         $robot = new Robots();
 
         // Execute the query
-        return new Resultset(null, $robot, $robot->getReadConnection()->query($sql));
+        return new Resultset(null , $robot , $robot->getReadConnection()->query($sql));
     }
 }
 

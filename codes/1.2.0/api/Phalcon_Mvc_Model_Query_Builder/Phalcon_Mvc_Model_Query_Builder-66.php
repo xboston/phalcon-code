@@ -1,6 +1,6 @@
 <?php
 
-$builder->from(array('Robots', 'RobotsParts'));
+$builder->from(array( 'Robots' , 'RobotsParts' ));
 
 
 

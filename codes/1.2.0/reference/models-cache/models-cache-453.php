@@ -1,6 +1,9 @@
 <?php
 
-$di->setShared('modelsManager', function() {
-    return new CustomModelsManager();
-});
+$di->setShared(
+    'modelsManager' ,
+    function () {
+        return new CustomModelsManager();
+    }
+);
 

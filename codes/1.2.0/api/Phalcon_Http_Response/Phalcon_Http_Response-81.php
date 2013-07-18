@@ -1,6 +1,6 @@
 <?php
 
-$response->setHeader("Content-Type", "text/plain");
+$response->setHeader("Content-Type" , "text/plain");
 
 
 

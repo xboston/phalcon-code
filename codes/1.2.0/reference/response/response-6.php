@@ -4,7 +4,7 @@
 $response = new \Phalcon\Http\Response();
 
 //Set status code
-$response->setStatusCode(404, "Not Found");
+$response->setStatusCode(404 , "Not Found");
 
 //Set the content of the response
 $response->setContent("Sorry, the page doesn't exist");

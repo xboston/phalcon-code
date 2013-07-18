@@ -4,7 +4,7 @@ try {
 
     //... some phalcon code
 
-} catch(\Phalcon\Exception $e) {
+} catch ( \Phalcon\Exception $e ) {
 
 }
 

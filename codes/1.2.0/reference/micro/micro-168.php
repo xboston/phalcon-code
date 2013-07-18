@@ -1,12 +1,15 @@
 <?php
 
-$app->get('/show/data', function () use ($app) {
+$app->get(
+    '/show/data' ,
+    function () use ($app) {
 
-    //Set the Content-Type header
-    $app->response->setContentType('text/plain')->sendHeaders();
+        //Set the Content-Type header
+        $app->response->setContentType('text/plain')->sendHeaders();
 
-    //Print a file
-    readfile("data.txt");
+        //Print a file
+        readfile("data.txt");
 
-});
+    }
+);
 

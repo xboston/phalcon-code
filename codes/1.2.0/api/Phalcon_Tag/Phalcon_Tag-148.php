@@ -1,6 +1,6 @@
 <?php
 
-echo Phalcon\Tag::textField(array("name", "size" => 30));
+echo Phalcon\Tag::textField(array( "name" , "size" => 30 ));
 
 
 

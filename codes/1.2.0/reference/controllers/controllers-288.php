@@ -10,7 +10,7 @@ class UserController extends Phalcon\Mvc\Controller
 
     public function welcomeAction()
     {
-        echo "Welcome, ", $this->persistent->name;
+        echo "Welcome, " , $this->persistent->name;
     }
 
 }

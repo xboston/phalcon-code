@@ -18,7 +18,7 @@ class Invoices extends Phalcon\Mvc\Model
         // stores data in the cache
     }
 
-    public static function find($parameters=null)
+    public static function find($parameters = null)
     {
         //Create a unique key
         $key = self::_createKey($parameters);
@@ -27,14 +27,14 @@ class Invoices extends Phalcon\Mvc\Model
         $results = self::_getCache($key);
 
         // Valid data is an object
-        if (is_object($results)) {
+        if ( is_object($results) ) {
             return $results;
         }
 
         $results = array();
 
         $invoices = parent::find($parameters);
-        foreach ($invoices as $invoice) {
+        foreach ( $invoices as $invoice ) {
 
             //Query the related customer
             $customer = $invoice->customer;
@@ -46,7 +46,7 @@ class Invoices extends Phalcon\Mvc\Model
         }
 
         //Store the invoices in the cache + their customers
-        self::_setCache($key, $results);
+        self::_setCache($key , $results);
 
         return $results;
     }

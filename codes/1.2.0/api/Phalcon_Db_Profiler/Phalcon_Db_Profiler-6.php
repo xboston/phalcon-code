@@ -15,10 +15,10 @@ $connection->query($sql);
 //Get the last profile in the profiler
 $profile = $profiler->getLastProfile();
 
-echo "SQL Statement: ", $profile->getSQLStatement(), "\n";
-echo "Start Time: ", $profile->getInitialTime(), "\n";
-echo "Final Time: ", $profile->getFinalTime(), "\n";
-echo "Total Elapsed Time: ", $profile->getTotalElapsedSeconds(), "\n";
+echo "SQL Statement: " , $profile->getSQLStatement() , "\n";
+echo "Start Time: " , $profile->getInitialTime() , "\n";
+echo "Final Time: " , $profile->getFinalTime() , "\n";
+echo "Total Elapsed Time: " , $profile->getTotalElapsedSeconds() , "\n";
 
 
 

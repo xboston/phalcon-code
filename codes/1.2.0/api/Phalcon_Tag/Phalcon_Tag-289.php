@@ -1,6 +1,9 @@
 <?php
 
- {{ submit_button('Save') }}
+{
+    {
+        submit_button('Save') }
+}
 
 
 

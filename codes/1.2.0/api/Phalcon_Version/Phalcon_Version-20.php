@@ -1,6 +1,6 @@
 <?php
 
- echo Phalcon\Version::get();
+echo Phalcon\Version::get();
 
 
 

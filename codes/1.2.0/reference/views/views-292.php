@@ -1,10 +1,10 @@
 <div class="post">
-<?php
+    <?php
 
-  foreach ($posts as $post) {
-    echo "<h1>", $post->title, "</h1>";
-  }
+    foreach ( $posts as $post ) {
+        echo "<h1>" , $post->title , "</h1>";
+    }
 
-?>
+    ?>
 </div>
 

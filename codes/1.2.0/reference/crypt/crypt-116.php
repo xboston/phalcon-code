@@ -13,7 +13,7 @@ class SecretsController extends Controller
 
         $secret->content = $this->crypt->encrypt($text);
 
-        if ($secret->save()) {
+        if ( $secret->save() ) {
             $this->flash->success('Secret was successfully created!');
         }
 

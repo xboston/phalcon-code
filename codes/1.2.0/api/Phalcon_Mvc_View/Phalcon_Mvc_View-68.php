@@ -1,6 +1,6 @@
 <?php
 
- $view->setLayoutsDir('../common/layouts/');
+$view->setLayoutsDir('../common/layouts/');
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-while ($b->peekReady() !== false) {
+while ( $b->peekReady() !== false ) {
 
     $job = $b->reserve();
 

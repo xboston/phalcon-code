@@ -5,8 +5,8 @@ class Robots extends Phalcon\Mvc\Model
     public function getMessages()
     {
         $messages = array();
-        foreach (parent::getMessages() as $message) {
-            switch ($message->getType()) {
+        foreach ( parent::getMessages() as $message ) {
+            switch ( $message->getType() ) {
                 case 'InvalidCreateAttempt':
                     $messages[] = 'The record cannot be created because it already exists';
                     break;
@@ -18,6 +18,7 @@ class Robots extends Phalcon\Mvc\Model
                     break;
             }
         }
+
         return $messages;
     }
 }

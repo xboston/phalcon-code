@@ -1,7 +1,6 @@
 <?php
 
-use Phalcon\Events\Manager as EventsManager,
-    Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
+use Phalcon\Events\Manager as EventsManager , Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 
 $eventsManager = new EventsManager();
 
@@ -9,14 +8,14 @@ $eventsManager = new EventsManager();
 $dbListener = new MyDbListener();
 
 //Listen all the database events
-$eventsManager->attach('db', $dbListener);
+$eventsManager->attach('db' , $dbListener);
 
 $connection = new DbAdapter(array(
-    "host" => "localhost",
-    "username" => "root",
-    "password" => "secret",
-    "dbname" => "invo"
-));
+                                 "host"     => "localhost" ,
+                                 "username" => "root" ,
+                                 "password" => "secret" ,
+                                 "dbname"   => "invo"
+                            ));
 
 //Assign the eventsManager to the db adapter instance
 $connection->setEventsManager($eventsManager);

@@ -1,6 +1,6 @@
 <?php
 
- echo $robot->readAttribute('name');
+echo $robot->readAttribute('name');
 
 
 

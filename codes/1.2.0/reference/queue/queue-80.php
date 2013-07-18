@@ -1,6 +1,6 @@
 <?php
 
-while (($job = $b->peekReady()) !== false) {
+while ( ($job = $b->peekReady()) !== false ) {
 
     $message = $job->getBody();
 

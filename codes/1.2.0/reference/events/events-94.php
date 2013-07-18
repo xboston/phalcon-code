@@ -1,8 +1,6 @@
 <?php
 
-use Phalcon\Db\Profiler,
-    Phalcon\Logger,
-    Phalcon\Logger\Adapter\File;
+use Phalcon\Db\Profiler , Phalcon\Logger , Phalcon\Logger\Adapter\File;
 
 class MyDbListener
 {
@@ -17,13 +15,13 @@ class MyDbListener
     public function __construct()
     {
         $this->_profiler = new Profiler();
-        $this->_logger = new Logger("../apps/logs/db.log");
+        $this->_logger   = new Logger("../apps/logs/db.log");
     }
 
     /**
      * This executed if the event triggered is 'beforeQuery'
      */
-    public function beforeQuery($event, $connection)
+    public function beforeQuery($event , $connection)
     {
         $this->_profiler->startProfile($connection->getSQLStatement());
     }
@@ -31,9 +29,9 @@ class MyDbListener
     /**
      * This executed if the event triggered is 'afterQuery'
      */
-    public function afterQuery($event, $connection)
+    public function afterQuery($event , $connection)
     {
-        $this->_logger->log($connection->getSQLStatement(), Logger::INFO);
+        $this->_logger->log($connection->getSQLStatement() , Logger::INFO);
         $this->_profiler->stopProfile();
     }
 

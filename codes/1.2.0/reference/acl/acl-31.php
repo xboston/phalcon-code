@@ -1,7 +1,7 @@
 <?php
 
 // Create some roles
-$roleAdmins = new \Phalcon\Acl\Role("Administrators", "Super-User role");
+$roleAdmins = new \Phalcon\Acl\Role("Administrators" , "Super-User role");
 $roleGuests = new \Phalcon\Acl\Role("Guests");
 
 // Add "Guests" role to acl

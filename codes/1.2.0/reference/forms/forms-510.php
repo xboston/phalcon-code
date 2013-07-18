@@ -1,4 +1,4 @@
 <?php
 
-$this->forms->set('login', new LoginForm());
+$this->forms->set('login' , new LoginForm());
 

@@ -1,6 +1,6 @@
 <?php
 
-  $this->dispatcher->forward(array('controller' => 'posts', 'action' => 'index'));
+$this->dispatcher->forward(array( 'controller' => 'posts' , 'action' => 'index' ));
 
 
 

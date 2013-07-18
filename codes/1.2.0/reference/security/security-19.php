@@ -10,7 +10,7 @@ class UsersController extends Controller
 
         $user = new Users();
 
-        $login = $this->request->getPost('login');
+        $login    = $this->request->getPost('login');
         $password = $this->request->getPost('password');
 
         $user->login = $login;

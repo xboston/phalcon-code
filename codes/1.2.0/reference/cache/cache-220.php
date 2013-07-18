@@ -1,9 +1,8 @@
 <?php
 
-if ($cache->exists("someKey")) {
+if ( $cache->exists("someKey") ) {
     echo $cache->get("someKey");
-}
-else {
+} else {
     echo "Cache does not exists!";
 }
 

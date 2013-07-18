@@ -9,7 +9,7 @@ class Robots extends \Phalcon\Mvc\Model
 
     public function initialize()
     {
-        $this->hasMany("id", "RobotsParts", "robots_id");
+        $this->hasMany("id" , "RobotsParts" , "robots_id");
     }
 
     /**
@@ -17,9 +17,9 @@ class Robots extends \Phalcon\Mvc\Model
      *
      * @return \RobotsParts[]
      */
-    public function getRobotsParts($parameters=null)
+    public function getRobotsParts($parameters = null)
     {
-        return $this->getRelated('RobotsParts', $parameters);
+        return $this->getRelated('RobotsParts' , $parameters);
     }
 
 }

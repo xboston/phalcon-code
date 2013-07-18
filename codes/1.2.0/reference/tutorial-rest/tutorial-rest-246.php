@@ -1,25 +1,31 @@
 <?php
 
 //Retrieves robots based on primary key
-$app->get('/api/robots/{id:[0-9]+}', function($id) use ($app) {
+$app->get(
+    '/api/robots/{id:[0-9]+}' ,
+    function ($id) use ($app) {
 
-    $phql = "SELECT * FROM Robots WHERE id = :id:";
-    $robot = $app->modelsManager->executeQuery($phql, array(
-        'id' => $id
-    ))->getFirst();
-
-    if ($robot == false) {
-        $response = array('status' => 'NOT-FOUND');
-    } else {
-        $response = array(
-            'status' => 'FOUND',
-            'data' => array(
-                'id' => $robot->id,
-                'name' => $robot->name
+        $phql  = "SELECT * FROM Robots WHERE id = :id:";
+        $robot = $app->modelsManager->executeQuery(
+            $phql ,
+            array(
+                 'id' => $id
             )
-        );
-    }
+        )->getFirst();
 
-    echo json_encode($response);
-});
+        if ( $robot == false ) {
+            $response = array( 'status' => 'NOT-FOUND' );
+        } else {
+            $response = array(
+                'status' => 'FOUND' ,
+                'data'   => array(
+                    'id'   => $robot->id ,
+                    'name' => $robot->name
+                )
+            );
+        }
+
+        echo json_encode($response);
+    }
+);
 

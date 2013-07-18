@@ -1,6 +1,6 @@
 <?php
 
- print_r($config['database']);
+print_r($config['database']);
 
 
 

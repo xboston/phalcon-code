@@ -9,13 +9,13 @@ $reflector = $reader->get('Example');
 $annotations = $reflector->getClassAnnotations();
 
 //Traverse the annotations
-foreach ($annotations as $annotation) {
+foreach ( $annotations as $annotation ) {
 
     //Print the annotation name
-    echo $annotation->getName(), PHP_EOL;
+    echo $annotation->getName() , PHP_EOL;
 
     //Print the number of arguments
-    echo $annotation->numberArguments(), PHP_EOL;
+    echo $annotation->numberArguments() , PHP_EOL;
 
     //Print the arguments
     print_r($annotation->getArguments());

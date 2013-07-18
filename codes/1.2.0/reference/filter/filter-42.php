@@ -12,10 +12,10 @@ class ProductsController extends \Phalcon\Mvc\Controller
     {
 
         // Sanitizing price from input
-        $price = $this->request->getPost("price", "double");
+        $price = $this->request->getPost("price" , "double");
 
         // Sanitizing email from input
-        $email = $this->request->getPost("customerEmail", "email");
+        $email = $this->request->getPost("customerEmail" , "email");
 
     }
 

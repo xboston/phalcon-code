@@ -7,9 +7,9 @@ class ProductsMigration_100 extends \Phalcon\Mvc\Model\Migration
     {
         //...
         self::$_connection->insert(
-            "products",
-            array("Malabar spinach", 14.50),
-            array("name", "price")
+            "products" ,
+            array( "Malabar spinach" , 14.50 ) ,
+            array( "name" , "price" )
         );
     }
 

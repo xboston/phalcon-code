@@ -4,5 +4,5 @@
 $connection->dropTable("robots");
 
 //Drop table robot from database "machines"
-$connection->dropTable("robots", "machines");
+$connection->dropTable("robots" , "machines");
 

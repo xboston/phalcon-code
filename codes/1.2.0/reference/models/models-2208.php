@@ -1,7 +1,6 @@
 <?php
 
-use Phalcon\Mvc\Model\Transaction\Manager as TxManager,
-    Phalcon\Mvc\Model\Transaction\Failed as TxFailed;
+use Phalcon\Mvc\Model\Transaction\Manager as TxManager , Phalcon\Mvc\Model\Transaction\Failed as TxFailed;
 
 try {
 
@@ -12,11 +11,11 @@ try {
     $transaction = $manager->get();
 
     //Get the robots will be deleted
-    foreach (Robots::find("type = 'mechanical'") as $robot) {
+    foreach ( Robots::find("type = 'mechanical'") as $robot ) {
         $robot->setTransaction($transaction);
-        if ($robot->delete() == false) {
+        if ( $robot->delete() == false ) {
             //Something goes wrong, we should to rollback the transaction
-            foreach ($robot->getMessages() as $message) {
+            foreach ( $robot->getMessages() as $message ) {
                 $transaction->rollback($message->getMessage());
             }
         }
@@ -27,7 +26,7 @@ try {
 
     echo "Robots were deleted successfully!";
 
-} catch(TxFailed $e) {
-    echo "Failed, reason: ", $e->getMessage();
+} catch ( TxFailed $e ) {
+    echo "Failed, reason: " , $e->getMessage();
 }
 

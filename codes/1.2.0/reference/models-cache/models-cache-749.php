@@ -9,37 +9,37 @@ class CustomNodeVisitor
 
     public function visit($node)
     {
-        switch ($node['type']) {
+        switch ( $node['type'] ) {
 
             case 'binary-op':
 
-                $left = $this->visit($node['left']);
+                $left  = $this->visit($node['left']);
                 $right = $this->visit($node['right']);
-                if (!$left || !$right) {
+                if ( !$left || !$right ) {
                     return false;
                 }
 
-                if ($left=='id') {
-                    if ($node['op'] == '>') {
+                if ( $left == 'id' ) {
+                    if ( $node['op'] == '>' ) {
                         $this->_initial = $right;
                     }
-                    if ($node['op'] == '=') {
+                    if ( $node['op'] == '=' ) {
                         $this->_initial = $right;
                     }
-                    if ($node['op'] == '>=')    {
+                    if ( $node['op'] == '>=' ) {
                         $this->_initial = $right;
                     }
-                    if ($node['op'] == '<') {
+                    if ( $node['op'] == '<' ) {
                         $this->_final = $right;
                     }
-                    if ($node['op'] == '<=')    {
+                    if ( $node['op'] == '<=' ) {
                         $this->_final = $right;
                     }
                 }
                 break;
 
             case 'qualified':
-                if ($node['name'] == 'id') {
+                if ( $node['name'] == 'id' ) {
                     return 'id';
                 }
                 break;

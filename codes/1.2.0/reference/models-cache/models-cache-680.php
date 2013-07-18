@@ -7,6 +7,7 @@ class CustomQueryBuilder extends Phalcon\Mvc\Model\Query\Builder
     {
         $query = new CustomQuery($this->getPhql());
         $query->setDI($this->getDI());
+
         return $query;
     }
 

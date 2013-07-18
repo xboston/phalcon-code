@@ -7,14 +7,16 @@ class PostsController extends \Phalcon\Mvc\Controller
     {
         // This is executed before every found action
 
-        if ($dispatcher->getActionName() == 'save') {
+        if ( $dispatcher->getActionName() == 'save' ) {
 
             $this->flash->error("You don't have permission to save posts");
 
-            $this->dispatcher->forward(array(
-                'controller' => 'home',
-                'action' => 'index'
-            ));
+            $this->dispatcher->forward(
+                array(
+                     'controller' => 'home' ,
+                     'action'     => 'index'
+                )
+            );
 
             return false;
         }

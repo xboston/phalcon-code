@@ -1,6 +1,6 @@
 <?php
 
-$metaData->setAutomaticCreateAttributes(new Robots(), array('created_at' => true));
+$metaData->setAutomaticCreateAttributes(new Robots() , array( 'created_at' => true ));
 
 
 

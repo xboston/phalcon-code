@@ -4,5 +4,5 @@
 $router = new MyRouter();
 
 //Pass the resolved object to the service registration
-$di->set('router', $router);
+$di->set('router' , $router);
 

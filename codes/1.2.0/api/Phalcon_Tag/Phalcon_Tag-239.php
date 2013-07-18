@@ -1,4 +1,4 @@
 <?php
 
- echo Phalcon\Tag::radioField(array("name"))
+echo Phalcon\Tag::radioField(array( "name" ))
 

@@ -2,9 +2,12 @@
 
 $phql = "SELECT * FROM Cars WHERE name = :name:";
 
-$cars = $this->modelsManager->executeQuery($phql, array(
-    'name' => 'Audi'
-));
+$cars = $this->modelsManager->executeQuery(
+    $phql ,
+    array(
+         'name' => 'Audi'
+    )
+);
 
-apc_store('my-cars', $cars);
+apc_store('my-cars' , $cars);
 

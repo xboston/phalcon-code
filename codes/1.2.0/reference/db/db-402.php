@@ -31,6 +31,6 @@ $eventsManager = new Phalcon\Events\Manager();
 $dbProfiler = new DbProfiler();
 
 //Attach the listener listening for all database events
-$eventsManager->attach('db', $dbProfiler);
+$eventsManager->attach('db' , $dbProfiler);
 
 

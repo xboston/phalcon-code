@@ -1,6 +1,6 @@
 <?php
 
- $scripts = $assets->get('js');
+$scripts = $assets->get('js');
 
 
 

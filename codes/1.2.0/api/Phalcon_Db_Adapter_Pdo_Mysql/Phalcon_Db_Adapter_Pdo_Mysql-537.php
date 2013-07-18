@@ -1,6 +1,6 @@
 <?php
 
- print_r($connection->tableOptions('robots'));
+print_r($connection->tableOptions('robots'));
 
 
 

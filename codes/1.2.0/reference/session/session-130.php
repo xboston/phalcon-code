@@ -11,9 +11,8 @@ class UserController extends Phalcon\Mvc\Controller
 
     public function welcomeAction()
     {
-        if (isset($this->persistent->name))
-        {
-            echo "Welcome, ", $this->persistent->name;
+        if ( isset($this->persistent->name) ) {
+            echo "Welcome, " , $this->persistent->name;
         }
     }
 

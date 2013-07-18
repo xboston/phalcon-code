@@ -12,9 +12,11 @@ class PostsController extends \Phalcon\Mvc\Controller
     public function showArticleAction()
     {
         // Cache this view for 1 hour
-        $this->view->cache(array(
-            "lifetime" => 3600
-        ));
+        $this->view->cache(
+            array(
+                 "lifetime" => 3600
+            )
+        );
     }
 
     public function resumeAction()
@@ -22,8 +24,8 @@ class PostsController extends \Phalcon\Mvc\Controller
         //Cache this view for 1 day with the key "resume-cache"
         $this->view->cache(
             array(
-                "lifetime" => 86400,
-                "key"      => "resume-cache",
+                 "lifetime" => 86400 ,
+                 "key"      => "resume-cache" ,
             )
         );
     }
@@ -33,9 +35,9 @@ class PostsController extends \Phalcon\Mvc\Controller
         //Passing a custom service
         $this->view->cache(
             array(
-                "service"  => "myCache",
-                "lifetime" => 86400,
-                "key"      => "resume-cache",
+                 "service"  => "myCache" ,
+                 "lifetime" => 86400 ,
+                 "key"      => "resume-cache" ,
             )
         );
     }
