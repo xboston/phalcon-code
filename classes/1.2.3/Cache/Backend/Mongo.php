@@ -1,0 +1,23 @@
+<?php
+namespace Phalcon\Cache\Backend{
+
+    abstract class Mongo extends \Phalcon\Cache\Backend implements \Phalcon\Cache\BackendInterface
+    {
+        public function __construct($frontend, $options = NULL){}
+        protected function _getCollection(){}
+        public function get($keyName, $lifetime = NULL){}
+        public function save($keyName = NULL, $content = NULL, $lifetime = NULL, $stopBuffer = NULL){}
+        public function delete($keyName){}
+        public function queryKeys($prefix = NULL){}
+        public function exists($keyName = NULL, $lifetime = NULL){}
+        public function start($keyName, $lifetime = NULL){}
+        public function stop($stopBuffer = NULL){}
+        public function getFrontend(){}
+        public function getOptions(){}
+        public function isFresh(){}
+        public function isStarted(){}
+        public function setLastKey($lastKey){}
+        public function getLastKey(){}
+        public function getLifetime(){}
+    }
+}

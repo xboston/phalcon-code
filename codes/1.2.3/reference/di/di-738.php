@@ -1,0 +1,4 @@
+<?php
+
+$request = $di->getRequest();
+

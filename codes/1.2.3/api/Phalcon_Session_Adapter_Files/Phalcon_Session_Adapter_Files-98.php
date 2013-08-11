@@ -1,0 +1,7 @@
+<?php
+
+$session->remove('auth');
+
+
+
+
